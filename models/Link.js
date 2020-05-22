@@ -5,9 +5,19 @@ const linkSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    links: {
+    fullUrl: {
+        type: String,
+        required: true,
+    },
+    date: {
+        type: Date,
+        required: true,
+        default: Date.now()
+    },
+    click: {
         type: Array,
         required: true,
+        default: [],
     }
 })
 

@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const shortenerRoutes = require('./routes/shortener');
 const userRoutes = require('./routes/user');
-const linkRoutes = require('./routes/link')
+const linkRoutes = require('./routes/link');
 const passport = require('passport');
 require('dotenv').config();
 
@@ -16,7 +17,8 @@ app.use(express.json());
     
 app.use(passport.initialize());
 require('./config/passport')(passport);
-    
+
+app.use('/:id', shortenerRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/links', linkRoutes);
 
