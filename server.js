@@ -1,26 +1,52 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const shortenerRoutes = require('./routes/shortener');
-const userRoutes = require('./routes/user');
-const linkRoutes = require('./routes/link');
-const passport = require('passport');
-require('dotenv').config();
+const session = require('express-session')
+const Link = require('./models/Link')
+const linkRoutes = require('./routes/links');
+const userRoutes = require('./routes/users');
 
-const app = express();
+require('dotenv').config();
+// require('./config/passport')(passport);    
 
 mongoose.connect(process.env.DBCONNECTION, {useNewUrlParser: true, useUnifiedTopology: true})
     .then( () => console.log("Connected to MongoDB"))
     .catch( (err) => console.log(err))
 
+const app = express();
+
+// app.use(session({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: false
+// }))
+
+
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-    
-app.use(passport.initialize());
-require('./config/passport')(passport);
 
-app.use('/:id', shortenerRoutes);
+// app.use(passport.initialize());
+// app.use(passport.session())
+
 app.use('/api/users', userRoutes);
 app.use('/api/links', linkRoutes);
+
+//@route GET /api/links
+//@desc open link
+//@access public
+app.get('/:id', (req, res) => {
+    console.log("GET");
+    Link.findOne({_id: req.params.id})
+    .then(({full, click}) => {
+        res.redirect(full);
+        //need to PUT the add of click
+        const prevClick = click;
+        const newClick = [...prevClick, {date: Date.now()}];
+        Link.findOneAndUpdate({_id: req.params.id}, {click: newClick}, {useFindAndModify: false})
+        .then( link => res.json(link))
+        .catch( err => res.status(404).json(err));
+    })
+    .catch(err => res.status(404).json(err))
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>console.log(`Server listening on port ${PORT}`))

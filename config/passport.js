@@ -11,11 +11,13 @@ opts.secretOrKey = process.env.SECRET;
 module.exports = passport => {
     passport.use(
         new JwtStrategy(opts, (jwt_payload, done) => {
-            User.findbyId(jwt.payload.id)
+            console.log(jwt_payload)
+            User.findbyId(jwt_payload.id)
                 .then(user => {
+                    if (err) return done(err, false)
                     if (user) return done(null, user)
                     return done(null, false)
                 })
                 .catch(err => console.log(err))
-        }), JwtStrategy)
+        }), passport)
 };

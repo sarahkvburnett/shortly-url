@@ -42,6 +42,9 @@ router.post('/signup', [
     })
 });
 
+//id: 5eb84d1c4df52c601c221b19
+//token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImlkIjoiNWViODRkMWM0ZGY1MmM2MDFjMjIxYjE5IiwiaWF0IjoxNTkwNzY3NjY4LCJleHAiOjE1OTMzNTk2Njh9.AVAWjWkcLgrJQlDDFRmMw7ATKt09eRmTpfNYWi3jDoA
+
 //@route POST /api/users/login
 //@desc register a user
 //@access public
@@ -56,13 +59,9 @@ router.post('/login', [
         bcrypt.compare(req.body.password, user.password)
         .then((isMatch) => {
                 if (isMatch) {
-                const { firstName, id } = user
-                const token = jwt.sign({firstName, id}, process.env.SECRET, {expiresIn: "30d"})
-                res.json({
-                    success: true,
-                    firstName,
-                    token: 'Bearer ' + token
-                    })
+                const { firstName, id } = user;
+                const token = jwt.sign({firstName, id}, process.env.SECRET, {expiresIn: "30d"});
+                res.json({id: user.id, token: 'Bearer ' + token});
             } else return res.status(400).json({error: "Password does not match"})
         })
     })
