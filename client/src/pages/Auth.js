@@ -5,6 +5,7 @@ import { Login } from '../components/Login';
 import { Logout } from '../components/Logout';
 import { Signup } from '../components/Signup';
 import MediaQuery from 'react-responsive';
+import image from '../images/illustration-working.svg';
 
 const AuthPg = styled.div`
     min-height: 70vh;
@@ -25,7 +26,7 @@ export const Auth = ({auth}) => {
     return (
         <AuthPg>
             <MediaQuery minDeviceWidth={breakpoint}>
-                <Img><img src="./illustration-working.svg" alt="woman working at desk"/></Img>
+                <Img><img src={image} alt="woman working at desk"/></Img>
             </MediaQuery>
             { auth==="login" && <Login/> }
             { auth==="logout" && <Logout/> }
