@@ -1,9 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import { PrimaryButton, white, violet } from '../Styles'
+import React from 'react';
+import styled from 'styled-components';
+import { PrimaryButton, white, violet, breakpoint } from '../Styles';
+import imgDesktop from '../images/bg-boost-desktop.svg';
+import imgMobile from '../images/bg-boost-mobile.svg';
 
 const BoostBox = styled.div`
-    background: ${violet} url('../images/bg-boost-mobile.svg') no-repeat;
+    background: ${violet} url(${imgMobile}) no-repeat;
+    @media (min-width: ${breakpoint}) {
+        background-image: url(${imgDesktop});
+    };
     width: 100vw;
     padding: 2vh 2vw;
     margin: auto;

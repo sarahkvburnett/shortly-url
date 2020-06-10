@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint, PrimaryButton, white } from '../Styles';
+import image from '../images/illustration-working.svg';
 
 const IntroWrapper = styled.section`
     height: auto;
@@ -59,7 +60,7 @@ export const Intro = () => {
     return (
         <IntroWrapper>
             <IntroImg>
-                <img src="./illustration-working.svg" alt="woman working at desk"/>
+                <img src={image} alt="woman working at desk"/>
             </IntroImg>
            <IntroText>
                 <h1>More than just shorter links</h1>

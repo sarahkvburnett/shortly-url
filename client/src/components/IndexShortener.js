@@ -2,14 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { breakpoint, violet, red } from '../Styles';
 import { LinkForm } from './LinkForm';
+import imgDesktop from '../images/bg-shorten-desktop.svg';
+import imgMobile from '../images/bg-shorten-mobile.svg';
 
 const Shortener = styled.div`
     position: relative;
     width: 80vw;
     top: -15vh;
-    background-image: url('../images/shorten-mobile.svg');
+    background-image: url(${imgMobile});
     @media (min-width: 500px) {
-        background-image: url('../images/shorten-desktop.svg')
+        background-image: url(${imgDesktop})
     }
     background-color: ${violet};
     height: 30vh;
