@@ -36,14 +36,31 @@ router.post('/', (req, res) => {
 //@route GET /api/links
 //@desc get links by userID
 //@access authenticated
-router.get('/:id', isAuthenticated, (req, res) => {
-    Link.find({userId: req.params.id})
+router.get('/:userId', isAuthenticated, (req, res) => {
+    Link.find({userId: req.params.userId})
     .then(links => res.json(links))
     .catch(err => res.status(400).json(err))
 });
 
+//@route PUT /api/link
+//@desc edit short link
+//@access authenticated
+router.put('/:id', isAuthenticated, (req, res) => {
+    Link.findOne({_id: req.params.id})
+        .then(link => {
+            const { full, click, date, userId } = link;
+            if (full !== req.body.full || click !== req.body.full || date !== req.body.date || userId !== req.body.userId ) {
+                res.status(400).json({msg: 'Can only edit short link'})
+            }
+            Link.findOneAndUpdate({_id: req.params.id}, {_id: req.body.id})
+                .then( query => res.json(query))
+                .catch( err => res.send(400).json(err));
+        })
+        .catch(err => res.send(400).json(err));
+}); 
+
 //@route DELETE /api/links
-//@desc remove link for user
+//@desc remove link
 //@access authenticated
 router.delete('/:id', isAuthenticated, (req, res) => {
     Link.findOneAndDelete({_id: req.params.id})
