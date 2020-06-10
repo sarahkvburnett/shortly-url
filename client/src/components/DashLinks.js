@@ -62,7 +62,7 @@ const Input = styled.input`
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    width: auto;
+    min-width: auto;
     &:hover + div {
         opacity: 1;
         pointer-events: all;
@@ -73,7 +73,7 @@ const Urls = ({short, full, link}) => {
     return (
         <URLS className="urls">
             <h3>{full}</h3>
-            <Input id={short} value={short} title={shortlyUrl + '/' + short} readOnly/>
+            <Input id={short} value={shortlyUrl + '/' + short} readOnly/>
             <DashLinkBtns link={link}/>
         </URLS>
     )

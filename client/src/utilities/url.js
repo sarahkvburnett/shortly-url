@@ -1,3 +1,1 @@
-export const shortlyUrl = 'localhost:5000';
-
-//heroku = 'https://shortlyurl.herokuapp.com/';
+export const shortlyUrl = 'https://short.ly';

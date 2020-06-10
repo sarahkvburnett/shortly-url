@@ -89,7 +89,7 @@ export const Label = styled.label`
 export const Input = styled.input`
     display: block;
     width: 100%;
-    padding: 1vh 1vw;
+    padding: 1vh 2vw;
     margin: 1vh 0;
     border-radius: 5px;
     border: 1px solid ${grey};

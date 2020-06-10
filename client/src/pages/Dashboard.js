@@ -4,7 +4,7 @@ import { UserContext } from '../context/UserContext';
 import { ActiveLinkContext } from '../context/ActiveLinkContext';
 import styled from 'styled-components';
 import { Links } from '../components/DashLinks';
-import { LinkForm } from '../components/LinkForm';
+import { LinkShortener } from '../components/Shortener';
 import { DashLoad } from '../layout/DashLoad';
 import { Graph } from '../components/Graph';
 import { cyan, violet, darkViolet, grey, white } from '../Styles';
@@ -19,13 +19,6 @@ const Dash = styled.div`
     color: ${violet};
     h2 {
         text-align: center;
-    }
-    form {
-        background: ${violet};
-        padding: 2vh 0;
-        input {
-            margin: 1vh auto;
-        }
     }
 `
 
@@ -55,7 +48,7 @@ export const Dashboard = () => {
             {!loading && <Links/> }
             { linkUpdate && linkUpdate.process === "edit" && <LinkEditor/> }
             { linkUpdate && linkUpdate.process === "delete" && <LinkDeletor/> }
-            <LinkForm/>
+            <LinkShortener position="0"/>
         </Dash>
     )
 }
