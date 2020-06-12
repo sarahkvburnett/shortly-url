@@ -64,7 +64,7 @@ router.put('/:id', isAuthenticated, (req, res) => {
                 res.status(400).json({msg: 'Can only edit short link'})
             }
             if ( short === req.body.short) res.status(400).json({msg: 'Short link is the same'})
-            Link.findByIdAndUpdate(_id, {short: req.body.short}, {new: true})
+            Link.findByIdAndUpdate(_id, {short: req.body.short}, {new: true, useFindAndModify: false})
                 .then( query => res.json(query))
                 .catch( err => res.status(400).json(err));
         })

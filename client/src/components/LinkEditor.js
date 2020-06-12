@@ -12,8 +12,8 @@ export const LinkEditor = () => {
     const [ newLink, setNewLink ] = useState(linkUpdate.link.short);
     const [ error, setError ] = useState();
     const handleChange = (event) => {
-        setNewLink(event.target.value);
         setError(null);
+        setNewLink(event.target.value);
     };
     const updateLink = (event) => {
         const {link} = linkUpdate;
@@ -29,16 +29,16 @@ export const LinkEditor = () => {
         .catch( err => setError('Update failed, please try again'));
     }
     return (
-            <LinkModal>
-                <h3>Edit Shortly Link</h3>
-                <p>{linkUpdate.link.full}</p>
-                <div style={{display: "flex"}}>
-                    <p>https://shortly/</p>
-                    <input onChange={handleChange} value={newLink}/>
-                </div>
-                { error && <Error><FontAwesomeIcon icon={faExclamationTriangle}/> {error}</Error> }
-                <PrimaryButton id="update" type="button" onClick={() => updateLink()}>Update</PrimaryButton>
-                <Button type="button" onClick={() => setLinkUpdate('')}>Cancel</Button>
+            <LinkModal onSubmit={() => updateLink()}>
+                    <h3>Edit Shortly Link</h3>
+                    <p>{linkUpdate.link.full}</p>
+                    <div style={{display: "flex"}}>
+                        <p>https://shortly/</p>
+                        <input onChange={handleChange} value={newLink} required pattern="^[a-z0-9_-]{3,16}$" title="Letters and numbers between 3-16 characters"/>
+                    </div>
+                    { error && <Error><FontAwesomeIcon icon={faExclamationTriangle}/> {error}</Error> }
+                    <PrimaryButton id="update">Update</PrimaryButton>
+                    <Button type="button" onClick={() => setLinkUpdate('')}>Cancel</Button>
             </LinkModal> 
     )
 }

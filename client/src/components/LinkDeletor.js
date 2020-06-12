@@ -17,12 +17,12 @@ export const LinkDeletor = () => {
         .catch( err => setError('Delete failed, please try again'));
     }
     return (
-            <LinkModal>
+            <LinkModal onSubmit={() => deleteLink()}>
                 <h3>Delete Shortly Link</h3>
                 <p>{link.full}</p>
                 <p>{`https://shortly/${link.short}`}</p>
                 { error && <Error><FontAwesomeIcon icon={faExclamationTriangle}/> {error}</Error> }
-                <PrimaryButton id="update" type="button" onClick={() => deleteLink()}>Delete</PrimaryButton>
+                <PrimaryButton id="delete">Delete</PrimaryButton>
                 <Button type="button" onClick={() => setLinkUpdate('')}>Cancel</Button>
             </LinkModal> 
     )

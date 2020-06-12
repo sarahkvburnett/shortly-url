@@ -94,7 +94,7 @@ export const Input = styled.input`
     border-radius: 5px;
     border: 1px solid ${grey};
 `
-export const LinkModal = styled.div`
+export const LinkModal = styled.form`
 position: fixed;
 z-index: 100;
 top: 0;

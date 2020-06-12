@@ -4,8 +4,12 @@ import { UserContext } from '../context/UserContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import validator from 'validator';
+import isEmpty from 'validator/lib/isEmpty';
 import styled from 'styled-components';
-import { red, grey, cyan, white, breakpoint, Error } from '../Styles';
+import { red, grey, cyan, white, breakpoint } from '../Styles';
+
+console.log(isEmpty);
 
 const Form = styled.form`
     width: 70vw;
@@ -25,7 +29,7 @@ const Input = styled.input`
     height: 10vh;
     width: 70vw;
     border-radius: 15px;
-    padding: .5vw 1vw .5vw 1vw;
+    padding: 1vh 2vw;
     margin: 1vh .5vw;
     border: none;
     &:invalid {
@@ -64,29 +68,33 @@ const P = styled.p`
     }
 `
 
-const ErrorBar = styled(Error)`
+const Error = styled(P)`
     font-style: italic;
     text-align: left;
-    padding: 0;
+    color: ${red};
 `
 
 export const LinkForm = () => {
     const [ user ] = useContext(UserContext);
     const [ links, setLinks ] = useContext(LinksContext);
-    const [ link, setLink ] = useState('');
+    const [ input, setInput ] = useState({value: 'Shorten a link here...'});
     const [ error, setError ] = useState('');
     const handleChange = (event) => {
-        setError('');
         event.persist();
-        setLink(event.target.value);
-        if (!event.target.validity.valid) setError('Please add a link')
+        setError('');
+        const value = event.target.value;
+        if (validator.isEmpty(value)) {
+            setError('Please add a link');
+            return setInput({value, valid: false});
+        } 
+        else if (validator.isURL(value)) setInput({value, valid: true});
+        else setInput({value, valid: false});
     };
     const addLink = (event) => {
         event.preventDefault();
-        setLink('');
-        const params = {
-            "full": link,
-        };
+        if (!input.valid) return setError('Please add a link');
+        setInput({value: ''});
+        const params = {full: input.value};
         if (user.id) params.userId = user.id;
         axios.post('api/links', params)
             .then( ({data}) => {
@@ -97,10 +105,10 @@ export const LinkForm = () => {
             .catch( error => setError('Error! Please try again') )
     };
     return (
-        <Form onSubmit={(event, link) => addLink(event, link)}>
+        <Form onSubmit={(event) => addLink(event)}>
                 <label htmlFor="link" style={{display: "none"}}>Website Url</label>
                 <div>
-                <Input id="link" name="link" type="text" placeholder="Shorten a link here..." onChange={handleChange} value={link} required/>
+                <Input id="link" name="link" onChange={handleChange} value={input.value} onFocus={() => setInput({value: ''})}/>
                 <Button type="submit" value="Shorten It!"/>
                 </div>
                 { error !== '' 
