@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Intro } from '../layout/Intro';
 import { LinkShortener} from '../components/Shortener';
 import { Links } from '../components/IndexLinks';

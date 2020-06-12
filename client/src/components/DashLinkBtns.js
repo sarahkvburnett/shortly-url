@@ -1,11 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import  { breakpoint, red, cyan, grey, white, violet} from '../Styles';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash, faHandPointUp } from '@fortawesome/free-solid-svg-icons';
-import { LinksContext } from '../context/LinksContext';
 import { ActiveLinkContext } from '../context/ActiveLinkContext';
-import { Redirect } from 'react-router-dom';
 import { LinkUpdateContext } from '../context/LinkUpdateContext';
 
 const Buttons = styled.div`
@@ -51,7 +49,6 @@ const Buttons = styled.div`
 export const DashLinkBtns = ({link}) => {
     const [ activeLink, setActiveLink ] = useContext(ActiveLinkContext);
     const [ linkUpdate, setLinkUpdate] = useContext(LinkUpdateContext);
-    const [ links, setLinks ] = useContext(LinksContext);
     const { _id } = link;
     const theme = (id) => {
         if (activeLink !== undefined ) {
@@ -65,12 +62,10 @@ export const DashLinkBtns = ({link}) => {
     const selectLink = () => setActiveLink(link);
     const editLink = () => setLinkUpdate({
         process: "edit",
-        _id,
         link,
     });
     const deleteLink = () => setLinkUpdate({
         process: "delete",
-        _id,
         link,
     });
     return (

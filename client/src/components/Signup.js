@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { PrimaryFormBtn, Form, Label, Input } from '../Styles';
-import { Error } from './Error';
+import { Errors } from './AuthErrors';
 import axios from 'axios';
 
 export const Signup =  () => {
@@ -27,7 +27,7 @@ export const Signup =  () => {
     return (
         <Form onSubmit={signup}>
             <h3>Sign Up</h3>
-            { formValues.error && <Error/> }
+            { formValues.error && <Errors errors={errors}/> }
             <Label HTMLfor="firstName">First Name <Input id="firstName" name="firstName" onChange={handleChange} value={firstName} required></Input></Label>
             <Label HTMLfor="lastName">Last Name <Input id="lastName" name="lastName" onChange={handleChange} value={lastName} required></Input></Label>
             <Label HTMLfor="email">Email <Input type="email" id="email" name="email" onChange={handleChange} value={email} required></Input></Label>

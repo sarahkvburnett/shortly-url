@@ -10,8 +10,6 @@ import { Dashboard } from './pages/Dashboard';
 import { UserContext } from './context/UserContext';
 import { setAuthToken } from './utilities/setAuthToken';
 import jwt_decode from 'jwt-decode'
-import { LinkEditor } from './components/LinkEditor';
-import { LinkDeletor } from './components/LinkDeletor';
 
 export const App = () => {
     const [ user, setUser ] = useContext(UserContext);

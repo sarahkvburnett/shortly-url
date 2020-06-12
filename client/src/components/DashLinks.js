@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { LinksContext } from '../context/LinksContext';
 import styled from 'styled-components';
-import { grey, white, violet, cyan, red, breakpoint } from '../Styles';
+import { grey, white, violet, breakpoint } from '../Styles';
 import { ActiveLinkContext } from '../context/ActiveLinkContext';
 import { DashLinkBtns } from '../components/DashLinkBtns';
 import { shortlyUrl } from '../utilities/url';
@@ -62,7 +62,7 @@ const Input = styled.input`
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    min-width: auto;
+    min-width: 50vw;
     &:hover + div {
         opacity: 1;
         pointer-events: all;
@@ -91,7 +91,7 @@ const Details = ({date, click, short}) => {
 
 export const Links = () => {
     const [ links ] = useContext(LinksContext);
-    const [ activeLink, setActiveLink] = useContext(ActiveLinkContext);
+    const [ activeLink ] = useContext(ActiveLinkContext);
     const theme = (id) => {
         if (activeLink !== undefined ) {
             if (id === activeLink._id) return { color: white, background: violet} 
@@ -105,9 +105,9 @@ export const Links = () => {
         <LinksBg>
             { 
             links.map( (link) => { 
-                const { _id, date, full, click } = link;
+                const { _id, date, full, click, short } = link;
                 return <Link style={theme(_id)} key={_id}>
-                    <Urls short={_id} full={full} link={link}/>
+                    <Urls short={short} full={full} link={link}/>
                     <Details date={date} click={click}/>
                     </Link>
                 }) 

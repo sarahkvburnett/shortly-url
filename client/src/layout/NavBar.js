@@ -60,7 +60,7 @@ const MobNav = styled.div`
 `
 
 export const NavBar = () => {
-    const [ user, setUser ] = useContext(UserContext);
+    const [ user ] = useContext(UserContext);
     const { isAuth } = user;
     const [isMobNav, setIsMobNav] = useState(false);
     const toggleMobNav = () => isMobNav ? setIsMobNav(false) : setIsMobNav(true);

@@ -1,16 +1,16 @@
 import React, { useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
-import { PrimaryFormBtn, FormBtn, Form, Label, Input, violet, cyan } from '../Styles';
+import { PrimaryFormBtn, FormBtn, Form, Label, Input } from '../Styles';
 import { UserContext } from '../context/UserContext';
 import { LinksContext } from '../context/LinksContext';
 import { setAuthToken }  from '../utilities/setAuthToken';
-import { Error } from '../components/Error';
+import { Errors } from './AuthErrors';
 import axios from 'axios';
 
 export const Login = () => {
     const [ user, setUser ] = useContext(UserContext);
-    const [ setLinks ] = useContext(LinksContext);
+    const [ links, setLinks ] = useContext(LinksContext);
 
     const [ formValues, setFormValues ] = useState({
         email: '',
@@ -44,7 +44,7 @@ export const Login = () => {
     return (
         <Form onSubmit={login}>
             <h3>Login</h3>
-            { formValues.errors && <Error errors={formValues.errors}/> }
+            { formValues.errors && <Errors errors={errors}/> }
             <Label HTMLfor="email">Email <Input type="email" id="email" name="email" onChange={handleChange} value={email} required></Input></Label>
             <Label HTMLfor="password">Password <Input type="password" id="password" name="password" onChange={handleChange} value={password}required></Input></Label>
             <PrimaryFormBtn type="submit">Submit</PrimaryFormBtn>

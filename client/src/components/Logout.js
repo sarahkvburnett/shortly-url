@@ -3,10 +3,9 @@ import { Redirect } from 'react-router-dom';
 import { setAuthToken }  from '../utilities/setAuthToken';
 import { UserContext } from '../context/UserContext';
 import { Form, PrimaryFormBtn } from '../Styles';
-import styled from 'styled-components';
 
 export const Logout = () => {
-    const [ User, setUser ] = useContext(UserContext)
+    const [ user, setUser ] = useContext(UserContext)
     const logout = () => {
         localStorage.removeItem("jwtToken");
         setAuthToken(false);

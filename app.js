@@ -33,9 +33,8 @@ app.use('/api/links', linkRoutes);
 //@route GET /api/links
 //@desc open link
 //@access public
-app.get('/:id', (req, res) => {
-    console.log("GET");
-    Link.findOne({_id: req.params.id})
+app.get('/:short', (req, res) => {
+    Link.findOne({short: req.params.short})
     .then(({full, click}) => {
         res.redirect(full);
         //need to PUT the add of click

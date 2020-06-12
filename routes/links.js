@@ -28,6 +28,7 @@ router.post('/', (req, res) => {
         User.find({_id: req.body.userId})
         .catch(err => res.json(err));
     } else newLink.userId = "public";
+    newLink.short = newLink._id;
     newLink.save()
     .then(link => res.json([link]))
     .catch(err => res.json(err));
@@ -42,22 +43,38 @@ router.get('/:userId', isAuthenticated, (req, res) => {
     .catch(err => res.status(400).json(err))
 });
 
+//@route GET /api/links
+// get single link by id
+//@access authenticated
+router.get('/link/:id', isAuthenticated, (req, res) => {
+    Link.findById(req.params.id)
+    .then(link => res.json(link))
+    .catch(err => res.status(400).json(err))
+});
+
+
 //@route PUT /api/link
 //@desc edit short link
 //@access authenticated
 router.put('/:id', isAuthenticated, (req, res) => {
-    Link.findOne({_id: req.params.id})
+    Link.findById(req.params.id)
         .then(link => {
-            const { full, click, date, userId } = link;
-            if (full !== req.body.full || click !== req.body.full || date !== req.body.date || userId !== req.body.userId ) {
+            const { full, userId, short, _id } = link;
+            if (full !== req.body.full || userId !== req.body.userId ) { // add back in date validation was failing
                 res.status(400).json({msg: 'Can only edit short link'})
             }
-            Link.findOneAndUpdate({_id: req.params.id}, {_id: req.body.id})
+            if ( short === req.body.short) res.status(400).json({msg: 'Short link is the same'})
+            Link.findByIdAndUpdate(_id, {short: req.body.short}, {new: true})
                 .then( query => res.json(query))
-                .catch( err => res.send(400).json(err));
+                .catch( err => res.status(400).json(err));
         })
-        .catch(err => res.send(400).json(err));
+        .catch(err => {
+            console.log(err);
+            res.status(400).json({"msg": "find fail"});
+        })
 }); 
+
+
 
 //@route DELETE /api/links
 //@desc remove link

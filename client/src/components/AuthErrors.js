@@ -1,25 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { red } from '../Styles';
+import { red, Error } from '../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-const ErrorBar = styled.div`
+const ErrorBar = styled(Error)`
     width: 100%;
     display: flex;
     align-items: center;
-    color: ${red};
     margin: 3vh 0;
+    font-size: inherit;
     div {
         margin-left: 1vw;
         font-size: smaller;
     }
     border: 1px solid ${red};
-    padding: 1vh 1vw;
     border-radius: 5px;
 `
 
-export const Error = ({errors}) => {
+export const Errors = ({errors}) => {
     return (
         <ErrorBar> 
             <FontAwesomeIcon icon={faExclamationTriangle}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint, violet, red } from '../Styles';
+import { breakpoint, violet } from '../Styles';
 import { LinkForm } from './LinkForm';
 import imgDesktop from '../images/bg-shorten-desktop.svg';
 import imgMobile from '../images/bg-shorten-mobile.svg';

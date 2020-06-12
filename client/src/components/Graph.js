@@ -53,7 +53,7 @@ const Error = styled.p`
 
 
 export const Graph = ({loading}) => {
-    const [ activeLink, setActiveLink] = useContext(ActiveLinkContext);
+    const [ activeLink, setActiveLink ] = useContext(ActiveLinkContext);
     const [ firstDate, setFirstDate ] = useState(Date.now() - 518400000);
     const [ clickData, setClickData ] = useState([]);
     const [ totalClicks, setTotalClicks ] = useState(0);
@@ -70,7 +70,7 @@ export const Graph = ({loading}) => {
         for (let i = 1; i < 7; i++){
             dateArr.push(new Date((i * 86400000) + firstDate).toString().substring(0,10));
         }
-        const timeRangeClicks = activeLink.click
+        activeLink.click
             .filter( click => dateArr.includes(new Date(click.date).toString().substring(0, 10)))
             .map( click => {
                 const index = dateArr.indexOf(new Date(click.date).toString().substring(0, 10));

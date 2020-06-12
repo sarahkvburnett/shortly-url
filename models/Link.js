@@ -1,17 +1,22 @@
 const mongoose = require('mongoose');
-const shortid = require('shortid')
+const shortid = require('shortid');
 
 const linkSchema = new mongoose.Schema({
-    _id:{
+    _id: {
         type: String,
         required: true,
-        default: shortid.generate()
+        default: shortid.generate(),
+        isNew: true,
     },
     userId: {
         type: String,
         required: true,
     },
     full: {
+        type: String,
+        required: true,
+    },
+    short: {
         type: String,
         required: true,
     },
@@ -24,7 +29,7 @@ const linkSchema = new mongoose.Schema({
         type: Array,
         required: true,
         default: [],
-    }
+    },
 })
 
 module.exports = Link = mongoose.model('Link', linkSchema);
