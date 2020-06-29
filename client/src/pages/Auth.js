@@ -1,36 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
-import { white, breakpoint } from '../Styles';
+import { white, desktop } from '../Styles';
 import { Login } from '../components/auth/Login';
 import { Logout } from '../components/auth/Logout';
 import { Signup } from '../components/auth/Signup';
-import MediaQuery from 'react-responsive';
 import image from '../images/illustration-working.svg';
 
 const AuthPg = styled.div`
-    min-height: 70vh;
-    display: flex;
     background: ${white};
+    margin: auto;
+    @media (min-width: ${desktop}){
+        display: flex;
+        flex-direction: row-reverse;
+        min-height: 70vh;
+    }
 `
 
 const Img = styled.div`
-    min-height: 70vh;
-    width: 70vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+        max-width: 100%;
+        padding: 1vh 1vw;
+    }
+    @media (min-width: ${desktop}){
+        min-height: 70vh;
+        width: 70vw;
+    }
 `
 
 
 export const Auth = ({auth}) => {
     return (
         <AuthPg>
-            <MediaQuery minDeviceWidth={breakpoint}>
-                <Img><img src={image} alt="woman working at desk"/></Img>
-            </MediaQuery>
             { auth==="login" && <Login/> }
             { auth==="logout" && <Logout/> }
             { auth==="signup" && <Signup/> }
+            <Img><img src={image} alt="woman working at desk"/></Img>
         </AuthPg>
     )
 }

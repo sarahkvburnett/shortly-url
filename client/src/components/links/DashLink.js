@@ -7,6 +7,7 @@ import { shortlyUrl } from '../../utilities/url';
 import { linkBackgroundColor as background, linkColor as color} from '../../utilities/styling'
 
 const Link = styled.div`
+    cursor: pointer;
     max-width: 96vw;
     margin: 2vh 2vw;
     padding: 1vh 1vw;

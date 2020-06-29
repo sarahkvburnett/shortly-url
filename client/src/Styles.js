@@ -15,8 +15,8 @@ export const darkViolet = "hsl(260, 8%, 14%)";
 export const white = "#FFF";
 
 export const tablet = "500px";
-export const desktop = "800px";
-export const breakpoint = '800px';
+export const desktop = "900px";
+export const breakpoint = '900px';
 
 export const Button = styled.button`
     background: none;
@@ -49,8 +49,7 @@ export const PrimaryButton = styled(Button)`
 `
 
 export const Form = styled.form`
-    min-height: 70vh;
-    margin: 2vh 2vw;
+    margin: 0 2vw;
     width: 90%;
     h3 {
         margin: 1vh 0;
@@ -60,6 +59,15 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (min-width: ${desktop}) {
+        min-height: 70vh;
+        padding-bottom: 2vh;
+    }
+    @media (max-width: ${tablet}) {
+        input, button, label {
+            line-height: 2;
+        }
+    }
 `
 
 export const FormBtn = styled(Button)`
@@ -91,7 +99,7 @@ export const Label = styled.label`
 export const Input = styled.input`
     display: block;
     width: 100%;
-    padding: 1vh 2vw;
+    padding: 1vh 1vw;
     margin: 1vh 0;
     border-radius: 5px;
     border: 1px solid ${grey};

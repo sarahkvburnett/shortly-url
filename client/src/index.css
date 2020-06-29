@@ -18,8 +18,10 @@ body {
     color: hsl(260, 8%, 14%);
 }
 
-button {
+button, input, label {
     font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 h1 {
