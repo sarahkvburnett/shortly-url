@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
-import { PrimaryFormBtn, FormBtn, Form, Label, Input } from '../Styles';
-import { UserContext } from '../context/UserContext';
-import { LinksContext } from '../context/LinksContext';
-import { setAuthToken }  from '../utilities/setAuthToken';
+import { PrimaryFormBtn, FormBtn, Form, Label, Input } from '../../Styles';
+import { UserContext } from '../../context/UserContext';
+import { LinksContext } from '../../context/LinksContext';
+import { setAuthToken }  from '../../utilities/setAuthToken';
 import { Errors } from './AuthErrors';
 import axios from 'axios';
 

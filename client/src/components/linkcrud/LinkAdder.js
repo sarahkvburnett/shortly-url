@@ -1,15 +1,13 @@
 import React, { useState, useContext } from 'react'
-import { LinksContext } from '../context/LinksContext';
-import { UserContext } from '../context/UserContext';
+import { LinksContext } from '../../context/LinksContext';
+import { UserContext } from '../../context/UserContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import validator from 'validator';
 import isEmpty from 'validator/lib/isEmpty';
 import styled from 'styled-components';
-import { red, grey, cyan, white, breakpoint } from '../Styles';
-
-console.log(isEmpty);
+import { red, grey, cyan, white, breakpoint } from '../../Styles';
 
 const Form = styled.form`
     width: 70vw;
@@ -74,7 +72,7 @@ const Error = styled(P)`
     color: ${red};
 `
 
-export const LinkForm = () => {
+export const LinkAdder = () => {
     const [ user ] = useContext(UserContext);
     const [ links, setLinks ] = useContext(LinksContext);
     const [ input, setInput ] = useState({value: 'Shorten a link here...'});
@@ -117,4 +115,4 @@ export const LinkForm = () => {
                 }
         </Form>
     )
-}
+};

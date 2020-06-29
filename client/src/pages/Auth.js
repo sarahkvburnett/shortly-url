@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { white, breakpoint } from '../Styles';
-import { Login } from '../components/Login';
-import { Logout } from '../components/Logout';
-import { Signup } from '../components/Signup';
+import { Login } from '../components/auth/Login';
+import { Logout } from '../components/auth/Logout';
+import { Signup } from '../components/auth/Signup';
 import MediaQuery from 'react-responsive';
 import image from '../images/illustration-working.svg';
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { LinksContext } from '../context/LinksContext';
+import { LinksContext } from '../../context/LinksContext';
 import styled from 'styled-components'
-import { FullLink } from './links/FullLink'
-import { ShortLink } from './links/ShortLink'
-import { LinkCopyButton } from './links/LinkCopyButton'
-import { breakpoint } from '../Styles'
+import { CopyShortLink } from './CopyShortLink'
+import { LinkCopyButton } from './LinkCopyButton'
+import { breakpoint } from '../../Styles'
+import { useCopyLink } from '../../utilities/useCopyLink';
 
 const LinkContainer = styled.div`
     position: relative;
@@ -31,15 +31,24 @@ const Link = styled.div`
     }
 `
 
+const FullLink = styled.div`
+    flex: 3;
+    height: 5vh;
+    line-height: 5vh;
+    width: 76vw;
+    overflow-y: auto;
+    overflow-x: auto;
+    hyphens: none;
+    @media (min-width: ${breakpoint}) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+`
+
+
 export const Links = () => {
     const [ links, setLinks ] = useContext(LinksContext);
-    const [ copiedLink, setCopiedLink ] = useState('');
-    const copyToClipboard = (event, id) => {
-        event.target.previousSibling.select()
-        document.execCommand('copy')
-        event.target.focus()
-        setCopiedLink(id)
-    };
+    const [ copiedLink, copyLink ] = useCopyLink();
     useEffect(() => {
         if (localStorage.shortlyLinks) setLinks(links => JSON.parse(localStorage.shortlyLinks))
     }, []);
@@ -48,9 +57,9 @@ export const Links = () => {
         {
         links.map( ({_id, full}) => {
             return <Link key={_id} className="link">
-                <FullLink fullUrl={full}/>
-                <ShortLink shortUrl={_id}/>
-                <LinkCopyButton id={_id} copyToClipboard={copyToClipboard} copiedLink={copiedLink}/>
+                <FullLink>{full}</FullLink>
+                <CopyShortLink shortUrl={_id}/>
+                <LinkCopyButton id={_id} copiedLink={copiedLink} copyLink={copyLink}/>
             </Link> 
         })
         }

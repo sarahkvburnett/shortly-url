@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom';
-import { setAuthToken }  from '../utilities/setAuthToken';
-import { UserContext } from '../context/UserContext';
-import { Form, PrimaryFormBtn } from '../Styles';
+import { setAuthToken }  from '../../utilities/setAuthToken';
+import { UserContext } from '../../context/UserContext';
+import { Form, PrimaryFormBtn } from '../../Styles';
 
 export const Logout = () => {
     const [ user, setUser ] = useContext(UserContext)

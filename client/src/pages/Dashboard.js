@@ -4,13 +4,14 @@ import { ActiveLinkContext } from '../context/ActiveLinkContext';
 import styled from 'styled-components';
 import { DashLoad } from '../components/DashLoad';
 import { DashNone } from '../layout/DashNone';
-import { Links } from '../components/DashLinks';
-import { LinkShortener } from '../components/Shortener';
+import { Links } from '../components/links/DashLinks';
+import { LinkShortener } from '../components/linkcrud/LinkShortener';
 import { Graph } from '../components/Graph';
 import { violet, grey } from '../Styles';
 import { LinkUpdateContext } from '../context/LinkUpdateContext';
-import { LinkEditor } from '../components/LinkEditor';
-import { LinkDeletor } from '../components/LinkDeletor';
+import { LinkCopier } from '../components/linkcrud/LinkCopier';
+import { LinkEditor } from '../components/linkcrud/LinkEditor';
+import { LinkDeletor } from '../components/linkcrud/LinkDeletor';
 
 const Dash = styled.div`
     min-height: 70vh;
@@ -32,6 +33,7 @@ export const Dashboard = () => {
             {!loading && links.length === 0 && <DashNone/> }
             {!loading && activeLink && <Graph loading={loading}/>}
             {!loading && <Links/> }
+            { linkUpdate && linkUpdate.process === "copy" && <LinkCopier/> }
             { linkUpdate && linkUpdate.process === "edit" && <LinkEditor/> }
             { linkUpdate && linkUpdate.process === "delete" && <LinkDeletor/> }
             <LinkShortener position="0"/>

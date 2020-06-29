@@ -1,1 +1,1 @@
-export const shortlyUrl = 'https://short.ly';
+export const shortlyUrl = 'https://short.ly/';

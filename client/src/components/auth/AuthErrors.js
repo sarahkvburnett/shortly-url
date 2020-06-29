@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { red, Error } from '../Styles';
+import { red, Error } from '../../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 

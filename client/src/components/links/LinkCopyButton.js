@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PrimaryButton, violet } from '../../Styles'
+import { PrimaryButton, violet, darkViolet } from '../../Styles'
 
 const Button = styled(PrimaryButton)`
     flex: 1;
@@ -12,8 +12,20 @@ const Button = styled(PrimaryButton)`
     width: 76vw;
 `
 
-export const LinkCopyButton = ({id, copyToClipboard, copiedLink}) => {
+const DisabledButton = styled(Button)`
+    background: ${darkViolet};
+    &:hover {
+        background: ${darkViolet};
+        opacity: 1;
+        cursor: auto;
+    }
+`
+
+export const LinkCopyButton = ({id, copiedLink, copyLink}) => {
     return (
-        <Button className="linkcopybtn" onClick={(event) => copyToClipboard(event, id)}>{copiedLink === id ? "Copied!" : "Copy"}</Button>
+        <React.Fragment>
+             { copiedLink !== id && <Button className="linkcopybtn" onClick={(event) => copyLink(event, id)}>Copy</Button> }
+            { copiedLink === id && <DisabledButton type="button" disabled="true">Copied</DisabledButton> }
+        </React.Fragment>
     )
 }

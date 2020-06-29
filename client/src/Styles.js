@@ -14,7 +14,9 @@ export const darkBlue = "hsl(255, 11%, 22%)";
 export const darkViolet = "hsl(260, 8%, 14%)";
 export const white = "#FFF";
 
-export const breakpoint = '800px'
+export const tablet = "500px";
+export const desktop = "800px";
+export const breakpoint = '800px';
 
 export const Button = styled.button`
     background: none;

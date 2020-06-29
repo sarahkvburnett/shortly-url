@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { PrimaryFormBtn, Form, Label, Input } from '../Styles';
+import { PrimaryFormBtn, Form, Label, Input } from '../../Styles';
 import { Errors } from './AuthErrors';
 import axios from 'axios';
 

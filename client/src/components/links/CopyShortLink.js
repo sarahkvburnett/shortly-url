@@ -22,8 +22,8 @@ const ShortUrl = styled.input`
     overflow: hidden;
 `
 
-export const ShortLink = ({shortUrl}) => {
+export const CopyShortLink = ({shortUrl}) => {
     return (
-        <ShortUrl readOnly="readonly" className="shortLink" value={shortlyUrl + '/' + shortUrl}/>
+        <ShortUrl readOnly="readonly" className="shortLink" value={shortlyUrl + shortUrl}/>
     )
 }
