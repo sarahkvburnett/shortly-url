@@ -18,8 +18,8 @@ router.post('/signup', [
     check('password2').isLength({min: 6})
 ], (req, res) => {
     const errors = validationResult(req);
-    if (!errors.isEmpty()) return res.status(400).json(errors);
     if (req.body.password !== req.body.password2) return res.status(400).json({error: "Passwords do not match"})
+    if (!errors.isEmpty()) return res.status(400).json({error: "One or more fields not long enough"});
     User.findOne({email: req.body.email})
     .then(user => {
         if (user) return res.status(400).json({error: "Email already exists"});
@@ -52,8 +52,8 @@ router.post('/login', [
     check('email').isEmail(),
     check('password').isLength({min: 6})
 ], (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) return res.status(400).json(errors);
+    // const errors = validationResult(req);
+    // if (!errors.isEmpty()) return res.status(400).json(errors);
     User.findOne({email: req.body.email})
     .then(user => {
         bcrypt.compare(req.body.password, user.password)

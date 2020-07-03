@@ -12,22 +12,26 @@ export const Signup =  () => {
         password: '',
         password2: '',
     });
-    const { firstName, lastName, email, password, password2, errors } = formValues;
+    const [ errors, setErrors ] = useState([]);
+    const { firstName, lastName, email, password, password2 } = formValues;
     const handleChange = (event) => {
         event.persist()
         setFormValues(values => ({...values, [event.target.id]: event.target.value}))   
     };
+    const isSignupValid = ({firstName, lastName, email, password, password2}) => {
+        //
+    }
     const signup = (event) => {
         event.preventDefault()
         axios
           .post('/api/users/signup', {firstName, lastName, email, password})
           .then(() => <Redirect to="/login" />)
-          .catch(err => err)
+          .catch(err => setErrors([err.response.data.error]))
     };
     return (
         <Form onSubmit={signup}>
             <h3>Sign Up</h3>
-            { formValues.error && <Errors errors={errors}/> }
+            { errors.length > 0 && <Errors errors={errors}/> }
             <Label HTMLfor="firstName">First Name <Input id="firstName" name="firstName" onChange={handleChange} value={firstName} required></Input></Label>
             <Label HTMLfor="lastName">Last Name <Input id="lastName" name="lastName" onChange={handleChange} value={lastName} required></Input></Label>
             <Label HTMLfor="email">Email <Input type="email" id="email" name="email" onChange={handleChange} value={email} required></Input></Label>

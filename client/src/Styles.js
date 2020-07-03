@@ -103,6 +103,10 @@ export const Input = styled.input`
     margin: 1vh 0;
     border-radius: 5px;
     border: 1px solid ${grey};
+    :invalid {
+        border: 1px solid ${red};
+        outline: 1px solid ${red};
+    }
 `
 export const LinkModal = styled.form`
 position: fixed;

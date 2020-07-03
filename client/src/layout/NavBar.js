@@ -56,7 +56,7 @@ const MobNav = styled.div`
         width: 75%;
         border-radius: 30px;
         padding: 2vh 2vw;
-    }
+    } 
 `
 
 export const NavBar = () => {
