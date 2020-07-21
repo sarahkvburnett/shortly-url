@@ -9,7 +9,7 @@ const Button = styled(PrimaryButton)`
     &:hover {
         background: ${violet};
     }
-    width: 76vw;
+    width: 100%;
 `
 
 const DisabledButton = styled(Button)`

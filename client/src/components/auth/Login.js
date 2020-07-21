@@ -7,7 +7,7 @@ import { LinksContext } from '../../context/LinksContext';
 import { setAuthToken }  from '../../utilities/setAuthToken';
 import { Errors } from './AuthErrors';
 import axios from 'axios';
-import validator from 'validator';
+import { isLoginValid } from '../../utilities/validateAuth';
 
 export const Login = () => {
     const [ user, setUser ] = useContext(UserContext);
@@ -22,25 +22,11 @@ export const Login = () => {
         event.persist()
         setFormValues(values => ({...values, [event.target.id]: event.target.value}))   
     };
-
-    const isLoginValid = ({email, password}) => {
-        let valid = true;
-        if (validator.isEmpty(email) || !validator.isEmail(email)) {
-            setErrors(errors => ([...errors, 'Please enter your email']))
-            valid = false;
-        }
-        if ( validator.isEmpty(password)) {
-            setErrors(errors => ([...errors, 'Please enter your password']))
-            valid = false;
-        }
-        return valid;
-    }
-
     const login = (event) => {
         event.preventDefault();
         const { email, password } = formValues;
-        const formValid  = isLoginValid({email, password});
-        if (!formValid) return;
+        const errorMsgs = isLoginValid({email, password});
+        if (errorMsgs.length !== 0) return setErrors(errorMsgs);
         axios
           .post('/api/users/login', {email, password})
           .then((res) => {
@@ -52,7 +38,7 @@ export const Login = () => {
               setLinks([]);
               return <Redirect to="/dashboard"/>
           })
-          .catch(err => setErrors([err.response.data.error]));
+          .catch(err => setErrors([err.response.data.error || "Login failed. Please try again"]));
     };
   
     return (

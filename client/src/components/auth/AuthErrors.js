@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { red, Error } from '../../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { Exclamation } from '../Icons';
 
 const ErrorBar = styled(Error)`
     width: 100%;
@@ -22,10 +22,9 @@ const ErrorBar = styled(Error)`
 `
 
 export const Errors = ({errors}) => {
-    console.log(errors);
     return (
         <ErrorBar> 
-            <FontAwesomeIcon icon={faExclamationTriangle}/>
+            <Exclamation/>
             <div>
                  {errors.map( (error, index) => <p key={index}>{error}</p> )}
             </div>

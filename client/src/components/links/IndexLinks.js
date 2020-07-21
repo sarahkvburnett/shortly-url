@@ -3,16 +3,17 @@ import { LinksContext } from '../../context/LinksContext';
 import styled from 'styled-components'
 import { CopyShortLink } from './CopyShortLink'
 import { LinkCopyButton } from './LinkCopyButton'
-import { breakpoint } from '../../Styles'
+import { breakpoint, alignWidth, smallerWidth } from '../../Styles'
 import { useCopyLink } from '../../utilities/useCopyLink';
 
 const LinkContainer = styled.div`
     position: relative;
     top: -15vh;
-    width: 80vw;
+    width: ${alignWidth};
     height: min-content;
     margin: auto;
     @media (min-width: ${breakpoint}) {
+        width: ${smallerWidth};
         top: -10vh;
     }
 `
@@ -20,7 +21,7 @@ const LinkContainer = styled.div`
 const Link = styled.div`
     min-height: 15vh;
     background: #FFF;
-    width: 80vw;
+    width: ${alignWidth};
     padding: 2vh 2vw;
     margin: 2vh 0 2vh 0;
     border-radius: 15px;
@@ -28,6 +29,7 @@ const Link = styled.div`
         display: flex;
         align-items: center;
         height: 10vh;
+        width: ${smallerWidth}
     }
 `
 
@@ -35,7 +37,7 @@ const FullLink = styled.div`
     flex: 3;
     height: 5vh;
     line-height: 5vh;
-    width: 76vw;
+    width: 100%;
     overflow-y: auto;
     overflow-x: auto;
     hyphens: none;

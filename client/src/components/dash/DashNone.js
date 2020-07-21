@@ -1,5 +1,5 @@
 import React from 'react';
-import { Load } from '../Styles';
+import { Load } from '../../Styles';
 
 export const DashNone = () => {
     console.log(Load);

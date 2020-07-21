@@ -8,7 +8,7 @@ const ShortUrl = styled.input`
     color: ${cyan};
     display: block;
     border: none;
-    width: 76vw;
+    width: 100%;
     height: 5vh;
     margin: 2vh 0 2vh 0;
     outline: none;

@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { white, greyViolet, grey, cyan, violet } from '../Styles';
+import { white, greyViolet, grey, cyan, violet, alignWidth, smallerWidth, desktop } from '../../Styles';
 
 const Stats = styled.div`
     height: auto;
-    width: 80vw;
+    width: ${alignWidth};
     margin: auto;
     text-align: center;
-    padding: 0 2vw;
     h2, h3, p {
         padding: 1vh 2vw;
     }
@@ -17,15 +16,37 @@ const Stats = styled.div`
 `
 const Intro = styled.div`
     background: ${grey};
+    h3 {
+        line-height: 2;
+    }
     p {
-        font-weight: bold;
-        font-size: larger;
         padding-bottom: 2vh;
+        @media (min-width: ${desktop}) {
+            width: 40vw;
+            margin: auto;
+        }
     }
 `
 
 const InfoContainer = styled.div`
     background: linear-gradient(to right, ${grey} 49%, ${cyan} 49% 51%, ${grey} 51%);
+    @media (min-width: ${desktop}) {
+        height: 80vh;
+        width: ${smallerWidth};
+        margin: auto;
+        background: linear-gradient(to bottom, ${grey} 48%, ${cyan} 48% 52%, ${grey} 52%);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 2.5vw;
+        align-items: center;
+        .brand {
+            align-self: flex-start;
+        }
+        .custom {
+            align-self: flex-end;
+        }
+    }
 `
 
 const InfoBox = styled.div`
@@ -37,7 +58,17 @@ const InfoBox = styled.div`
 
 const InfoText = styled.div`
     background: ${white};
-    padding: 7.5vh 2vw 2vh;
+    padding: 7.5vh 1vw 2vh;
+    p {
+        font-size: 14px;
+    };
+    h3 {
+        margin-top: 4vh;
+        line-height: 2;
+    }
+    @media (min-width: ${desktop}) {
+        height: 50vh;
+    }
 `
 
 const I = styled.i`

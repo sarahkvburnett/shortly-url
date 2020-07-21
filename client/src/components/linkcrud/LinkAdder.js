@@ -1,44 +1,55 @@
 import React, { useState, useContext } from 'react'
 import { LinksContext } from '../../context/LinksContext';
 import { UserContext } from '../../context/UserContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import validator from 'validator';
-import isEmpty from 'validator/lib/isEmpty';
 import styled from 'styled-components';
 import { red, grey, cyan, white, breakpoint } from '../../Styles';
+import { Exclamation } from '../Icons';
 
 const Form = styled.form`
-    width: 70vw;
     margin: auto;
-    padding: 1vh 1vw;
-    @media (min-width: ${breakpoint}) {
-        div {
-            height: 10vh;
-            display: flex;
+    padding: 1.5vh 1vw;
+    height: 30vh;
+    @media (max-width: ${breakpoint}) {
+        input {
+            width: 80vw;
+            margin: 2vh 0;
         }
+    }
+    @media (min-width: ${breakpoint}) {
+       width: 80vw;
+       display: grid;
+       padding: 9vh 2vw 0;
+       grid-template-columns: 8fr 2fr;
+       grid-template-rows: auto auto;
+       grid-column-gap: 1.5vw;
+       grid-template-areas: "link button" "error error";
+       p {
+           margin: 0;
+       }
+       input {
+        height: 12vh;
+       }
+    }
     }
 }
 `
 
 const Input = styled.input`
     display: block;
-    height: 10vh;
-    width: 70vw;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 1vh 2vw;
-    margin: 1vh .5vw;
     border: none;
     &:invalid {
         border: 2px solid ${red};
     }
+    grid-area: link;
 `
     
 const Button = styled(Input)`
     font-weight: bold;
     background: ${cyan};
-    border-radius: 15px;
     color: ${white};
     padding: 1vh 2vw;
     cursor: pointer;
@@ -46,16 +57,13 @@ const Button = styled(Input)`
         color: ${white};
         opacity: 0.5;
     }
-    @media (min-width: ${breakpoint}){
-        flex-basis: 20%;
-    }
+    grid-area: button;
 `
 
 const P = styled.p`
     text-align: center;
     width: 100%;
-    padding: 1vh 1vw;
-    margin: 2vh 0;
+    padding: 0 1vw;
     color: ${grey};
     font-size: small;
     a {
@@ -64,6 +72,8 @@ const P = styled.p`
             color: ${cyan};
         }
     }
+    grid-area: error;
+    height: 3vh;
 `
 
 const Error = styled(P)`
@@ -75,44 +85,55 @@ const Error = styled(P)`
 export const LinkAdder = () => {
     const [ user ] = useContext(UserContext);
     const [ links, setLinks ] = useContext(LinksContext);
-    const [ input, setInput ] = useState({value: 'Shorten a link here...'});
-    const [ error, setError ] = useState('');
+    const [ input, setInput ] = useState({value: "Shorten a link here... "});
+    const [ error, setError ] = useState(false);
+    const [ isSending, setIsSending ] = useState(false);
+    const changeState = (value, valid, err) => {
+        setInput({value: value, valid: valid});
+        err ? setError("Please add a link") : setError(false);
+    };
     const handleChange = (event) => {
         event.persist();
         setError('');
         const value = event.target.value;
-        if (validator.isEmpty(value)) {
-            setError('Please add a link');
-            return setInput({value, valid: false});
-        } 
-        else if (validator.isURL(value)) setInput({value, valid: true});
-        else setInput({value, valid: false});
+        if (validator.isEmpty(value)) changeState(value, false, true) 
+        else if (validator.isURL(value)) changeState(value, true, false);
+        else changeState(value, false, false);
     };
-    const addLink = (event) => {
-        event.preventDefault();
-        if (!input.valid) return setError('Please add a link');
-        setInput({value: ''});
-        const params = {full: input.value};
-        if (user.id) params.userId = user.id;
-        axios.post('api/links', params)
-            .then( ({data}) => {
-                const newLinks = [...links, {_id: data[0]._id, full: data[0].full, short: data[0]._id, date: data[0].date, click: data[0].click}];
-                setLinks(newLinks);
-                if (!user.id) localStorage.setItem('shortlyLinks', JSON.stringify(newLinks));   
-            })
-            .catch( error => setError('Error! Please try again') )
-    };
+        const addLink = (event) => {
+            event.preventDefault();
+            if (!input.valid) return setError('Please add a link');
+            const params = {full: input.value};
+            if (user.id) params.userId = user.id;
+            setIsSending(true);
+            axios.post('api/links', params)
+                .then( ({data}) => {
+                    const newLinks = [...links, {_id: data[0]._id, full: data[0].full, short: data[0]._id, date: data[0].date, click: data[0].click}];
+                    setLinks(newLinks);
+                    if (!user.id) localStorage.setItem('shortlyLinks', JSON.stringify(newLinks));  
+                    setInput({value: ''});
+                    setIsSending(false);
+                })
+                .catch( error => {
+                    setError('Error! Please try again') ;
+                    setIsSending(false);
+                }) 
+        };
     return (
         <Form onSubmit={(event) => addLink(event)}>
                 <label htmlFor="link" style={{display: "none"}}>Website Url</label>
-                <div>
-                <Input id="link" name="link" onChange={handleChange} value={input.value} onFocus={() => setInput({value: ''})}/>
-                <Button type="submit" value="Shorten It!"/>
-                </div>
-                { error !== '' 
-                ? <Error><FontAwesomeIcon icon={faExclamationTriangle}/> {error}</Error> 
-                :  <P>By clicking SHORTEN you are agreeing to Shortly's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></P>
+                { error ? <Error><Exclamation/> {error}</Error>
+                  : isSending ? <P>Shortening ...</P> 
+                  : <P> </P>
                 }
+                <Input 
+                    id="link" 
+                    name="link" 
+                    onChange={handleChange} 
+                    value={input.value} 
+                    required={input.value ===  "Shorten a link here..." ? false : true} 
+                    onFocus={() => changeState("", false, true)}/> 
+                <Button type="submit" value={isSending ? "Shortening..." : "Shorten It!"} disabled={isSending}/>
         </Form>
     )
 };

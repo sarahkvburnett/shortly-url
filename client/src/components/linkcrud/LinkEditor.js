@@ -16,18 +16,20 @@ export const LinkEditor = () => {
         setError(null);
         setNewLink(event.target.value);
     };
+    const updateState = () => {
+        const { link } = linkUpdate;
+        setLinkUpdate(''); 
+        setLinks( prev => prev.map( prevLink => {
+            return prevLink._id === link._id ? {...prevLink, short: link.short} : {...prevLink}
+        }))
+    }
     const updateLink = (event) => {
         event.preventDefault();
-        const {link} = linkUpdate;
-        if (newLink === link._id) setError('Url same as existing');
+        const { link } = linkUpdate;
+        if (newLink === link.short) return setError('Url same as existing');
         link.short = newLink;
         axios.put(`/api/links/${link._id}`, link)
-        .then( res => {
-                setLinkUpdate(''); 
-                setLinks( prev => prev.map( prevLink => {
-                    return prevLink._id === link._id ? {...prevLink, short: link.short} : {...prevLink}
-                }))
-        })
+        .then( res => updateState())            
         .catch( err => setError('Update failed, please try again'));
     }
     return (

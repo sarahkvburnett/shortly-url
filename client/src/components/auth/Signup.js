@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { PrimaryFormBtn, Form, Label, Input } from '../../Styles';
 import { Errors } from './AuthErrors';
 import axios from 'axios';
+import { isSignupValid } from '../../utilities/validateAuth';
 
 export const Signup =  () => {
     const [ formValues, setFormValues ] = useState({
@@ -18,25 +19,25 @@ export const Signup =  () => {
         event.persist()
         setFormValues(values => ({...values, [event.target.id]: event.target.value}))   
     };
-    const isSignupValid = ({firstName, lastName, email, password, password2}) => {
-        //
-    }
     const signup = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+        const errorMsgs = isSignupValid(formValues);
+        console.log(errorMsgs.length);
+        if (errorMsgs.length !== 0) return setErrors(errorMsgs);
         axios
           .post('/api/users/signup', {firstName, lastName, email, password})
           .then(() => <Redirect to="/login" />)
-          .catch(err => setErrors([err.response.data.error]))
+          .catch(err => setErrors([err.response.data.error || "Sign up failed. Please try again"]))
     };
     return (
-        <Form onSubmit={signup}>
+        <Form onSubmit={signup} noValidate>
             <h3>Sign Up</h3>
             { errors.length > 0 && <Errors errors={errors}/> }
             <Label HTMLfor="firstName">First Name <Input id="firstName" name="firstName" onChange={handleChange} value={firstName} required></Input></Label>
             <Label HTMLfor="lastName">Last Name <Input id="lastName" name="lastName" onChange={handleChange} value={lastName} required></Input></Label>
             <Label HTMLfor="email">Email <Input type="email" id="email" name="email" onChange={handleChange} value={email} required></Input></Label>
-            <Label HTMLfor="password">Password <Input type="password" id="password" name="password" onChange={handleChange} value={password} required></Input></Label>
-            <Label HTMLfor="password2">Confirm your password <Input type="password" id="password2" name="password2" onChange={handleChange} value={password2} required></Input></Label>
+            <Label HTMLfor="password">Password <Input type="password" id="password" name="password" onChange={handleChange} value={password} pattern={password2} required></Input></Label>
+            <Label HTMLfor="password2">Confirm your password <Input type="password" id="password2" name="password2" onChange={handleChange} value={password2} pattern={password} required></Input></Label>
             <PrimaryFormBtn type="submit">Sign up</PrimaryFormBtn>
         </Form>
     );

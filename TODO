@@ -1,0 +1,18 @@
+TODO:
+
+Use cookies for auth
+Forget password
+
+Write tests 
+
+Dashboard not found
+
+Loading state for auth/ buttons
+Button ui - with loading - props text and onclick function
+
+One click copy dash links
+
+flash ui for link update/deleted/copied
+
+link updating on rejection
+redux

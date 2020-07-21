@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint, PrimaryButton, white } from '../Styles';
-import image from '../images/illustration-working.svg';
+import { breakpoint, PrimaryButton, white, alignPadding } from '../../Styles';
+import image from '../../images/illustration-working.svg';
 
 const IntroWrapper = styled.section`
     height: auto;
@@ -9,7 +9,7 @@ const IntroWrapper = styled.section`
     background: ${white};
     padding-bottom: 15vh;
     @media (min-width: ${breakpoint}) {
-        padding-left: 8vw;
+        padding-left: ${alignPadding};
         height: 100vh;
         display: flex;
         flex-direction: row-reverse;
@@ -33,7 +33,6 @@ const IntroText = styled.div`
     height: auto;
     width: 100vw;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;

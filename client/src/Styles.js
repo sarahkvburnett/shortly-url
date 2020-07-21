@@ -18,6 +18,13 @@ export const tablet = "500px";
 export const desktop = "900px";
 export const breakpoint = '900px';
 
+export const alignWidth = '88vw';
+export const alignPadding = '6vw';
+
+export const smallerWidth = '80vw';
+
+export const heightPadding = '6vh';
+
 export const Button = styled.button`
     background: none;
     border: none;
@@ -50,7 +57,7 @@ export const PrimaryButton = styled(Button)`
 
 export const Form = styled.form`
     margin: 0 2vw;
-    width: 90%;
+    width: 96%;
     h3 {
         margin: 1vh 0;
         text-align: center;

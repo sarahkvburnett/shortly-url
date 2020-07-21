@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
-import { LinksContext } from '../context/LinksContext';
-import { UserContext } from '../context/UserContext';
-import { ActiveLinkContext } from '../context/ActiveLinkContext';
-import { darkViolet, cyan, grey, Load } from '../Styles';
+import { LinksContext } from '../../context/LinksContext';
+import { UserContext } from '../../context/UserContext';
+import { ActiveLinkContext } from '../../context/ActiveLinkContext';
+import { darkViolet, cyan, grey, Load } from '../../Styles';
 import axios from 'axios';
 
 const LoadIcon = styled.div`

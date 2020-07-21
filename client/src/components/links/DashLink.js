@@ -28,9 +28,10 @@ const Urls = styled.div`
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-    }
-    @media (min-width: ${breakpoint}) {
-        width: 70%;
+        width: 96vw;
+        @media (min-width: ${breakpoint}) {
+            width: 70vw;
+        }
     }
 `
 

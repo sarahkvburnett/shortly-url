@@ -13,10 +13,15 @@ export const LinkDeletor = () => {
     const [ error, setError ] = useState();
     const { link } = linkUpdate;
 
+    const updateState = () => {
+        setLinks(prev => prev.filter( link => link !== linkUpdate.link ))
+        setLinkUpdate(''); 
+    }
+
     const deleteLink = (event) => {
         event.preventDefault();
         axios.delete(`/api/links/${link._id}`)
-        .then( res => {setLinkUpdate(''); setLinks(prev => prev.filter( link => link !== linkUpdate.link ))})
+        .then( res => updateState())
         .catch( err => setError('Delete failed, please try again'));
     }
     

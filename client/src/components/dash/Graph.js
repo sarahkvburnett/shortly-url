@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import MediaQuery from 'react-responsive';
 import { BarChart, XAxis, YAxis, Bar } from 'recharts';
-import { ActiveLinkContext } from '../context/ActiveLinkContext';
+import { ActiveLinkContext } from '../../context/ActiveLinkContext';
 import styled from 'styled-components';
-import { darkViolet, cyan, white, grey, red, breakpoint, Input } from '../Styles';
+import { darkViolet, cyan, white, grey, red, breakpoint, Input } from '../../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
