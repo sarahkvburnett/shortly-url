@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { white, greyViolet, grey, cyan, violet, alignWidth, smallerWidth, desktop } from '../../Styles';
+import { white, greyViolet, grey, cyan, violet, alignWidth, smallerWidth, desktop } from '../Styles';
 
 const Stats = styled.div`
     height: auto;

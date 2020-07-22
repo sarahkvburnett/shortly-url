@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { PrimaryFormBtn, Form, Label, Input } from '../../Styles';
 import { Errors } from './AuthErrors';
 import axios from 'axios';
 import { isSignupValid } from '../../utilities/validateAuth';
+import { AuthForm, Label, Input, FormBtn, PrimaryFormBtn } from '../../Styles';
 
 export const Signup =  () => {
     const [ formValues, setFormValues ] = useState({
@@ -30,7 +30,7 @@ export const Signup =  () => {
           .catch(err => setErrors([err.response.data.error || "Sign up failed. Please try again"]))
     };
     return (
-        <Form onSubmit={signup} noValidate>
+        <AuthForm onSubmit={signup} noValidate>
             <h3>Sign Up</h3>
             { errors.length > 0 && <Errors errors={errors}/> }
             <Label HTMLfor="firstName">First Name <Input id="firstName" name="firstName" onChange={handleChange} value={firstName} required></Input></Label>
@@ -39,6 +39,6 @@ export const Signup =  () => {
             <Label HTMLfor="password">Password <Input type="password" id="password" name="password" onChange={handleChange} value={password} pattern={password2} required></Input></Label>
             <Label HTMLfor="password2">Confirm your password <Input type="password" id="password2" name="password2" onChange={handleChange} value={password2} pattern={password} required></Input></Label>
             <PrimaryFormBtn type="submit">Sign up</PrimaryFormBtn>
-        </Form>
+        </AuthForm>
     );
 }

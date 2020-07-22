@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
-import { ActiveLinkContext } from '../../context/ActiveLinkContext';
+import React from 'react';
 import styled from 'styled-components';
-import { grey, violet, white, breakpoint } from '../../Styles';
+import { grey, breakpoint } from '../../Styles';
 import { DashLinkBtns } from './DashLinkBtns';
 import { shortlyUrl } from '../../utilities/url';
-import { linkBackgroundColor as background, linkColor as color} from '../../utilities/styling'
+import { linkBackgroundColor as background, linkColor as color} from '../../utilities/themes'
+import { useActiveLink } from '../../hooks/useActiveLink';
 
 const Link = styled.div`
     cursor: pointer;
@@ -65,7 +65,7 @@ const Input = styled.input`
 
 const DashLink = ({link}) => {
     const { _id, date, full, click, short } = link;
-    const [ activeLink, setActiveLink ] = useContext(ActiveLinkContext);
+    const { activeLink, setActiveLink } = useActiveLink();
     return (
         <Link style={{background: background(link._id, activeLink), color: color(link._id, activeLink)}} onClick={() => setActiveLink(link)}>
              <Urls className="urls">

@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import  { tablet, red, cyan, grey, desktop, violet} from '../../Styles';
-import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faEdit, faTrash, faCopy } from '@fortawesome/free-solid-svg-icons';
-import { ActiveLinkContext } from '../../context/ActiveLinkContext';
-import { LinkUpdateContext } from '../../context/LinkUpdateContext';
+import  { tablet, red, cyan, grey, violet} from '../../Styles';
+import { Edit, Copy, Trash } from '../../layout/Icons';
+import { useProcessLink } from '../../hooks/useProcessLink';
 
 const Buttons = styled.div`
     grid-area: buttons;
@@ -42,26 +40,12 @@ const Buttons = styled.div`
 `
 
 export const DashLinkBtns = ({link, showBtns}) => {
-    const [ activeLink, setActiveLink ] = useContext(ActiveLinkContext);
-    const [ linkUpdate, setLinkUpdate] = useContext(LinkUpdateContext);
-    const { _id } = link;
-    const editLink = () => setLinkUpdate({
-        process: "edit",
-        link,
-    });
-    const deleteLink = () => setLinkUpdate({
-        process: "delete",
-        link,
-    });
-    const copyLink = () => setLinkUpdate({
-        process: "copy",
-        link,
-    });
+    const { setProcessCopy, setProcessDelete, setProcessEdit } = useProcessLink();
     return (
         <Buttons className="button">
-            <button type="button" className="copy" onClick={copyLink} data-name="Copy"><FontAwesomeIcon icon={faCopy}/></button>
-            <button type="button" className="edit" onClick={editLink} data-name="Edit"><FontAwesomeIcon icon={faEdit}/></button>
-            <button type="button" className="delete" onClick={deleteLink} data-name="Delete"><FontAwesomeIcon icon={faTrash}/></button>
+            <button type="button" className="copy" onClick={() => setProcessCopy(link)}><Copy/></button>
+            <button type="button" className="edit" onClick={() => setProcessEdit(link)}><Edit/></button>
+            <button type="button" className="delete" onClick={() => setProcessDelete(link)}><Trash/></button>
         </Buttons>
     )
 }

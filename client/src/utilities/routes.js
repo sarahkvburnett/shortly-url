@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-// check docs to fix this!! 
+// TODO:check docs to fix this!! 
 
 export const PublicRoute = ({children, isAuth}) => {
     return (

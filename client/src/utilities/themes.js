@@ -1,4 +1,4 @@
-import { violet, white } from '../Styles';
+import { violet, grey, white } from '../Styles';
 
 //active vs normal link color theme for dashboard links
 export const linkBackgroundColor = (id, activeLink) => {

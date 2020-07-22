@@ -1,21 +1,20 @@
 import React, { useState, useContext } from 'react';
-import { Button, PrimaryButton, LinkModal, Error } from '../../Styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { LinksContext } from '../../context/LinksContext';
-import { LinkUpdateContext } from '../../context/LinkUpdateContext';
+import { PrimaryButton, LinkModal } from '../../Styles';
 import axios from 'axios';
 import { shortlyUrl } from '../../utilities/url';
+import { Error } from '../../layout/Error';
+import { CloseButton } from './CloseButton';
+import { useLinks } from '../../hooks/useLinks';
+import { useProcessLink } from '../../hooks/useProcessLink';
 
 export const LinkDeletor = () => {
-    const [ links, setLinks ] = useContext(LinksContext);
-    const [ linkUpdate, setLinkUpdate ] = useContext(LinkUpdateContext);
+    const { deleteLinkFromLinks } = useLinks();
+    const { processLink: {link, link: {_id, full, short}}, setProcessNull } = useProcessLink();
     const [ error, setError ] = useState();
-    const { link } = linkUpdate;
 
     const updateState = () => {
-        setLinks(prev => prev.filter( link => link !== linkUpdate.link ))
-        setLinkUpdate(''); 
+        deleteLinkFromLinks({link});
+        setProcessNull();
     }
 
     const deleteLink = (event) => {
@@ -28,11 +27,11 @@ export const LinkDeletor = () => {
     return (
             <LinkModal onSubmit={event => deleteLink(event)}>
                 <h3>Delete Shortly Link</h3>
-                <p>{link.full}</p>
-                <p>{shortlyUrl + link.short}</p>
-                { error && <Error><FontAwesomeIcon icon={faExclamationTriangle}/> {error}</Error> }
+                <p>{full}</p>
+                <p>{shortlyUrl +short}</p>
+                { error && <Error error={error}/> }
                 <PrimaryButton id="delete">Delete</PrimaryButton>
-                <Button type="button" onClick={() => setLinkUpdate('')}>Cancel</Button>
+                <CloseButton/>
             </LinkModal> 
     )
 }

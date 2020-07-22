@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Logo} from '../images/logo.svg';
-import { Facebook, Instagram, Pinterest, Twitter} from './Icons';
+import { Facebook, Instagram, Pinterest, Twitter} from './../layout/Icons';
 import { darkViolet, breakpoint, white, cyan, alignPadding } from '../Styles';
 
 const FooterContainer = styled.div`

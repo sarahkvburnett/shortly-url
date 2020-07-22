@@ -23,9 +23,9 @@ const DisabledButton = styled(Button)`
 
 export const LinkCopyButton = ({id, copiedLink, copyLink}) => {
     return (
-        <React.Fragment>
+        <>
              { copiedLink !== id && <Button className="linkcopybtn" onClick={(event) => copyLink(event, id)}>Copy</Button> }
             { copiedLink === id && <DisabledButton type="button" disabled="true">Copied</DisabledButton> }
-        </React.Fragment>
+        </>
     )
 }

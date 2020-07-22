@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint, PrimaryButton, white, alignPadding } from '../../Styles';
-import image from '../../images/illustration-working.svg';
+import { breakpoint, PrimaryButton, white, alignPadding } from '../Styles';
+import image from '../images/illustration-working.svg';
 
 const IntroWrapper = styled.section`
     height: auto;

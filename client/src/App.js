@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import './index.css';
 import { NavBar } from './components/NavBar';
-import { Footer } from './components/Footer';
+import { Footer } from './layout/Footer';
 import { Home } from './pages/Index';
 import { Auth } from './pages/Auth';
 import { Dashboard } from './pages/Dashboard';

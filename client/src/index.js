@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { UserProvider } from './context/UserContext';
 import { LinksProvider } from './context/LinksContext';
 import { ActiveLinkProvider } from './context/ActiveLinkContext';
-import { LinkUpdateProvider } from './context/LinkUpdateContext'
+import { ProcessLinkProvider } from './context/ProcessLinkContext'
 import { App } from './App'
 
 
@@ -12,9 +12,9 @@ ReactDOM.render(
     <UserProvider>
       <LinksProvider>
         <ActiveLinkProvider>
-          <LinkUpdateProvider>
+          <ProcessLinkProvider>
             <App />
-          </LinkUpdateProvider>
+          </ProcessLinkProvider>
       </ActiveLinkProvider>
       </LinksProvider>
     </UserProvider>

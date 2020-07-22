@@ -5,7 +5,7 @@ import Logo from '../images/logo.svg';
 import styled from 'styled-components';
 import { breakpoint, Button, PrimaryButton, white, grey, violet, alignPadding, desktop } from '../Styles';
 import MediaQuery from 'react-responsive';
-import { Close, Burger } from './Icons';
+import { Close, Burger } from './../layout/Icons';
 import { NavLinks } from './NavLinks';
 
 const Nav = styled.div`

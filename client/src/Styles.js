@@ -41,21 +41,38 @@ export const Button = styled.button`
     }
 `
 
-export const PrimaryButton = styled(Button)`
-    background: ${cyan};
+export const PrimaryButton = styled.button`
+    border: none;
+    cursor: pointer;
+        background: ${cyan};
     border-radius: 15px;
     color: ${white};
     padding: 1vh 2vw;
+    a {
+        color: ${white};
+    }
     &:hover {
         color: ${white};
         opacity: 0.5;
     }
-    a {
-        color: ${white};
+    &:disabled {
+        background: ${darkViolet};
     }
 `
 
-export const Form = styled.form`
+export const Load = styled.div`
+height: 50vh;
+background: ${darkViolet};
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+p, h3 {
+    color: ${cyan};
+    margin-bottom: 2vh;
+}
+`
+export const AuthForm = styled.form`
     margin: 0 2vw;
     width: 96%;
     h3 {
@@ -115,6 +132,7 @@ export const Input = styled.input`
         outline: 1px solid ${red};
     }
 `
+
 export const LinkModal = styled.form`
 position: fixed;
 z-index: 100;
@@ -168,25 +186,3 @@ p {
     margin: 1vh 0;
 }
 `
-
-export const Error = styled.div`
-width: 100%;
-color: ${red};
-padding: 1vh 1vw;
-font-size: smaller;
-`
-
-export const Load = styled.div`
-height: 50vh;
-background: ${darkViolet};
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-p, h3 {
-    color: ${cyan};
-    margin-bottom: 2vh;
-}
-`
-
-

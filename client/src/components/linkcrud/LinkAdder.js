@@ -1,11 +1,11 @@
-import React, { useState, useContext } from 'react'
-import { LinksContext } from '../../context/LinksContext';
-import { UserContext } from '../../context/UserContext';
+import React, { useState } from 'react'
 import axios from 'axios';
 import validator from 'validator';
 import styled from 'styled-components';
 import { red, grey, cyan, white, breakpoint } from '../../Styles';
-import { Exclamation } from '../Icons';
+import { Error } from '../../layout/Error';
+import { useUser } from '../../hooks/useUser';
+import { useLinks } from '../../hooks/useLinks';
 
 const Form = styled.form`
     margin: auto;
@@ -76,15 +76,9 @@ const P = styled.p`
     height: 3vh;
 `
 
-const Error = styled(P)`
-    font-style: italic;
-    text-align: left;
-    color: ${red};
-`
-
 export const LinkAdder = () => {
-    const [ user ] = useContext(UserContext);
-    const [ links, setLinks ] = useContext(LinksContext);
+    const { user } = useUser();
+    const { links, setLinks } = useLinks();
     const [ input, setInput ] = useState({value: "Shorten a link here... "});
     const [ error, setError ] = useState(false);
     const [ isSending, setIsSending ] = useState(false);
@@ -122,10 +116,7 @@ export const LinkAdder = () => {
     return (
         <Form onSubmit={(event) => addLink(event)}>
                 <label htmlFor="link" style={{display: "none"}}>Website Url</label>
-                { error ? <Error><Exclamation/> {error}</Error>
-                  : isSending ? <P>Shortening ...</P> 
-                  : <P> </P>
-                }
+                { error ? <Error error={error}/> : <P/> }
                 <Input 
                     id="link" 
                     name="link" 

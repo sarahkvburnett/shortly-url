@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { red, Error } from '../../Styles';
+import { red } from '../../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Exclamation } from '../Icons';
+import { Exclamation } from '../../layout/Icons';
 
-const ErrorBar = styled(Error)`
+const ErrorBar = styled.div`
+    width: 100%;
+    color: ${red};
+    padding: 1vh 1vw;
+    font-size: smaller;
     width: 100%;
     display: flex;
     align-items: center;

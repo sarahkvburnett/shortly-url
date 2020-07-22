@@ -10,5 +10,8 @@ export const useCopyLink = () => {
         setCopiedLink(newState);
     }
     
-     return [copiedLink, copyLink];
+     return {
+         copiedLink, 
+         copyLink
+     }
 }

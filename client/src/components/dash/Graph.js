@@ -3,9 +3,8 @@ import MediaQuery from 'react-responsive';
 import { BarChart, XAxis, YAxis, Bar } from 'recharts';
 import { ActiveLinkContext } from '../../context/ActiveLinkContext';
 import styled from 'styled-components';
-import { darkViolet, cyan, white, grey, red, breakpoint, Input } from '../../Styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { darkViolet, cyan, white, grey, red, breakpoint } from '../../Styles';
+import { Error } from '../../layout/Error';
 
 const GraphBox = styled.div`
     background: ${darkViolet};
@@ -37,20 +36,20 @@ const GraphBox = styled.div`
     }
 `
 
-const DateInput = styled(Input)`
+const DateInput = styled.input`
     background: none;
     color: ${white};
     width: auto;
     display: block;
-`
-
-const Error = styled.p`
-    color: ${red};
-    border: 1px solid ${red};
     padding: 1vh 1vw;
+    margin: 1vh 0;
     border-radius: 5px;
+    border: 1px solid ${grey};
+    :invalid {
+        border: 1px solid ${red};
+        outline: 1px solid ${red};
+    }
 `
-
 
 export const Graph = ({loading}) => {
     const [ activeLink, setActiveLink ] = useContext(ActiveLinkContext);
@@ -95,7 +94,7 @@ export const Graph = ({loading}) => {
         <GraphBox>
             <div className="date">
                 <DateInput type="date" id="date" onChange={selectDate} readonly/>
-                { error !== '' && <Error className="error"><FontAwesomeIcon icon={faExclamationTriangle}/> {error}</Error> }
+                { error !== '' && <Error error={error}/> }
                 <p>WEEK COMMENCING: <span>{new Date(firstDate).toString().substring(0, 10)}</span></p>
                 <p>WEEK COUNT: <span>{totalClicks}</span></p>
             </div>

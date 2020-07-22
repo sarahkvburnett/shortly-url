@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react'
-import { LinksContext } from '../../context/LinksContext';
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { CopyShortLink } from './CopyShortLink'
 import { LinkCopyButton } from './LinkCopyButton'
 import { breakpoint, alignWidth, smallerWidth } from '../../Styles'
-import { useCopyLink } from '../../utilities/useCopyLink';
+import { useCopyLink } from '../../hooks/useCopyLink';
+import { useLinks } from '../../hooks/useLinks';
 
 const LinkContainer = styled.div`
     position: relative;
@@ -47,13 +47,12 @@ const FullLink = styled.div`
     }
 `
 
-
+ 
 export const Links = () => {
-    const [ links, setLinks ] = useContext(LinksContext);
-    const [ copiedLink, copyLink ] = useCopyLink();
-    useEffect(() => {
-        if (localStorage.shortlyLinks) setLinks(links => JSON.parse(localStorage.shortlyLinks))
-    }, []);
+    const { links, setLinksfromBrowser } = useLinks();
+    const { copiedLink, copyLink } = useCopyLink();
+    useEffect(setLinksfromBrowser, []);
+    console.log(links);
     return( 
     <LinkContainer className="linkContainer">
         {
