@@ -4,11 +4,13 @@ import { LinksContext } from '../context/LinksContext';
 export const useLinks = () => {
     const [ links, setLinks ] = useContext(LinksContext);
 
-    const setLinksfromBrowser = () => {
+    const setLinksFromBrowser = () => {
         if (localStorage.shortlyLinks) setLinks( () => JSON.parse(localStorage.shortlyLinks) )
     };
 
-    const setLinksfromDB = () => {};
+    const setLinksFromDB = (links) => {
+        setLinks(links);
+    };
 
     const deleteLinkFromLinks = ({link}) => {
         setLinks ( prev => prev.filter( prevLink => prevLink._id !== link._id))
@@ -20,12 +22,16 @@ export const useLinks = () => {
         }))
     };
 
+    const removeBrowserLinks = () => {
+        setLinks([]);
+    } 
+
     return {
         links,
-        setLinks,
-        setLinksfromBrowser,
-        setLinksfromDB,
+        setLinksFromBrowser,
+        setLinksFromDB,
         deleteLinkFromLinks,
-        updateLinkInLinks
+        updateLinkInLinks,
+        removeBrowserLinks,
     }
 }

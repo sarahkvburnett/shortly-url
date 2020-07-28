@@ -1,8 +1,7 @@
 import React from 'react';
-import { Load } from '../../Styles';
+import { Load } from '../Styles';
 
-export const DashNone = () => {
-    console.log(Load);
+const DashNone = () => {
     return (
         <Load>
             <h3>No Links found</h3>
@@ -10,4 +9,6 @@ export const DashNone = () => {
             <p>Or refresh the page</p>
         </Load>
     )
-}
+};
+
+export default DashNone;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { PrimaryButton, LinkModal } from '../../Styles';
+import { PrimaryButton, LinkModal } from '../Styles';
 import axios from 'axios';
 import { shortlyUrl } from '../../utilities/url';
-import { Error } from '../../layout/Error';
-import { CloseButton } from './CloseButton';
+import Error from '../Error';
+import CloseButton from './CloseButton';
 import { useProcessLink } from '../../hooks/useProcessLink';
 import { useLinks } from '../../hooks/useLinks';
 
-export const LinkEditor = () => {
+const LinkEditor = () => {
     const { updateLinkinLinks } = useLinks();
     const { processLink: {link, link: {_id, full, short}}, setProcessNull } = useProcessLink();
     const [ newShortLink, setNewShortLink ] = useState(short);
@@ -41,4 +41,6 @@ export const LinkEditor = () => {
                     <CloseButton/>
             </LinkModal> 
     )
-}
+};
+
+export default LinkEditor;

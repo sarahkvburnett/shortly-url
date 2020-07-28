@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import MediaQuery from 'react-responsive';
 import { BarChart, XAxis, YAxis, Bar } from 'recharts';
-import { ActiveLinkContext } from '../../context/ActiveLinkContext';
 import styled from 'styled-components';
-import { darkViolet, cyan, white, grey, red, breakpoint } from '../../Styles';
-import { Error } from '../../layout/Error';
+import { darkViolet, cyan, white, grey, red, breakpoint } from '../Styles';
+import Error from '../Error';
+import { useActiveLink } from '../../hooks/useActiveLink';
 
 const GraphBox = styled.div`
     background: ${darkViolet};
@@ -51,13 +51,12 @@ const DateInput = styled.input`
     }
 `
 
-export const Graph = ({loading}) => {
-    const [ activeLink, setActiveLink ] = useContext(ActiveLinkContext);
+const Graph = () => {
+    const { activeLink } = useActiveLink();
     const [ firstDate, setFirstDate ] = useState(Date.now() - 518400000);
     const [ clickData, setClickData ] = useState([]);
     const [ totalClicks, setTotalClicks ] = useState(0);
     const [ error, setError ] = useState('');
-
     const styles = {
         fontSize: "smaller",
     }
@@ -87,7 +86,9 @@ export const Graph = ({loading}) => {
     
     const selectDate = (event) => {
         setError('');
-        event.target.validity.valid ? setFirstDate(Math.floor(new Date(event.target.value).getTime())) : setError(["Please enter date in format 'yyyy-mm-dd'"]);
+        event.target.validity.valid 
+        ? setFirstDate(Math.floor(new Date(event.target.value).getTime())) 
+        : setError(["Please enter date in format 'yyyy-mm-dd'"]);
     }
 
     return (
@@ -114,4 +115,6 @@ export const Graph = ({loading}) => {
             </MediaQuery>
         </GraphBox>
     )
-}
+};
+
+export default Graph;

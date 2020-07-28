@@ -1,12 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { UserContext } from '../context/UserContext';
+import React, { useState, Suspense, lazy} from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../images/logo.svg';
 import styled from 'styled-components';
-import { breakpoint, Button, PrimaryButton, white, grey, violet, alignPadding, desktop } from '../Styles';
+import { breakpoint, alignPadding} from './Styles';
 import MediaQuery from 'react-responsive';
-import { Close, Burger } from './../layout/Icons';
-import { NavLinks } from './NavLinks';
+import { Close, Burger } from './Icons';
+const NavLinks = lazy(() => import('./NavLinks'));
 
 const Nav = styled.div`
     padding: 0 ${alignPadding};
@@ -25,20 +24,20 @@ const Nav = styled.div`
     }
     
 `
-export const NavBar = () => {
-    const [ user ] = useContext(UserContext);
-    const { isAuth } = user;
+const NavBar = () => {
     const [isMobNav, setIsMobNav] = useState(false);
     const toggleMobNav = () => isMobNav ? setIsMobNav(false) : setIsMobNav(true);
     return (
             <Nav>
                 <Link className="logo" to="/"><img src={Logo} alt="Shortly"/></Link>
-                <MediaQuery minDeviceWidth={breakpoint}>
-                    <NavLinks isAuth={isAuth}/>
-                </MediaQuery>
-                <MediaQuery maxDeviceWidth={breakpoint}>
-                    { isMobNav && <NavLinks isAuth={isAuth} setIsMobNav={setIsMobNav}/> }
-                </MediaQuery>
+                <Suspense fallback={<div/>}>
+                    <MediaQuery minDeviceWidth={breakpoint}>
+                        <NavLinks/>
+                    </MediaQuery>
+                    <MediaQuery maxDeviceWidth={breakpoint}>
+                        { isMobNav && <NavLinks setIsMobNav={setIsMobNav}/> }
+                    </MediaQuery>
+                </Suspense>
                 <MediaQuery maxDeviceWidth={breakpoint}>
                     <div onClick={toggleMobNav}>
                         { isMobNav ? <Close/> : <Burger/> }
@@ -46,4 +45,6 @@ export const NavBar = () => {
                 </MediaQuery>
             </Nav>
     );
-}
+};
+
+export default NavBar;

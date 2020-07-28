@@ -1,15 +1,14 @@
 import React from 'react';
 import { useLinks } from '../../hooks/useLinks';
 import styled from 'styled-components';
-import { grey, white, violet, breakpoint } from '../../Styles';
+import { grey, white, violet, breakpoint } from '../Styles';
 import Link from './DashLink';
 
 const LinksBg = styled.div`
     width: 100vw;
 `
 
-
-export const Links = () => {
+const DashLinks = () => {
     const { links } = useLinks();
     return (
         <LinksBg>
@@ -18,4 +17,6 @@ export const Links = () => {
             }
         </LinksBg>
     )
-}
+};
+
+export default DashLinks;

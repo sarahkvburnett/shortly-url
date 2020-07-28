@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { red } from '../../Styles';
+import { red } from '../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Exclamation } from '../../layout/Icons';
+import { Exclamation } from '../Icons';
 
 const ErrorBar = styled.div`
     width: 100%;
@@ -25,7 +25,7 @@ const ErrorBar = styled.div`
     border-radius: 5px;
 `
 
-export const Errors = ({errors}) => {
+const Errors = ({errors}) => {
     return (
         <ErrorBar> 
             <Exclamation/>
@@ -35,3 +35,5 @@ export const Errors = ({errors}) => {
         </ErrorBar>
     )
 };
+
+export default Errors;

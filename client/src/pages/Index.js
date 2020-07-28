@@ -1,18 +1,22 @@
-import React from 'react';
-import { Intro } from '../layout/Intro';
-import { LinkShortener} from '../components/linkcrud/LinkShortener';
-import { Links } from '../components/links/IndexLinks';
-import { Statistics } from '../layout/Statistics';
-import { Boost } from '../layout/Boost';
+import React, {lazy, Suspense} from 'react';
+import Intro from '../components/index/Intro';
+import LinkShortener from '../components/linkcrud/LinkShortener';
+const Links = lazy(() => import('../components/links/IndexLinks'));
+const Statistics = lazy(() => import('../components/index/Statistics'));
+const Boost = lazy(() => import('../components/index/Boost'));
 
-export const Home = () => {
+const Home = () => {
   return (
      <div className="home">
         <Intro/>
         <LinkShortener position="-17vh"/>
-        <Links/>
-        <Statistics/>
-        <Boost/>
+        <Suspense fallback={<div/>}>
+          <Links/>
+          <Statistics/>
+          <Boost/>
+        </Suspense>
       </div>
   )
-}
+};
+
+export default Home;

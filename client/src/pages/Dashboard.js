@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import styled from 'styled-components';
-import { DashLoad } from '../components/dash/DashLoad';
-import { DashNone } from '../components/dash/DashNone';
-import { Links } from '../components/links/DashLinks';
-import { LinkShortener } from '../components/linkcrud/LinkShortener';
-import { Graph } from '../components/dash/Graph';
-import { violet, grey } from '../Styles';
-import { LinkCopier } from '../components/linkcrud/LinkCopier';
-import { LinkEditor } from '../components/linkcrud/LinkEditor';
-import { LinkDeletor } from '../components/linkcrud/LinkDeletor';
 import { useLinks } from '../hooks/useLinks';
 import { useProcessLink } from '../hooks/useProcessLink';
-import { useActiveLink } from '../hooks/useActiveLink';
+import { violet, grey } from '../components/Styles';
+import DashNone from '../components/dash/DashNone';
+import DashLoad from '../components/dash/DashLoad';
+import DashLinks from '../components/links/DashLinks';
+import Graph from '../components/dash/Graph';
+const LinkCopier = lazy(() => import('../components/linkcrud/LinkCopier'));
+const LinkEditor = lazy(() => import('../components/linkcrud/LinkEditor'));
+const LinkDeletor = lazy(() => import('../components/linkcrud/LinkDeletor'));
+const LinkShortener = lazy(() => import('../components/linkcrud/LinkShortener'));
 
 const Dash = styled.div`
     min-height: 70vh;
@@ -22,21 +21,26 @@ const Dash = styled.div`
     }
 `
 
-export const Dashboard = () => {
+const Dashboard = () => {
     const { links } = useLinks();
-    const { processLink } = useProcessLink();
-    const { activeLink } = useActiveLink();
+    const { processLink: {process} } = useProcessLink();
     const [ loading, setLoading ] = useState(true);
     return (
         <Dash>
             {loading && <DashLoad setLoading={setLoading}/> }
-            {!loading && links.length === 0 && <DashNone/> }
-            {!loading && activeLink && <Graph loading={loading}/>}
-            {!loading && <Links/> }
-            { processLink.process === "copy" && <LinkCopier/> }
-            { processLink.process === "edit" && <LinkEditor/> }
-            { processLink.process === "delete" && <LinkDeletor/> }
-            <LinkShortener position="0"/>
+            {!loading && 
+            <>
+                {links.length > 0 ? <Graph/> : <DashNone/> }
+            </>}
+            <Suspense fallback={<div/>}>
+                { !loading && links.length > 0 && <DashLinks/> }
+                { process === "copy" && <LinkCopier/> }
+                { process === "edit" && <LinkEditor/> }
+                { process === "delete" && <LinkDeletor/> }
+                <LinkShortener position="0"/>
+            </Suspense>
         </Dash>
     )
-}
+};
+
+export default Dashboard;

@@ -1,24 +1,24 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import './index.css';
-import { NavBar } from './components/NavBar';
-import { Footer } from './layout/Footer';
-import { Home } from './pages/Index';
-import { Auth } from './pages/Auth';
-import { Dashboard } from './pages/Dashboard';
-import { UserContext } from './context/UserContext';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Auth from './pages/Auth';
+import Home from './pages/Index';
+import Dashboard from './pages/Dashboard';
 import { setAuthToken } from './utilities/setAuthToken';
 import jwt_decode from 'jwt-decode'
+import { useUser } from './hooks/useUser';
 
 export const App = () => {
-    const [ user, setUser ] = useContext(UserContext);
+    const { user: {isAuth}, setUser } = useUser();
 
     useEffect(() => {
-        if (localStorage.jwtToken) {
-            const token = localStorage.jwtToken;
+        if (localStorage.token) {
+            const { token } = localStorage;
             setAuthToken(token);
-            const { firstName, id} = jwt_decode(token);
+            const { firstName, id } = jwt_decode(token);
             setUser(() => ({ isAuth: true, firstName, id, token }));
         }
       }, [])
@@ -28,24 +28,26 @@ export const App = () => {
         <CSSTransition timeout={500} classNames="fade">
             <Router>
                 <NavBar/>
+                <Suspense fallback={<div style={{minHeight: "90vh"}}/>}>
                 <Switch>
                     <Route path="/login">
-                        {user.isAuth ? <Redirect to="/dashboard"/> : <Auth auth="login"/>}
+                        {isAuth ? <Redirect to="/dashboard"/> : <Auth auth="login"/>}
                     </Route> 
                     <Route path="/signup">
-                        {user.isAuth ? <Redirect to="/dashboard"/> : <Auth auth="signup" />}
+                        {isAuth ? <Redirect to="/dashboard"/> : <Auth auth="signup" />}
                     </Route>
                     <Route path="/logout">
-                        {user.isAuth ? <Auth auth="logout"/> : <Redirect to="/Dashboard"/>}
+                        {isAuth ? <Auth auth="logout"/> : <Redirect to="/Dashboard"/>}
                     </Route>
                     <Route path="/dashboard">
-                        {user.isAuth ? <Dashboard/> : <Redirect to="/login"/> }
+                        {isAuth ? <Dashboard/> : <Redirect to="/login"/> }
                     </Route>
                     <Route path="/">
-                        {user.isAuth ? <Redirect to="/dashboard"/> : <Home/>}            
+                        {isAuth ? <Redirect to="/dashboard"/> : <Home/>}            
                     </Route>
                 </Switch>
-                <Footer/>
+                </Suspense>
+                <Suspense fallback={<div/>}><Footer/></Suspense>
             </Router>
         </CSSTransition>
     </TransitionGroup>

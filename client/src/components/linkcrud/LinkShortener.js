@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint, violet, alignWidth, smallerWidth } from '../../Styles';
-import { LinkAdder } from './LinkAdder';
+import { breakpoint, violet, alignWidth, smallerWidth } from '../Styles';
+import LinkAdder from './LinkAdder';
 import imgDesktop from '../../images/bg-shorten-desktop.svg';
 import imgMobile from '../../images/bg-shorten-mobile.svg';
 
@@ -27,10 +27,12 @@ const Shortener = styled.div`
     }
 `
 
-export const LinkShortener = ({position}) => {
+const LinkShortener = ({position}) => {
     return (
         <Shortener style={{top: position}}>
             <LinkAdder/>
         </Shortener>
     )
-}
+};
+
+export default LinkShortener;

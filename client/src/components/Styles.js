@@ -72,6 +72,20 @@ p, h3 {
     margin-bottom: 2vh;
 }
 `
+
+export const LoadIcon = styled.div`
+    @keyframes spin {
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(360deg)}
+    }
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 8px solid ${grey};
+    border-top: 8px solid ${cyan};
+    animation: spin 2s linear infinite;
+`
+
 export const AuthForm = styled.form`
     margin: 0 2vw;
     width: 96%;
@@ -84,7 +98,6 @@ export const AuthForm = styled.form`
     align-items: center;
     justify-content: center;
     @media (min-width: ${desktop}) {
-        min-height: 70vh;
         padding-bottom: 2vh;
     }
     @media (max-width: ${tablet}) {

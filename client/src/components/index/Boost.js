@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PrimaryButton, white, violet, alignPadding } from '../Styles';
-import imgDesktop from '../images/bg-boost-desktop.svg';
-import imgMobile from '../images/bg-boost-mobile.svg';
+import imgDesktop from '../../images/bg-boost-desktop.svg';
+import imgMobile from '../../images/bg-boost-mobile.svg';
 
 const BoostBox = styled.div`
     background: ${violet} url(${imgMobile}) no-repeat;
@@ -27,11 +27,13 @@ const BoostBox = styled.div`
     };
 `
 
-export const Boost = () => {
+const Boost = () => {
     return (
         <BoostBox>
             <h2>Boost your links today</h2>
             <PrimaryButton><b>Get Started</b></PrimaryButton>
         </BoostBox>
     )
-}
+};
+
+export default Boost;

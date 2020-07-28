@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Button, PrimaryButton, white, grey, violet, desktop } from '../Styles';
+import { Button, PrimaryButton, white, grey, violet, desktop } from './Styles';
+import { useUser } from '../hooks/useUser';
 
 const Links = styled.div`
     display: flex;
@@ -64,9 +65,13 @@ const NavBtn = styled(Button)`
     margin: 1vw;
 `
 
-export const NavLinks = ({isAuth, setIsMobNav}) => {
+const NavLinks = ({setIsMobNav}) => {
+    const { user: {isAuth} } = useUser();
+    const closeMobNav = () => {
+        if (setIsMobNav) setIsMobNav(false)
+    };
     return (
-        <Links onClick={() => setIsMobNav(false)}>
+        <Links onClick={closeMobNav}>
             <div>
                 <NavBtn>Features</NavBtn>
                 <NavBtn>Pricing</NavBtn>
@@ -79,4 +84,6 @@ export const NavLinks = ({isAuth, setIsMobNav}) => {
                 </div>
         </Links>
     )
-}
+};
+
+export default NavLinks;

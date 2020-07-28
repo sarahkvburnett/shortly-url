@@ -3,16 +3,21 @@ TODO:
 Use cookies for auth
 Forget password
 
-Write tests 
+Bro check that user owns link they deleting
 
-Dashboard not found
+Write tests 
 
 Loading state for auth/ buttons
 Button ui - with loading - props text and onclick function
 
 One click copy dash links
 
-flash ui for link update/deleted/copied
+flash ui (portal):
+* Sign up sucessfull
+* Link updated
+* Link created
+* Link deleted
 
 link updating on rejection
-redux
+
+protected vs public route utility

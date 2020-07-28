@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import  { tablet, red, cyan, grey, violet} from '../../Styles';
-import { Edit, Copy, Trash } from '../../layout/Icons';
+import  { tablet, red, cyan, grey, violet} from '../Styles';
+import { Edit, Copy, Trash } from '../Icons';
 import { useProcessLink } from '../../hooks/useProcessLink';
 
 const Buttons = styled.div`
@@ -39,7 +39,7 @@ const Buttons = styled.div`
     }
 `
 
-export const DashLinkBtns = ({link, showBtns}) => {
+const DashLinkBtns = ({link, showBtns}) => {
     const { setProcessCopy, setProcessDelete, setProcessEdit } = useProcessLink();
     return (
         <Buttons className="button">
@@ -48,4 +48,6 @@ export const DashLinkBtns = ({link, showBtns}) => {
             <button type="button" className="delete" onClick={() => setProcessDelete(link)}><Trash/></button>
         </Buttons>
     )
-}
+};
+
+export default DashLinkBtns;

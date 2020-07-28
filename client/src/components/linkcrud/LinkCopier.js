@@ -1,12 +1,12 @@
 import React from 'react';
 import { useCopyLink } from '../../hooks/useCopyLink';
 import { shortlyUrl } from '../../utilities/url';
-import { PrimaryButton, LinkModal } from '../../Styles';
-import { CloseButton } from './CloseButton';
+import { PrimaryButton, LinkModal } from '../Styles';
+import CloseButton from './CloseButton';
 import { useProcessLink } from '../../hooks/useProcessLink';
 
-export const LinkCopier = () => {
-    const { processLink: {link: {short}}, setProcessNull } = useProcessLink();
+const LinkCopier = () => {
+    const { processLink: {link: {short}} } = useProcessLink();
     const { copiedLink, copyLink } = useCopyLink();
     console.log(copiedLink);
     return (
@@ -18,4 +18,6 @@ export const LinkCopier = () => {
                     <CloseButton/>
             </LinkModal> 
     )
-}
+};
+
+export default LinkCopier;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint, cyan } from '../../Styles';
+import { breakpoint, cyan } from '../Styles';
 import { shortlyUrl } from '../../utilities/url';
 
 const ShortUrl = styled.input`
@@ -22,8 +22,10 @@ const ShortUrl = styled.input`
     overflow: hidden;
 `
 
-export const CopyShortLink = ({shortUrl}) => {
+const CopyShortLink = ({shortUrl}) => {
     return (
         <ShortUrl readOnly="readonly" className="shortLink" value={shortlyUrl + shortUrl}/>
     )
 }
+
+export default CopyShortLink;

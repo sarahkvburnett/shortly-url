@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { PrimaryButton, violet, darkViolet } from '../../Styles'
+import { PrimaryButton, violet, darkViolet } from '../Styles'
 
 const Button = styled(PrimaryButton)`
     flex: 1;
@@ -21,11 +21,15 @@ const DisabledButton = styled(Button)`
     }
 `
 
-export const LinkCopyButton = ({id, copiedLink, copyLink}) => {
+const LinkCopyButton = ({id, copiedLink, copyLink}) => {
     return (
         <>
-             { copiedLink !== id && <Button className="linkcopybtn" onClick={(event) => copyLink(event, id)}>Copy</Button> }
-            { copiedLink === id && <DisabledButton type="button" disabled="true">Copied</DisabledButton> }
+        { copiedLink === id 
+            ? <DisabledButton type="button" disabled="true">Copied</DisabledButton> 
+            : <Button className="linkcopybtn" onClick={(event) => copyLink(event, id)}>Copy</Button> 
+        }
         </>
     )
 }
+
+export default LinkCopyButton;

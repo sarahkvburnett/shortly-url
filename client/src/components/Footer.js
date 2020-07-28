@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as Logo} from '../images/logo.svg';
-import { Facebook, Instagram, Pinterest, Twitter} from './../layout/Icons';
-import { darkViolet, breakpoint, white, cyan, alignPadding } from '../Styles';
+import { ReactComponent as Logo} from './../images/logo.svg';
+import { Facebook, Instagram, Pinterest, Twitter} from './Icons';
+import { darkViolet, breakpoint, white, cyan, alignPadding } from './Styles';
 
 const FooterContainer = styled.div`
     background: ${darkViolet};
@@ -78,8 +78,6 @@ const SocialLinks = styled.div`
         }
     }
 `
-
-
 const footer = [
     {
         "title": "Features",
@@ -97,7 +95,7 @@ const footer = [
         "urls": ["/about", "/team", "/careers", "/contact"]
     }]
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <FooterContainer>
             <Logo title="Shortly"/>
@@ -123,4 +121,6 @@ export const Footer = () => {
             </SocialLinks>
         </FooterContainer>
     )
-}
+};
+
+export default Footer;

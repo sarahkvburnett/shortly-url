@@ -84,7 +84,7 @@ const I = styled.i`
     justify-content: center;
 `
 
-export const Statistics = () => {
+const Statistics = () => {
     return (
         <Stats>
             <Intro>
@@ -122,4 +122,6 @@ export const Statistics = () => {
             </InfoContainer>
         </Stats>
     )
-}
+};
+
+export default Statistics;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { grey, breakpoint } from '../../Styles';
-import { DashLinkBtns } from './DashLinkBtns';
+import { grey, breakpoint } from '../Styles';
+import DashLinkBtns from './DashLinkBtns';
 import { shortlyUrl } from '../../utilities/url';
 import { linkBackgroundColor as background, linkColor as color} from '../../utilities/themes'
 import { useActiveLink } from '../../hooks/useActiveLink';
@@ -81,4 +81,4 @@ const DashLink = ({link}) => {
     )
 }
 
-export default DashLink
+export default DashLink;

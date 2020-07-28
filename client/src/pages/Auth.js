@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { white, desktop } from '../Styles';
-import { Login } from '../components/auth/Login';
-import { Logout } from '../components/auth/Logout';
-import { Signup } from '../components/auth/Signup';
+import { white, desktop } from '../components/Styles';
+import Login from '../components/auth/Login';
+import Logout from '../components/auth/Logout';
+import Signup from '../components/auth/Signup';
 import image from '../images/illustration-working.svg';
 
 const AuthPg = styled.div`
@@ -31,7 +31,7 @@ const Img = styled.div`
 `
 
 
-export const Auth = ({auth}) => {
+const Auth = ({auth}) => {
     return (
         <AuthPg>
             { auth==="login" && <Login/> }
@@ -41,3 +41,5 @@ export const Auth = ({auth}) => {
         </AuthPg>
     )
 }
+
+export default Auth;

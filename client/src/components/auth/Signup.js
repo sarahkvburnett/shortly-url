@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Errors } from './AuthErrors';
+import Errors from './AuthErrors';
 import axios from 'axios';
 import { isSignupValid } from '../../utilities/validateAuth';
-import { AuthForm, Label, Input, FormBtn, PrimaryFormBtn } from '../../Styles';
+import { AuthForm, Label, Input, PrimaryFormBtn } from '../Styles';
 
-export const Signup =  () => {
+const Signup =  () => {
     const [ formValues, setFormValues ] = useState({
         firstName: '',
         lastName: '',
@@ -22,7 +22,6 @@ export const Signup =  () => {
     const signup = (event) => {
         event.preventDefault();
         const errorMsgs = isSignupValid(formValues);
-        console.log(errorMsgs.length);
         if (errorMsgs.length !== 0) return setErrors(errorMsgs);
         axios
           .post('/api/users/signup', {firstName, lastName, email, password})
@@ -41,4 +40,6 @@ export const Signup =  () => {
             <PrimaryFormBtn type="submit">Sign up</PrimaryFormBtn>
         </AuthForm>
     );
-}
+};
+
+export default Signup;

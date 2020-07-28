@@ -1,13 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Redirect } from 'react-router-dom';
 import { setAuthToken }  from '../../utilities/setAuthToken';
-import { UserContext } from '../../context/UserContext';
-import { AuthForm, PrimaryFormBtn } from '../../Styles';
+import { AuthForm, PrimaryFormBtn } from '../Styles';
+import { useUser } from '../../hooks/useUser';
 
-export const Logout = () => {
-    const [ user, setUser ] = useContext(UserContext)
+const Logout = () => {
+    const { setUser } = useUser();
     const logout = () => {
-        localStorage.removeItem("jwtToken");
         setAuthToken(false);
         setUser( () => ({isAuth: false}))
     };
@@ -18,4 +17,6 @@ export const Logout = () => {
             <PrimaryFormBtn onClick={<Redirect to="/"/>}>No</PrimaryFormBtn>
         </AuthForm>
     )
-}
+};
+
+export default Logout;

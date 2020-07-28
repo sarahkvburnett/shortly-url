@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { CopyShortLink } from './CopyShortLink'
-import { LinkCopyButton } from './LinkCopyButton'
-import { breakpoint, alignWidth, smallerWidth } from '../../Styles'
+import CopyShortLink from './CopyShortLink'
+import LinkCopyButton from './LinkCopyButton'
+import { breakpoint, alignWidth, smallerWidth } from '../Styles'
 import { useCopyLink } from '../../hooks/useCopyLink';
 import { useLinks } from '../../hooks/useLinks';
 
@@ -48,11 +48,10 @@ const FullLink = styled.div`
 `
 
  
-export const Links = () => {
-    const { links, setLinksfromBrowser } = useLinks();
+const IndexLinks = () => {
+    const { links, setLinksFromBrowser } = useLinks();
     const { copiedLink, copyLink } = useCopyLink();
-    useEffect(setLinksfromBrowser, []);
-    console.log(links);
+    useEffect(setLinksFromBrowser, []);
     return( 
     <LinkContainer className="linkContainer">
         {
@@ -68,4 +67,4 @@ export const Links = () => {
     )
 }
 
-// <Link className="link" key={link[0]}><div className="fullLink">{link[1]}</div><ShortLink readOnly="readonly" className="shortLink" value={`https://rel.ink/${link[0]}`}><a href={`https://rel.ink/${link[0]}`}>{`https://rel.ink/${link[0]}`}</a></ShortLink><div className="button"><Button value={`https://rel.ink/${link[0]}`} onClick={copyToClipboard}>{copyButton}</Button></div></Link></LinkContainer>
+export default IndexLinks;

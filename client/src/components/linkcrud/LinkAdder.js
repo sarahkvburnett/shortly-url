@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import validator from 'validator';
 import styled from 'styled-components';
-import { red, grey, cyan, white, breakpoint } from '../../Styles';
-import { Error } from '../../layout/Error';
+import { red, grey, cyan, white, breakpoint } from '../Styles';
+import Error from '../Error';
 import { useUser } from '../../hooks/useUser';
 import { useLinks } from '../../hooks/useLinks';
 
@@ -76,7 +76,7 @@ const P = styled.p`
     height: 3vh;
 `
 
-export const LinkAdder = () => {
+const LinkAdder = () => {
     const { user } = useUser();
     const { links, setLinks } = useLinks();
     const [ input, setInput ] = useState({value: "Shorten a link here... "});
@@ -128,3 +128,5 @@ export const LinkAdder = () => {
         </Form>
     )
 };
+
+export default LinkAdder;
