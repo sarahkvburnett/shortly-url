@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import './index.css';

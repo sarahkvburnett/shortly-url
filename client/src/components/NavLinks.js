@@ -65,7 +65,7 @@ const NavBtn = styled(Button)`
     margin: 1vw;
 `
 
-const NavLinks = ({toggleMobNav}) => {
+const NavLinks = ({toggleMobNav = () => {}}) => {
     const { user: {isAuth} } = useUser();
     return (
         <Links onClick={toggleMobNav}>
@@ -74,7 +74,7 @@ const NavLinks = ({toggleMobNav}) => {
                 <NavBtn>Pricing</NavBtn>
                 <NavBtn className="resourcesBtn">Resources</NavBtn>
             </div>
-            <div>
+            <div data-testid="authBtns">
                 { !isAuth && <NavBtn><Link to="/login">Login</Link></NavBtn> }
                 { !isAuth && <PrimaryButton><Link to="/signup">Sign Up</Link></PrimaryButton>}
                 { isAuth && <PrimaryButton><Link to="/logout">Logout</Link></PrimaryButton>}

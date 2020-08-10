@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav links authenticated matches snapshot 1`] = `
+<div
+  className="sc-fzoLsD iGmkcm"
+  onClick={[Function]}
+>
+  <div>
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN"
+    >
+      Features
+    </button>
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN"
+    >
+      Pricing
+    </button>
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN resourcesBtn"
+    >
+      Resources
+    </button>
+  </div>
+  <div
+    data-testid="authBtns"
+  >
+    <button
+      className="sc-AxirZ fTDgvF"
+    >
+      <a
+        href="/logout"
+        onClick={[Function]}
+      >
+        Logout
+      </a>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`nav links not-authenticated matches snapshot 1`] = `
+<div
+  className="sc-fzoLsD iGmkcm"
+  onClick={[Function]}
+>
+  <div>
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN"
+    >
+      Features
+    </button>
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN"
+    >
+      Pricing
+    </button>
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN resourcesBtn"
+    >
+      Resources
+    </button>
+  </div>
+  <div
+    data-testid="authBtns"
+  >
+    <button
+      className="sc-AxjAm sc-fzpans cwvCVN"
+    >
+      <a
+        href="/login"
+        onClick={[Function]}
+      >
+        Login
+      </a>
+    </button>
+    <button
+      className="sc-AxirZ fTDgvF"
+    >
+      <a
+        href="/signup"
+        onClick={[Function]}
+      >
+        Sign Up
+      </a>
+    </button>
+  </div>
+</div>
+`;

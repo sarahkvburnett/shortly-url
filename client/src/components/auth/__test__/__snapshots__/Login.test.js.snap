@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login matches snapshot 1`] = `
+<form
+  className="sc-AxhUy jtTpBF"
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <h3>
+    Login
+  </h3>
+  <label
+    className="sc-Axmtr KwGTg"
+  >
+    Email 
+    <input
+      className="sc-AxmLO kxGjkT"
+      id="email"
+      name="email"
+      onChange={[Function]}
+      required={true}
+      type="email"
+      value=""
+    />
+  </label>
+  <label
+    className="sc-Axmtr KwGTg"
+  >
+    Password 
+    <input
+      className="sc-AxmLO kxGjkT"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      required={true}
+      type="password"
+      value=""
+    />
+  </label>
+  <button
+    className="sc-AxirZ sc-AxheI emVeqi"
+    type="submit"
+  >
+    Submit
+  </button>
+  <button
+    className="sc-AxjAm sc-AxgMl bEkBRD"
+    type="button"
+  >
+    Forgot password
+  </button>
+</form>
+`;

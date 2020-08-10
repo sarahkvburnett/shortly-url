@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1597058879610" clover="3.2.0">
+  <project timestamp="1597058879610" name="All files">
+    <metrics statements="11" coveredstatements="2" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="1" elements="27" coveredelements="3" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2"/>
+    <package name="src">
+      <metrics statements="9" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="App.js" path="C:\Users\becky\Desktop\shortly-url-shortener\client\src\App.js">
+        <metrics statements="9" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Error.js" path="C:\Users\becky\Desktop\shortly-url-shortener\client\src\components\Error.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

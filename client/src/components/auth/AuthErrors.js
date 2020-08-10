@@ -29,7 +29,7 @@ const Errors = ({errors}) => {
     return (
         <ErrorBar> 
             <Exclamation/>
-            <div>
+            <div data-testid="errors">
                  {errors.map( (error, index) => <p key={index}>{error}</p> )}
             </div>
         </ErrorBar>

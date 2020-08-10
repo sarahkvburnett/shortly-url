@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`boost matches snapshot 1`] = `
+<div
+  className="sc-fzoLsD duwcxg"
+>
+  <h2>
+    Boost your links today
+  </h2>
+  <button
+    className="sc-AxirZ fTDgvF"
+  >
+    <b>
+      Get Started
+    </b>
+  </button>
+</div>
+`;
