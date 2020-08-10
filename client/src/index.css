@@ -48,3 +48,21 @@ a {
 :focus {
     outline-color: hsl(257, 27%, 26%);
 }
+
+.display-enter, .display-appear {
+    opacity: 0;
+}
+
+.display-enter-active, .display-appear-active {
+    opacity: 1;
+    transition: opacity 2s
+}
+
+.display-exit-active {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.display-exit {
+    opacity: 0;
+}

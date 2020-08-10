@@ -10,10 +10,12 @@ import Dashboard from './pages/Dashboard';
 import { setAuthToken } from './utilities/setAuthToken';
 import jwt_decode from 'jwt-decode'
 import { useUser } from './hooks/useUser';
+import Flash from './components/Flash';
+import useFlash from './hooks/useFlash';
 
 export const App = () => {
     const { user: {isAuth}, setUser } = useUser();
-
+    const { isFlashVisible } = useFlash();
     useEffect(() => {
         if (localStorage.token) {
             const { token } = localStorage;
@@ -22,14 +24,15 @@ export const App = () => {
             setUser(() => ({ isAuth: true, firstName, id, token }));
         }
       }, [])
-    
   return (
-    <TransitionGroup>
-        <CSSTransition timeout={500} classNames="fade">
-            <Router>
-                <NavBar/>
-                <Suspense fallback={<div style={{minHeight: "90vh"}}/>}>
-                <Switch>
+    <Router>
+        <NavBar/>
+            <Suspense fallback={<div style={{minHeight: "90vh"}}/>}>
+                <CSSTransition in={isFlashVisible} timeout={350} classNames="display"
+                unmountOnExit appear>
+                    <Flash/>
+                </CSSTransition>
+                 <Switch>
                     <Route path="/login">
                         {isAuth ? <Redirect to="/dashboard"/> : <Auth auth="login"/>}
                     </Route> 
@@ -46,10 +49,8 @@ export const App = () => {
                         {isAuth ? <Redirect to="/dashboard"/> : <Home/>}            
                     </Route>
                 </Switch>
-                </Suspense>
-                <Suspense fallback={<div/>}><Footer/></Suspense>
-            </Router>
-        </CSSTransition>
-    </TransitionGroup>
+                <Footer/>
+            </Suspense>
+    </Router>
   );
 }
