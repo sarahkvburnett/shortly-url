@@ -35,7 +35,7 @@ const NavBar = () => {
                         <NavLinks/>
                     </MediaQuery>
                     <MediaQuery maxDeviceWidth={breakpoint}>
-                        { isMobNav && <NavLinks setIsMobNav={setIsMobNav}/> }
+                        { isMobNav && <NavLinks toggleMobNav={toggleMobNav}/> }
                     </MediaQuery>
                 </Suspense>
                 <MediaQuery maxDeviceWidth={breakpoint}>

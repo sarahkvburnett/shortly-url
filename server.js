@@ -12,7 +12,7 @@ mongoose.connect(process.env.DBCONNECTION, {useNewUrlParser: true, useUnifiedTop
 
 // encoding
 app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+app.use(express.json()); 
 
 //client
 app.use(express.static('./client/build/')); 

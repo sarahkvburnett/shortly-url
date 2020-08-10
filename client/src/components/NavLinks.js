@@ -9,10 +9,10 @@ const Links = styled.div`
     @media (max-width: ${desktop}) {
         position: absolute;
         z-index: 101;
-        top: 12vh;
-        left: 3vw;
-        height: 86vh;
-        width: 94vw;
+        top: 10vh;
+        left: 1vw;
+        height: 89vh;
+        width: 98vw;
         flex-direction: column;
         background: ${violet};
         padding: 2vh 2vw;
@@ -22,7 +22,7 @@ const Links = styled.div`
             display: block;
             width: 70vw;
             margin: auto;
-            height: 20px;
+            height: 10vh;
             border-bottom: 2px solid ${grey};
         }
         button {
@@ -65,13 +65,10 @@ const NavBtn = styled(Button)`
     margin: 1vw;
 `
 
-const NavLinks = ({setIsMobNav}) => {
+const NavLinks = ({toggleMobNav}) => {
     const { user: {isAuth} } = useUser();
-    const closeMobNav = () => {
-        if (setIsMobNav) setIsMobNav(false)
-    };
     return (
-        <Links onClick={closeMobNav}>
+        <Links onClick={toggleMobNav}>
             <div>
                 <NavBtn>Features</NavBtn>
                 <NavBtn>Pricing</NavBtn>

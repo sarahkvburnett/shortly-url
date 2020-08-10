@@ -33,5 +33,6 @@ export const useLinks = () => {
         deleteLinkFromLinks,
         updateLinkInLinks,
         removeBrowserLinks,
+        setLinks
     }
 }

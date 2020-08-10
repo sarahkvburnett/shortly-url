@@ -102,9 +102,10 @@ const LinkAdder = () => {
             setIsSending(true);
             axios.post('api/links', params)
                 .then( ({data}) => {
+                    debugger;
                     const newLinks = [...links, {_id: data[0]._id, full: data[0].full, short: data[0]._id, date: data[0].date, click: data[0].click}];
-                    setLinks(newLinks);
                     if (!user.id) localStorage.setItem('shortlyLinks', JSON.stringify(newLinks));  
+                    setLinks(newLinks);
                     setInput({value: ''});
                     setIsSending(false);
                 })
