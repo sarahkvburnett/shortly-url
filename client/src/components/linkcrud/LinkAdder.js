@@ -94,26 +94,25 @@ const LinkAdder = () => {
         else if (validator.isURL(value)) changeState(value, true, false);
         else changeState(value, false, false);
     };
-        const addLink = (event) => {
-            event.preventDefault();
-            if (!input.valid) return setError('Please add a link');
-            const params = {full: input.value};
-            if (user.id) params.userId = user.id;
-            setIsSending(true);
-            axios.post('api/links', params)
-                .then( ({data}) => {
-                    debugger;
-                    const newLinks = [...links, {_id: data[0]._id, full: data[0].full, short: data[0]._id, date: data[0].date, click: data[0].click}];
-                    if (!user.id) localStorage.setItem('shortlyLinks', JSON.stringify(newLinks));  
-                    setLinks(newLinks);
-                    setInput({value: ''});
-                    setIsSending(false);
-                })
-                .catch( error => {
-                    setError('Error! Please try again') ;
-                    setIsSending(false);
-                }) 
-        };
+    const addLink = (event) => {
+        event.preventDefault();
+        if (!input.valid) return setError('Please add a link');
+        const params = {full: input.value};
+        if (user.id) params.userId = user.id;
+        setIsSending(true);
+        axios.post('api/links', params)
+            .then( ({data}) => {
+                const newLinks = [...links, {_id: data[0]._id, full: data[0].full, short: data[0]._id, date: data[0].date, click: data[0].click}];
+                if (!user.id) localStorage.setItem('shortlyLinks', JSON.stringify(newLinks));  
+                setLinks(newLinks);
+                setInput({value: ''});
+                setIsSending(false);
+            })
+            .catch( error => {
+                setError('Error! Please try again') ;
+                setIsSending(false);
+            })                 
+    };
     return (
         <Form onSubmit={(event) => addLink(event)}>
                 <label htmlFor="link" style={{display: "none"}}>Website Url</label>
