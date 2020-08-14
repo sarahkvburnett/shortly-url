@@ -14,6 +14,7 @@ export const isSignupValid = ({firstName, lastName, email, password, password2})
     if (validator.isEmpty(email) || !validator.isEmail(email)) errorMsgs.push('Please enter your email');
     if ( validator.isEmpty(password)) errorMsgs.push('Please enter your password');
     if ( validator.isEmpty(password2)) errorMsgs.push('Please confirm your password');
+    if ( password.length < 6 ) errorMsgs.push('Password must be at least 6 characters')
     if ( password !== password2) errorMsgs.push('Entered passwords are not the same');
     return errorMsgs;
 }

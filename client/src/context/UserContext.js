@@ -8,6 +8,7 @@ export const UserProvider = (props) => {
         firstName: undefined,
         id: undefined,
         token: undefined,
+        currentAuth: undefined
     });
     
     return (

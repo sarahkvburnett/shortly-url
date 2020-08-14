@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { white, desktop } from '../components/Styles';
 import Login from '../components/auth/Login';
@@ -32,11 +32,18 @@ const Img = styled.div`
 
 
 const Auth = ({auth}) => {
+    const [ formValues, setFormValues ] = useState({
+        // firstName: '',
+        // lastName: '',
+        // email: '',
+        // password: '',
+        // password2: '',
+    }); 
     return (
         <AuthPg>
-            { auth==="login" && <Login/> }
+            { auth==="login" && <Login formValues={formValues} setFormValues={setFormValues} /> }
             { auth==="logout" && <Logout/> }
-            { auth==="signup" && <Signup/> }
+            { auth==="signup" && <Signup formValues={formValues} setFormValues={setFormValues}/> }
             <Img><img src={image} alt="woman working at desk"/></Img>
         </AuthPg>
     )

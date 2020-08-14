@@ -19,7 +19,7 @@ router.post('/signup', [
 ], (req, res) => {
     const errors = validationResult(req);
     if (req.body.password !== req.body.password2) return res.status(400).json({error: "Passwords do not match"})
-    if (!errors.isEmpty()) res.status(400).json({error: "One or more fields not long enough"});
+    if (!errors.isEmpty()) return res.status(400).json({error: "One or more fields not long enough"});
     User.findOne({email: req.body.email})
     .then(user => {
         if (user) return res.status(400).json({error: "Email already exists"});
