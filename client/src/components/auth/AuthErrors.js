@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { red } from '../Styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Exclamation } from '../Icons';
 
 const ErrorBar = styled.div`

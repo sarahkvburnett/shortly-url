@@ -4,17 +4,21 @@ import jwt_decode from "jwt-decode";
 
 export const useUser = () => {
     const [ user, setUser ] = useContext(UserContext);
-    const loginUser = (token) => {
-        const { firstName, id } = jwt_decode(token);
+    const loginUser = (id, token) => {
         setUser({
             isAuth: true,
-            firstName,
             id,
             token
         }) 
-    }
+    };
+    const logoutUser = () => {
+        setUser( () => ({
+            isAuth: false
+        }))
+    };
     return {
         user,
-        loginUser
+        loginUser,
+        logoutUser
     }
 };

@@ -5,7 +5,7 @@ export const useLinks = () => {
     const [ links, setLinks ] = useContext(LinksContext);
 
     const setLinksFromBrowser = () => {
-        if (localStorage.shortlyLinks) setLinks( () => JSON.parse(localStorage.shortlyLinks) )
+        if (localStorage.links) setLinks( () => JSON.parse(localStorage.links) )
     };
 
     const setLinksFromDB = (links) => {

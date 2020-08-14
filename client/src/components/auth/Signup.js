@@ -4,9 +4,12 @@ import Errors from './AuthErrors';
 import axios from 'axios';
 import { isSignupValid } from './validateAuth';
 import { AuthForm, Label, Input, PrimaryFormBtn } from '../Styles';
+import { useFlash } from '../../hooks/useFlash';
 
-const Signup =  ({formValues, setFormValues}) => {
+const Signup =  ({formValues, setFormValues, signupUrl}) => {
+    const { showFlash } = useFlash();
     const [ errors, setErrors ] = useState([]);
+    const [ hasAccount, setHasAccount ] = useState(false);
     const { firstName, lastName, email, password, password2 } = formValues;
     const handleChange = (event) => {
         event.persist()
@@ -14,11 +17,16 @@ const Signup =  ({formValues, setFormValues}) => {
     };
     const signup = (event) => {
         event.preventDefault();
+        setErrors([]);
         const errorMsgs = isSignupValid(formValues);
         if (errorMsgs.length !== 0) return setErrors(errorMsgs);
         axios
-          .post('/api/users/signup', formValues)
-          .then(() => <Redirect to="/login" />)
+          .post(signupUrl, formValues)
+           .then(() => {
+                showFlash('Sign up successful. Please login');
+                setHasAccount(true);
+                return <Redirect to="/login"/>
+           })
           .catch(err => setErrors([err.response.data.error || "Sign up failed. Please try again"]))
     };
     return (

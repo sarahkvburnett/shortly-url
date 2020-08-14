@@ -5,6 +5,7 @@ import { LinksProvider } from './context/LinksContext';
 import { ActiveLinkProvider } from './context/ActiveLinkContext';
 import { ProcessLinkProvider } from './context/ProcessLinkContext'
 import { App } from './App'
+import { FlashProvider } from './context/FlashContext';
 
 
 ReactDOM.render(
@@ -13,7 +14,9 @@ ReactDOM.render(
       <LinksProvider>
         <ActiveLinkProvider>
           <ProcessLinkProvider>
-            <App />
+            <FlashProvider>
+              <App />
+            </FlashProvider>
           </ProcessLinkProvider>
       </ActiveLinkProvider>
       </LinksProvider>

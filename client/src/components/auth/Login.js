@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { setAuthToken }  from '../../utilities/setAuthToken';
+import { setAuthHeader }  from '../../utilities/setAuthHeader';
 import Errors from './AuthErrors';
 import axios from 'axios';
 import { isLoginValid } from './validateAuth';
 import { AuthForm, Label, Input, FormBtn, PrimaryFormBtn } from '../Styles';
 import { useUser } from '../../hooks/useUser';
 import { useLinks } from '../../hooks/useLinks';
+import { useFlash } from '../../hooks/useFlash';
+import { addLocalStorage } from '../../utilities/setLocalStorage';
 
-const Login = ({formValues: {email, password}, setFormValues}) => {
+const Login = ({formValues: {email, password}, setFormValues, loginUrl}) => {
     const { loginUser } = useUser();
     const { removeBrowserLinks } = useLinks();
     const [ errors, setErrors ] = useState([]);
+    const { showFlash } = useFlash();
     const handleChange = (event) => {
         event.persist()
         setFormValues(values => ({...values, [event.target.id]: event.target.value}))   
@@ -20,14 +23,18 @@ const Login = ({formValues: {email, password}, setFormValues}) => {
         const errorMsgs = isLoginValid({email, password});
         if (errorMsgs.length !== 0) return setErrors(errorMsgs);
         axios
-          .post('/api/users/login', {email, password})
-          .then(({data: {token}}) => {
-              setAuthToken(token);
-              loginUser(token);
+          .post(loginUrl, {email, password})
+          .then(({data: {token, id}}) => {
+              showFlash('Login successful');
+              setAuthHeader(token);
+              addLocalStorage('user', JSON.stringify({id, token}));
+              loginUser(id, token);
               removeBrowserLinks();
           })
-          .catch(err => setErrors([err.response.data.error || "Login failed. Please try again"]));
-        setFormValues({});
+          .catch(err => { 
+              showFlash('Login failed');
+              setErrors([err.response.data.error || "Login failed. Please try again"]);
+          });
     };
     return (
         <AuthForm onSubmit={login} noValidate>

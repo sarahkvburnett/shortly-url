@@ -20,7 +20,7 @@ exports[`login matches snapshot 1`] = `
       onChange={[Function]}
       required={true}
       type="email"
-      value=""
+      value="sarah@gmail.com"
     />
   </label>
   <label
@@ -34,7 +34,7 @@ exports[`login matches snapshot 1`] = `
       onChange={[Function]}
       required={true}
       type="password"
-      value=""
+      value="123456"
     />
   </label>
   <button

@@ -2,22 +2,22 @@
 
 exports[`nav links authenticated matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD iGmkcm"
+  className="sc-fzoLsD tzHtr"
   onClick={[Function]}
 >
   <div>
     <button
-      className="sc-AxjAm sc-fzpans cwvCVN"
+      className="sc-AxjAm iwCWZU"
     >
       Features
     </button>
     <button
-      className="sc-AxjAm sc-fzpans cwvCVN"
+      className="sc-AxjAm iwCWZU"
     >
       Pricing
     </button>
     <button
-      className="sc-AxjAm sc-fzpans cwvCVN resourcesBtn"
+      className="sc-AxjAm iwCWZU resourcesBtn"
     >
       Resources
     </button>
@@ -25,38 +25,38 @@ exports[`nav links authenticated matches snapshot 1`] = `
   <div
     data-testid="authBtns"
   >
-    <button
-      className="sc-AxirZ fTDgvF"
+    <a
+      href="/logout"
+      onClick={[Function]}
     >
-      <a
-        href="/logout"
-        onClick={[Function]}
+      <button
+        className="sc-AxirZ fTDgvF"
       >
         Logout
-      </a>
-    </button>
+      </button>
+    </a>
   </div>
 </div>
 `;
 
 exports[`nav links not-authenticated matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD iGmkcm"
+  className="sc-fzoLsD tzHtr"
   onClick={[Function]}
 >
   <div>
     <button
-      className="sc-AxjAm sc-fzpans cwvCVN"
+      className="sc-AxjAm iwCWZU"
     >
       Features
     </button>
     <button
-      className="sc-AxjAm sc-fzpans cwvCVN"
+      className="sc-AxjAm iwCWZU"
     >
       Pricing
     </button>
     <button
-      className="sc-AxjAm sc-fzpans cwvCVN resourcesBtn"
+      className="sc-AxjAm iwCWZU resourcesBtn"
     >
       Resources
     </button>
@@ -64,26 +64,26 @@ exports[`nav links not-authenticated matches snapshot 1`] = `
   <div
     data-testid="authBtns"
   >
-    <button
-      className="sc-AxjAm sc-fzpans cwvCVN"
+    <a
+      href="/login"
+      onClick={[Function]}
     >
-      <a
-        href="/login"
-        onClick={[Function]}
+      <button
+        className="sc-AxjAm iwCWZU"
       >
         Login
-      </a>
-    </button>
-    <button
-      className="sc-AxirZ fTDgvF"
+      </button>
+    </a>
+    <a
+      href="/signup"
+      onClick={[Function]}
     >
-      <a
-        href="/signup"
-        onClick={[Function]}
+      <button
+        className="sc-AxirZ fTDgvF"
       >
         Sign Up
-      </a>
-    </button>
+      </button>
+    </a>
   </div>
 </div>
 `;

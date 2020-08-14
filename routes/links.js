@@ -25,21 +25,22 @@ const validateLink = (req, res, next) => {
     else next();
 };
 
-//TODO: equality check of date and time
+//TODO: equivalent check of date and time and click
 const compareLink = (req, res, next) => {
     Link.findById(req.params.id)
     .then(link => {
         let { full, userId, short, _id} = link;
+        console.log(link, req.body);
         if ( short === req.body.short) return res.status(400).json({msg: 'Short link is the same'})
         else if (
             _id !== req.params.id ||
             userId !== req.body.userId || 
             full !== req.body.full
-            ) return res.status(400).json({msg: 'Can only edit short link'})
+            ) return res.status(400).json({msg: 'Link details do not match'})
         else next()
     })
     .catch(err => res.status(404).json({"msg": "Link not found", err}))
-}
+} 
 
 //@route POST /api/links
 //@route public

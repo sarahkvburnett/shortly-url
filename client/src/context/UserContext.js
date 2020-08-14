@@ -5,12 +5,11 @@ export const UserContext = createContext();
 export const UserProvider = (props) => {
     const [ user, setUser] = useState({
         isAuth: false,
-        firstName: undefined,
-        id: undefined,
-        token: undefined,
-        currentAuth: undefined
+        // firstName: undefined,
+        // id: undefined,
+        // token: undefined,
+        // currentAuth: undefined
     });
-    
     return (
         <UserContext.Provider value={[user, setUser]}>
             {props.children}

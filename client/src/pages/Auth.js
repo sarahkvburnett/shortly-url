@@ -5,6 +5,7 @@ import Login from '../components/auth/Login';
 import Logout from '../components/auth/Logout';
 import Signup from '../components/auth/Signup';
 import image from '../images/illustration-working.svg';
+import { loginUrl, signupUrl } from '../utilities/urls';
 
 const AuthPg = styled.div`
     background: ${white};
@@ -41,9 +42,9 @@ const Auth = ({auth}) => {
     }); 
     return (
         <AuthPg>
-            { auth==="login" && <Login formValues={formValues} setFormValues={setFormValues} /> }
+            { auth==="login" && <Login formValues={formValues} setFormValues={setFormValues} loginUrl={loginUrl}/> }
             { auth==="logout" && <Logout/> }
-            { auth==="signup" && <Signup formValues={formValues} setFormValues={setFormValues}/> }
+            { auth==="signup" && <Signup formValues={formValues} setFormValues={setFormValues} signupUrl={signupUrl}/> }
             <Img><img src={image} alt="woman working at desk"/></Img>
         </AuthPg>
     )

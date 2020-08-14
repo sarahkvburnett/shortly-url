@@ -11,16 +11,9 @@ Write tests
 * finish with login
 * need to look up testing router
 
-Loading state for auth/ buttons
-Button ui - with loading - props text and onclick function
+loading state for buttons?
 
 One click copy dash links
-
-flash ui (portal): - started but need to sort out tranistion
-* Sign up sucessfull
-* Link updated
-* Link created
-* Link deleted
 
 transitions
 
@@ -30,10 +23,17 @@ protected vs public route utility
 
 add functionality to buttons on index
 
-bug on repeat add link duplicate key
+duplicate key 
 
 alphanumeric id 
 
-edit signup ssv errors with useful messages
+edit signup ss with useful messages
 
-need to sort out signup redirect to login :)
+signup not redirecting to login
+
+error handling
+
+add local storage links to user on login
+
+userId issue with crud
+

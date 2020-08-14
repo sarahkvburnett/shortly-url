@@ -1,31 +1,33 @@
 import React, { useState } from 'react';
 import { PrimaryButton, LinkModal } from '../Styles';
 import axios from 'axios';
-import { shortlyUrl } from '../../utilities/url';
+import { shortlyUrl } from '../../utilities/urls';
 import Error from '../Error';
 import CloseButton from './CloseButton';
 import { useProcessLink } from '../../hooks/useProcessLink';
 import { useLinks } from '../../hooks/useLinks';
+import { useFlash } from '../../hooks/useFlash';
 
 const LinkEditor = () => {
-    const { updateLinkinLinks } = useLinks();
+    const { updateLinkInLinks } = useLinks();
     const { processLink: {link, link: {_id, full, short}}, setProcessNull } = useProcessLink();
     const [ newShortLink, setNewShortLink ] = useState(short);
+    const { showFlash } = useFlash();
     const [ error, setError ] = useState();
     const handleChange = (event) => {
         setError(null);
         setNewShortLink(event.target.value);
     };
-    const updateState = (newLink) => {
-        setProcessNull(); 
-        updateLinkinLinks(newLink);
-    }
     const updateLink = (event) => {
         event.preventDefault();
         if (newShortLink === short) return setError('Url same as existing');
         const newLink = {...link, short: newShortLink};
         axios.put(`/api/links/${_id}`, newLink)
-        .then( res => updateState(newLink))            
+        .then( res => {
+            updateLinkInLinks(newLink);
+            showFlash('Link updated');
+            setProcessNull(); 
+        })            
         .catch( err => setError('Update failed, please try again'));
     }
     return (

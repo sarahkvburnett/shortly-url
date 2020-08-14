@@ -58,11 +58,10 @@ const Links = styled.div`
         align-items: center;
         height: 10vh;
         width: auto;
+        button {
+            margin: 2vh;
+        }
     }
-`
-
-const NavBtn = styled(Button)`
-    margin: 1vw;
 `
 
 const NavLinks = ({toggleMobNav = () => {}}) => {
@@ -70,14 +69,14 @@ const NavLinks = ({toggleMobNav = () => {}}) => {
     return (
         <Links onClick={toggleMobNav}>
             <div>
-                <NavBtn>Features</NavBtn>
-                <NavBtn>Pricing</NavBtn>
-                <NavBtn className="resourcesBtn">Resources</NavBtn>
+                <Button>Features</Button>
+                <Button>Pricing</Button>
+                <Button className="resourcesBtn">Resources</Button>
             </div>
             <div data-testid="authBtns">
-                { !isAuth && <NavBtn><Link to="/login">Login</Link></NavBtn> }
-                { !isAuth && <PrimaryButton><Link to="/signup">Sign Up</Link></PrimaryButton>}
-                { isAuth && <PrimaryButton><Link to="/logout">Logout</Link></PrimaryButton>}
+                { !isAuth && <Link to="/login"><Button>Login</Button></Link> }
+                { !isAuth && <Link to="/signup"><PrimaryButton>Sign Up</PrimaryButton></Link>}
+                { isAuth && <Link to="/logout"><PrimaryButton>Logout</PrimaryButton></Link>}
                 </div>
         </Links>
     )
