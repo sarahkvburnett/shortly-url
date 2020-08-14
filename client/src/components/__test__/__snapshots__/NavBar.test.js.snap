@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+ 
+exports[`nav bar matches snapshot 1`] = `
+<div
+  className="sc-fzoLsD lcTlnO"
+>
+  <a
+    className="logo"
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="Shortly"
+      src="logo.svg"
+    />
+  </a>
+</div>
+`;

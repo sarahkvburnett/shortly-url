@@ -6,6 +6,10 @@ Forget password
 Bro check that user owns link they deleting
 
 Write tests 
+* conditional rendering for the nav
+* test fails with app 
+* finish with login
+* need to look up testing router
 
 Loading state for auth/ buttons
 Button ui - with loading - props text and onclick function
@@ -23,3 +27,5 @@ transitions
 link updating on rejection
 
 protected vs public route utility
+
+add functionality to buttons on index

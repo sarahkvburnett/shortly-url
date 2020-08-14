@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`intro matches snapshot 1`] = `
+<section
+  className="sc-fzoLsD ctonXV"
+>
+  <div
+    className="sc-fzpans gomgoj"
+  >
+    <img
+      alt="woman working at desk"
+      src="illustration-working.svg"
+    />
+  </div>
+  <div
+    className="sc-fzplWN dNOlRr"
+  >
+    <h1>
+      More than just shorter links
+    </h1>
+    <p>
+      Build your brand’s recognition and get detailed insights on how your links are performing.
+    </p>
+    <button
+      className="sc-AxirZ fTDgvF"
+    >
+      Get Started
+    </button>
+  </div>
+</section>
+`;

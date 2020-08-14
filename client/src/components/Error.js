@@ -10,6 +10,6 @@ padding: 1vh 1vw;
 font-size: smaller;
 `
 
-const Error = ({error}) => <ErrorBar><Exclamation/> {error}</ErrorBar>;
+const Error = ({error}) => <ErrorBar data-testid="error"><Exclamation/> {error}</ErrorBar>;
 
 export default Error;
