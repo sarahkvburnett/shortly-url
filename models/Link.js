@@ -5,7 +5,7 @@ const linkSchema = new mongoose.Schema({
     _id: {
         type: String,
         required: true,
-        default: shortid.generate(),
+        default: shortid.generate,
         isNew: true,
     },
     userId: {
