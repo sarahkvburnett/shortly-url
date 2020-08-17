@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dash load matches snapshot 1`] = `
+<div
+  className="sc-AxiKw cKbaXL"
+>
+  <h3>
+    No Links found
+  </h3>
+  <p>
+    Please add a link below
+  </p>
+  <p>
+    Or refresh the page
+  </p>
+</div>
+`;

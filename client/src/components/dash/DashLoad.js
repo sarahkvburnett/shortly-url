@@ -4,13 +4,11 @@ import { Load, LoadIcon } from '../Styles';
 import { useActiveLink } from '../../hooks/useActiveLink';
 import { useUser } from '../../hooks/useUser';
 import { useLinks } from '../../hooks/useLinks';
-import { addLocalStorage } from '../../utilities/setLocalStorage';
 
 const DashLoad = ({setLoading}) => {
     const { setLinksFromDB, setLinksFromBrowser } = useLinks();
     const { user } = useUser();
     const { setActiveLink } = useActiveLink();
-    // load links from local storage if present otherwise get from db;
     useEffect( () => {
             axios.get(`/api/links/${user.id}`)
             .then( res => {

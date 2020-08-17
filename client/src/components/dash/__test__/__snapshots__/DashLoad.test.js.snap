@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dash load matches snapshot 1`] = `
+<div
+  className="sc-AxiKw cKbaXL"
+>
+  <p>
+    Fetching Links...
+  </p>
+  <div
+    className="sc-AxhCb cgHmUX"
+  />
+</div>
+`;

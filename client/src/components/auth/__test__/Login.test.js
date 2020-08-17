@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from '../Login';
 import { render, cleanup, fireEvent, screen, waitForElement } from '@testing-library/react';
-import { rest } from 'msw'
-import { setupServer } from 'msw/node'
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
 import renderer from 'react-test-renderer';
+import Login from '../Login';
 import { UserProvider } from '../../../context/UserContext';
 import { LinksProvider } from '../../../context/LinksContext';
 import { FlashProvider } from '../../../context/FlashContext';
@@ -14,7 +14,7 @@ const LoginWrapper = (formValues) => {
         <UserProvider>
             <LinksProvider>
                 <FlashProvider>
-                        <Login formValues={formValues} setFormValues={()=>{}} loginUrl='/login'/>
+                    <Login formValues={formValues} setFormValues={() => {}} loginUrl={'/login'}/>
                 </FlashProvider>
             </LinksProvider>
         </UserProvider>
@@ -54,7 +54,12 @@ afterAll(() => server.close())
 it('renders login without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<ValidLoginWrapper/>, div);
-})
+});
+
+it('login matches snapshot', () => {
+    const tree = renderer.create(<ValidLoginWrapper/>).toJSON();
+    expect(tree).toMatchSnapshot();
+});
 
 it('valid user is logged in', async () => {
     render(<ValidLoginWrapper/>);
@@ -81,7 +86,3 @@ it('handles server error', async () => {
     expect(screen.getByTestId('errors')).toHaveTextContent('Login failed. Please try again');
 });
 
-it('login matches snapshot', () => {
-    const tree = renderer.create(<ValidLoginWrapper/>).toJSON();
-    expect(tree).toMatchSnapshot();
-})

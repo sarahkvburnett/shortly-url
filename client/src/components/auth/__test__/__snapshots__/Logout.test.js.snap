@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logout matches snapshot 1`] = `
+<form
+  className="sc-AxhUy jtTpBF"
+>
+  <h3>
+    Are you sure you want to logout?
+  </h3>
+  <button
+    className="sc-AxirZ sc-AxheI emVeqi"
+    onClick={[Function]}
+  >
+    Yes
+  </button>
+  <button
+    className="sc-AxirZ sc-AxheI emVeqi"
+  >
+    <a
+      href="/dashboard"
+      onClick={[Function]}
+    >
+      No
+    </a>
+  </button>
+</form>
+`;

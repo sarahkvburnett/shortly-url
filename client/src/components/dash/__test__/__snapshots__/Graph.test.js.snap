@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graph matches snapshot 1`] = `
+<div
+  className="sc-fznyAO isDytu"
+>
+  <div
+    className="date"
+  >
+    <input
+      className="sc-fznKkj dozVdw"
+      id="date"
+      onChange={[Function]}
+      type="date"
+    />
+    <p>
+      WEEK COMMENCING: 
+      <span>
+        Tue Aug 11
+      </span>
+    </p>
+    <p>
+      WEEK COUNT: 
+      <span>
+        0
+      </span>
+    </p>
+  </div>
+</div>
+`;

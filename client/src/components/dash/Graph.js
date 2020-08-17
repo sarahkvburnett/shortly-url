@@ -19,7 +19,7 @@ const GraphBox = styled.div`
                 display: block;
             }
         }
-    }
+    } 
     .error {
         font-size: smaller;
     }
