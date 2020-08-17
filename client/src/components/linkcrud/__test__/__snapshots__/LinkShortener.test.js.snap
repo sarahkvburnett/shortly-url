@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link shortener matches snapshot 1`] = `
+<div
+  className="sc-fzqBZW deRmIF"
+  style={
+    Object {
+      "top": undefined,
+    }
+  }
+>
+  <form
+    className="sc-fznyAO dlGfaB"
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="link"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      Website Url
+    </label>
+    <p
+      className="sc-fzokOt kPqHuq"
+    />
+    <input
+      className="sc-fznKkj jhFdRJ"
+      data-testid="input"
+      id="link"
+      name="link"
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={true}
+      value="Shorten a link here... "
+    />
+    <input
+      className="sc-fznKkj sc-fznZeY iOAXEI"
+      data-testid="button"
+      disabled={false}
+      type="submit"
+      value="Shorten It!"
+    />
+  </form>
+</div>
+`;

@@ -2,10 +2,10 @@
 
 exports[`statistics matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD htqQCR"
+  className="sc-fzplWN ejJhIs"
 >
   <div
-    className="sc-fzpans gpZofI"
+    className="sc-fznyAO gIvbEl"
   >
     <h2>
       Advanced Statistics
@@ -15,13 +15,13 @@ exports[`statistics matches snapshot 1`] = `
     </p>
   </div>
   <div
-    className="sc-fzplWN ehPSBV"
+    className="sc-fznKkj jlncY"
   >
     <div
-      className="sc-fznyAO hTHikP brand"
+      className="sc-fznZeY fDbVBu brand"
     >
       <i
-        className="sc-fznZeY bkEUuO"
+        className="sc-fzqBZW bDCZNs"
       >
         <svg
           height="40"
@@ -35,7 +35,7 @@ exports[`statistics matches snapshot 1`] = `
         </svg>
       </i>
       <div
-        className="sc-fznKkj iLHHDj"
+        className="sc-fzokOt iIQvyw"
       >
         <h3>
           Brand Recognition
@@ -46,10 +46,10 @@ exports[`statistics matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="sc-fznyAO hTHikP records"
+      className="sc-fznZeY fDbVBu records"
     >
       <i
-        className="sc-fznZeY bkEUuO"
+        className="sc-fzqBZW bDCZNs"
       >
         <svg
           height="40"
@@ -63,7 +63,7 @@ exports[`statistics matches snapshot 1`] = `
         </svg>
       </i>
       <div
-        className="sc-fznKkj iLHHDj"
+        className="sc-fzokOt iIQvyw"
       >
         <h3>
           Detailed Records
@@ -74,10 +74,10 @@ exports[`statistics matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="sc-fznyAO hTHikP custom"
+      className="sc-fznZeY fDbVBu custom"
     >
       <i
-        className="sc-fznZeY bkEUuO"
+        className="sc-fzqBZW bDCZNs"
       >
         <svg
           height="48"
@@ -91,7 +91,7 @@ exports[`statistics matches snapshot 1`] = `
         </svg>
       </i>
       <div
-        className="sc-fznKkj iLHHDj"
+        className="sc-fzokOt iIQvyw"
       >
         <h3>
           Fully Customizable

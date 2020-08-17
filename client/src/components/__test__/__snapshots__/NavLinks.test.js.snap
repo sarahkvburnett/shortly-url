@@ -2,7 +2,7 @@
 
 exports[`nav links authenticated matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD tzHtr"
+  className="sc-fzplWN fTyIJW"
   onClick={[Function]}
 >
   <div>
@@ -41,7 +41,7 @@ exports[`nav links authenticated matches snapshot 1`] = `
 
 exports[`nav links not-authenticated matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD tzHtr"
+  className="sc-fzplWN fTyIJW"
   onClick={[Function]}
 >
   <div>

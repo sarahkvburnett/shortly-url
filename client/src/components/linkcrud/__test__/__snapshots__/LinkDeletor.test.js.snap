@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link deletor matches snapshot 1`] = `
+<form
+  className="sc-fzozJi eAysAZ"
+  onSubmit={[Function]}
+>
+  <h3>
+    Delete Shortly Link
+  </h3>
+  <p />
+  <p>
+    https://short.ly/undefined
+  </p>
+  <button
+    className="sc-AxirZ fTDgvF"
+    id="delete"
+  >
+    Delete
+  </button>
+  <button
+    className="sc-AxjAm iwCWZU"
+    onClick={[Function]}
+    type="button"
+  >
+    Close
+  </button>
+</form>
+`;

@@ -2,10 +2,10 @@
 
 exports[`intro matches snapshot 1`] = `
 <section
-  className="sc-fzoLsD ctonXV"
+  className="sc-fzplWN cgogOI"
 >
   <div
-    className="sc-fzpans gomgoj"
+    className="sc-fznyAO livSja"
   >
     <img
       alt="woman working at desk"
@@ -13,7 +13,7 @@ exports[`intro matches snapshot 1`] = `
     />
   </div>
   <div
-    className="sc-fzplWN dNOlRr"
+    className="sc-fznKkj dKlcTy"
   >
     <h1>
       More than just shorter links

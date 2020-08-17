@@ -19,16 +19,15 @@ const LinkDeletor = () => {
   } = useProcessLink();
   const { showFlash } = useFlash();
   const [error, setError] = useState();
-  const updateState = () => {
-    deleteLinkFromLinks({ link });
-    showFlash('Link deleted');
-    setProcessNull();
-  };
   const deleteLink = (event) => {
     event.preventDefault();
     axios
       .delete(`/api/links/${_id}`)
-      .then((res) => updateState())
+      .then((res) => {
+        deleteLinkFromLinks({ link });
+        showFlash('Link deleted');
+        setProcessNull();
+      })
       .catch((err) => setError("Delete failed, please try again"));
   };
 

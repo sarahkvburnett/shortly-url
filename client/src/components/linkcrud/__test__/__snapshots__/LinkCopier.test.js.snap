@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link copier matches snapshot 1`] = `
+<form
+  className="sc-fzozJi eAysAZ"
+>
+  <h3>
+    Copy Shortly Link
+  </h3>
+  <input
+    readOnly={true}
+    value="https://short.ly/undefined"
+  />
+  <button
+    className="sc-AxirZ fTDgvF"
+    id="copy"
+    onClick={[Function]}
+    type="button"
+  >
+    Copy
+  </button>
+  <button
+    className="sc-AxjAm iwCWZU"
+    onClick={[Function]}
+    type="button"
+  >
+    Close
+  </button>
+</form>
+`;

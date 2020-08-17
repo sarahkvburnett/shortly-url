@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link editor matches snapshot 1`] = `
+<form
+  className="sc-fzozJi eAysAZ"
+  onSubmit={[Function]}
+>
+  <h3>
+    Edit Shortly Link
+  </h3>
+  <p />
+  <div
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <p>
+      https://short.ly/
+    </p>
+    <input
+      data-testid="input"
+      onChange={[Function]}
+      pattern="^[a-z0-9_-]{3,16}$"
+      required={true}
+      title="Letters and numbers between 3-16 characters"
+    />
+  </div>
+  <button
+    className="sc-AxirZ fTDgvF"
+    data-testid="button"
+    id="update"
+  >
+    Update
+  </button>
+  <button
+    className="sc-AxjAm iwCWZU"
+    onClick={[Function]}
+    type="button"
+  >
+    Close
+  </button>
+</form>
+`;

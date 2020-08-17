@@ -109,7 +109,7 @@ const LinkAdder = () => {
                 setInput({value: ''});
                 setIsSending(false);
             })
-            .catch( error => {
+            .catch( () => {
                 setError('Error! Please try again') ;
                 setIsSending(false);
             })                 
@@ -124,8 +124,15 @@ const LinkAdder = () => {
                     onChange={handleChange} 
                     value={input.value} 
                     required={input.value ===  "Shorten a link here..." ? false : true} 
-                    onFocus={() => changeState("", false, true)}/> 
-                <Button type="submit" value={isSending ? "Shortening..." : "Shorten It!"} disabled={isSending}/>
+                    onFocus={() => changeState("", false, true)}
+                    data-testid="input"
+                /> 
+                <Button 
+                    type="submit" 
+                    value={isSending ? "Shortening..." : "Shorten It!"} 
+                    disabled={isSending}
+                    data-testid="button"
+                />
         </Form>
     )
 };

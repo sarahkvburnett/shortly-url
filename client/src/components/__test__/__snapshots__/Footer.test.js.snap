@@ -2,7 +2,7 @@
 
 exports[`footer matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD erFZcn"
+  className="sc-fzplWN hXJeDW"
 >
   <svg
     title="Shortly"
@@ -10,7 +10,7 @@ exports[`footer matches snapshot 1`] = `
     logo.svg
   </svg>
   <div
-    className="sc-fzpans bhyVfe"
+    className="sc-fznyAO cbEHCT"
   >
     <h4>
       Features
@@ -40,7 +40,7 @@ exports[`footer matches snapshot 1`] = `
     </ul>
   </div>
   <div
-    className="sc-fzpans bhyVfe"
+    className="sc-fznyAO cbEHCT"
   >
     <h4>
       Resources
@@ -70,7 +70,7 @@ exports[`footer matches snapshot 1`] = `
     </ul>
   </div>
   <div
-    className="sc-fzpans bhyVfe"
+    className="sc-fznyAO cbEHCT"
   >
     <h4>
       Company
@@ -107,7 +107,7 @@ exports[`footer matches snapshot 1`] = `
     </ul>
   </div>
   <div
-    className="sc-fzplWN fiVwUX"
+    className="sc-fznKkj ffGMWO"
   >
     <a
       href="https://facebook.com"
