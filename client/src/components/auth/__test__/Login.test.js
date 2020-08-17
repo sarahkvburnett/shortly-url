@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { rendersWithoutCrashing, matchesSnapshot } from '../../../setupTests';
 import { render, cleanup, fireEvent, screen, waitForElement } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
-import renderer from 'react-test-renderer';
 import Login from '../Login';
 import { UserProvider } from '../../../context/UserContext';
 import { LinksProvider } from '../../../context/LinksContext';
@@ -51,15 +50,9 @@ afterAll(() => server.close())
 //TODO:
 // test 404 server error - err.response.data.error undefined
 
-it('renders login without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<ValidLoginWrapper/>, div);
-});
+it('renders login without crashing', () => rendersWithoutCrashing(ValidLoginWrapper));
 
-it('login matches snapshot', () => {
-    const tree = renderer.create(<ValidLoginWrapper/>).toJSON();
-    expect(tree).toMatchSnapshot();
-});
+it('login matches snapshot', () => matchesSnapshot(ValidLoginWrapper));
 
 it('valid user is logged in', async () => {
     render(<ValidLoginWrapper/>);

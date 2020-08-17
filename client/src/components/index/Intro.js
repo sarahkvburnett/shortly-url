@@ -57,7 +57,7 @@ const IntroText = styled.div`
 
 const Intro = () => {
     return (
-        <IntroWrapper>
+        <IntroWrapper data-testid="home">
             <IntroImg>
                 <img src={image} alt="woman working at desk"/>
             </IntroImg>

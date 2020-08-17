@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { rendersWithoutCrashing, matchesSnapshot } from '../../../setupTests';
 import { render, cleanup, fireEvent, screen, waitForElement } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
@@ -60,15 +60,9 @@ afterAll(() => server.close())
 //TODO:
 // test 404 server error - err.response.data.error undefined
 
-it('renders signup without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<ValidSignupWrapper/>, div);
-});
+it('renders signup without crashing', () => rendersWithoutCrashing(ValidSignupWrapper));
 
-it('signup matches snapshot', () => {
-    const tree = renderer.create(<ValidSignupWrapper/>).toJSON();
-    expect(tree).toMatchSnapshot();
-});
+it('signup matches snapshot', () => matchesSnapshot(ValidSignupWrapper));
 
 it('valid user is signed up', async () => {
     render(<ValidSignupWrapper/>);

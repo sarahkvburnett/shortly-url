@@ -69,14 +69,14 @@ const Input = styled.input`
 
 const DashLink = ({ link }) => {
   const { _id, date, full, click, short } = link;
-  const { activeLink, setActiveLink } = useActiveLink();
+  const { activeLink, updateActiveLink } = useActiveLink();
   return (
     <Link
       style={{
         background: background(_id, activeLink),
         color: color(_id, activeLink),
       }}
-      onClick={() => setActiveLink(link)}
+      onClick={() => updateActiveLink(link)}
       data-testid="link"
     >
       <Urls className="urls">

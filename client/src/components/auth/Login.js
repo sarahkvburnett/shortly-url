@@ -37,7 +37,7 @@ const Login = ({formValues: {email, password}, setFormValues, loginUrl}) => {
           });
     };
     return (
-        <AuthForm onSubmit={login} noValidate>
+        <AuthForm onSubmit={login} noValidate data-testid="login">
             <h3>Login</h3>
             { errors.length > 0 && <Errors errors={errors}/> }
             <Label HTMLfor="email">Email <Input type="email" id="email" name="email" onChange={handleChange} value={email || ''} required></Input></Label>

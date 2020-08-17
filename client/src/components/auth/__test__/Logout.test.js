@@ -1,32 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { rendersWithoutCrashing, matchesSnapshot, ComponentWrapper } from '../../../setupTests';
 import Logout from '../Logout';
-import renderer from 'react-test-renderer';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { UserProvider } from '../../../context/UserContext';
-import { LinksProvider } from '../../../context/LinksContext';
-import { FlashProvider } from '../../../context/FlashContext';
 
-const LogoutWrapper = () => {
-    return (
-        <UserProvider>
-            <LinksProvider>
-                <FlashProvider>
-                        <Router>
-                        <Logout/>
-                        </Router>
-                </FlashProvider>
-            </LinksProvider>
-        </UserProvider>
-    )
-}
+const LogoutWrapper = () => ComponentWrapper(Logout);
 
-it('renders logout without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<LogoutWrapper/>, div);
-})
+it('renders logout without crashing', () => rendersWithoutCrashing(LogoutWrapper));
 
-it('logout matches snapshot', () => {
-    const tree = renderer.create(<LogoutWrapper/>).toJSON();
-    expect(tree).toMatchSnapshot();
-})
+it('logout matches snapshot', () => matchesSnapshot(LogoutWrapper));

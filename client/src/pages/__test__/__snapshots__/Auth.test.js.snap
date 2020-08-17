@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login matches snapshot 1`] = `
+<div
+  className="sc-fznyAO jJNjbR"
+>
+  <form
+    className="sc-AxhUy jtTpBF"
+    data-testid="login"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <h3>
+      Login
+    </h3>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      Email 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        required={true}
+        type="email"
+        value=""
+      />
+    </label>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      Password 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+        value=""
+      />
+    </label>
+    <button
+      className="sc-AxirZ sc-AxheI emVeqi"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button
+      className="sc-AxjAm sc-AxgMl bEkBRD"
+      type="button"
+    >
+      Forgot password
+    </button>
+  </form>
+  <div
+    className="sc-fznKkj RakxV"
+  >
+    <img
+      alt="woman working at desk"
+      src="illustration-working.svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`logout matches snapshot 1`] = `
+<div
+  className="sc-fznyAO jJNjbR"
+>
+  <form
+    className="sc-AxhUy jtTpBF"
+    data-testid="logout"
+  >
+    <h3>
+      Are you sure you want to logout?
+    </h3>
+    <button
+      className="sc-AxirZ sc-AxheI emVeqi"
+      onClick={[Function]}
+    >
+      Yes
+    </button>
+    <button
+      className="sc-AxirZ sc-AxheI emVeqi"
+    >
+      <a
+        href="/dashboard"
+        onClick={[Function]}
+      >
+        No
+      </a>
+    </button>
+  </form>
+  <div
+    className="sc-fznKkj RakxV"
+  >
+    <img
+      alt="woman working at desk"
+      src="illustration-working.svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`signup matches snapshot 1`] = `
+<div
+  className="sc-fznyAO jJNjbR"
+>
+  <form
+    className="sc-AxhUy jtTpBF"
+    data-testid="signup"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <h3>
+      Sign Up
+    </h3>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      First Name 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="firstName"
+        name="firstName"
+        onChange={[Function]}
+        required={true}
+        value=""
+      />
+    </label>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      Last Name 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="lastName"
+        name="lastName"
+        onChange={[Function]}
+        required={true}
+        value=""
+      />
+    </label>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      Email 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        required={true}
+        type="email"
+        value=""
+      />
+    </label>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      Password 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+        value=""
+      />
+    </label>
+    <label
+      className="sc-Axmtr KwGTg"
+    >
+      Confirm your password 
+      <input
+        className="sc-AxmLO kxGjkT"
+        id="password2"
+        name="password2"
+        onChange={[Function]}
+        required={true}
+        type="password"
+        value=""
+      />
+    </label>
+    <button
+      className="sc-AxirZ sc-AxheI emVeqi"
+      type="submit"
+    >
+      Sign up
+    </button>
+  </form>
+  <div
+    className="sc-fznKkj RakxV"
+  >
+    <img
+      alt="woman working at desk"
+      src="illustration-working.svg"
+    />
+  </div>
+</div>
+`;

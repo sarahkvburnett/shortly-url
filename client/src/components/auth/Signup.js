@@ -9,7 +9,6 @@ import { useFlash } from '../../hooks/useFlash';
 const Signup =  ({formValues, setFormValues, signupUrl}) => {
     const { showFlash } = useFlash();
     const [ errors, setErrors ] = useState([]);
-    const [ hasAccount, setHasAccount ] = useState(false);
     const { firstName, lastName, email, password, password2 } = formValues;
     const handleChange = (event) => {
         event.persist()
@@ -24,13 +23,14 @@ const Signup =  ({formValues, setFormValues, signupUrl}) => {
           .post(signupUrl, formValues)
            .then(() => {
                 showFlash('Sign up successful. Please login');
-                setHasAccount(true);
-                return <Redirect to="/login"/>
+                return (
+                <Redirect to="/login"/>
+                )
            })
           .catch(err => setErrors([err.response.data.error || "Sign up failed. Please try again"]))
     };
     return (
-        <AuthForm onSubmit={signup} noValidate>
+        <AuthForm onSubmit={signup} noValidate data-testid="signup">
             <h3>Sign Up</h3>
             { errors.length > 0 && <Errors errors={errors}/> }
             <Label HTMLfor="firstName">First Name <Input id="firstName" name="firstName" onChange={handleChange} value={firstName || ''} required></Input></Label>

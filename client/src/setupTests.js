@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import '@testing-library/jest-dom/extend-expect';
 import { render, cleanup, fireEvent, screen, waitForElement } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import renderer from 'react-test-renderer';
-import { UserProvider } from './context/UserContext';
+import { BrowserRouter, Router } from 'react-router-dom'
+import { createMemoryHistory } from 'history'
+import { UserContext, UserProvider } from './context/UserContext';
 import { LinksProvider } from './context/LinksContext';
 import { ActiveLinkProvider } from './context/ActiveLinkContext';
 import { ProcessLinkProvider } from './context/ProcessLinkContext';
 import { FlashProvider } from './context/FlashContext';
-import App from './App';
+import { App } from './App';
 
 export const ComponentWrapper = (Component) => {
     return (
@@ -19,24 +21,47 @@ export const ComponentWrapper = (Component) => {
                 <ActiveLinkProvider>
                     <ProcessLinkProvider>
                         <FlashProvider>
-                            <Component/>
+                            <BrowserRouter>
+                                <Component/>
+                            </BrowserRouter>
                         </FlashProvider>
                     </ProcessLinkProvider>
                 </ActiveLinkProvider>
             </LinksProvider>
         </UserProvider>
     )
-}
+};
+
+export const AppRouterWrapper = (route, newUser) => {
+    const [ user, setUser ] = useState(newUser);
+    const history = createMemoryHistory();
+    history.push(route)
+    return (
+        <UserContext.Provider value={[user, setUser]}>
+            <LinksProvider>
+                <ActiveLinkProvider>
+                    <ProcessLinkProvider>
+                        <FlashProvider>
+                            <Router history={history}>
+                                <App/>
+                            </Router>
+                        </FlashProvider>
+                    </ProcessLinkProvider>
+                </ActiveLinkProvider>
+            </LinksProvider>
+        </UserContext.Provider>
+    )
+};
 
 export const rendersWithoutCrashing = (Component) => {
     const div = document.createElement('div');
     ReactDOM.render(<Component/>, div);
-}
+};
 
 export const matchesSnapshot = (Component) => {
     const tree = renderer.create(<Component/>).toJSON();
     expect(tree).toMatchSnapshot();
-}
+};
 
 export const sampleLinks = [
     {

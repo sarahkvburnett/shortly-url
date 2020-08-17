@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import { rendersWithoutCrashing, matchesSnapshot } from '../../../setupTests';
 import DashLoad from '../DashLoad';
 import { UserProvider } from '../../../context/UserContext';
 import { LinksProvider } from '../../../context/LinksContext';
@@ -18,12 +17,6 @@ const DashLoadWrapper = () => {
     )
 }
 
-it('renders dash load without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<DashLoadWrapper/>, div);
-});
+it('renders dash load without crashing', () => rendersWithoutCrashing(DashLoadWrapper));
 
-it('dash load matches snapshot', () => {
-    const tree = renderer.create(<DashLoadWrapper/>).toJSON();
-    expect(tree).toMatchSnapshot();
-});
+it('dash load matches snapshot', () => matchesSnapshot(DashLoadWrapper));

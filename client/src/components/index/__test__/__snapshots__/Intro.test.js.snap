@@ -3,6 +3,7 @@
 exports[`intro matches snapshot 1`] = `
 <section
   className="sc-fzplWN cgogOI"
+  data-testid="home"
 >
   <div
     className="sc-fznyAO livSja"

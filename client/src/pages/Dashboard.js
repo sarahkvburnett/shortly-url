@@ -26,7 +26,7 @@ const Dashboard = () => {
     const { processLink: {process} } = useProcessLink();
     const [ loading, setLoading ] = useState(true);
     return (
-        <Dash>
+        <Dash data-testid="dashboard">
             {loading && <DashLoad setLoading={setLoading}/> }
             {!loading && 
             <>

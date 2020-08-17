@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard matches snapshot 1`] = `
+<div
+  className="sc-fzoLag fXtiGu"
+  data-testid="dashboard"
+>
+  <div
+    className="sc-AxiKw cKbaXL"
+  >
+    <p>
+      Fetching Links...
+    </p>
+    <div
+      className="sc-AxhCb cgHmUX"
+    />
+  </div>
+  <div
+    className="sc-fznWqX jhRSgX"
+    style={
+      Object {
+        "top": "0",
+      }
+    }
+  >
+    <form
+      className="sc-fzoXzr djigUv"
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="link"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        Website Url
+      </label>
+      <p
+        className="sc-fznJRM jLcXwS"
+      />
+      <input
+        className="sc-fzpjYC kliCFF"
+        data-testid="input"
+        id="link"
+        name="link"
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        value="Shorten a link here... "
+      />
+      <input
+        className="sc-fzpjYC sc-fznxsB dSfCL"
+        data-testid="button"
+        disabled={false}
+        type="submit"
+        value="Shorten It!"
+      />
+    </form>
+  </div>
+</div>
+`;

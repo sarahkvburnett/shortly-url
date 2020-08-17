@@ -3,6 +3,7 @@
 exports[`logout matches snapshot 1`] = `
 <form
   className="sc-AxhUy jtTpBF"
+  data-testid="logout"
 >
   <h3>
     Are you sure you want to logout?

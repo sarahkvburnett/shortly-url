@@ -3,6 +3,7 @@
 exports[`login matches snapshot 1`] = `
 <form
   className="sc-AxhUy jtTpBF"
+  data-testid="login"
   noValidate={true}
   onSubmit={[Function]}
 >

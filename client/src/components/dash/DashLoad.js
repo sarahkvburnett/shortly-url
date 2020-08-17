@@ -6,14 +6,14 @@ import { useUser } from '../../hooks/useUser';
 import { useLinks } from '../../hooks/useLinks';
 
 const DashLoad = ({setLoading}) => {
-    const { setLinksFromDB, setLinksFromBrowser } = useLinks();
+    const { setLinksFromDB } = useLinks();
     const { user } = useUser();
-    const { setActiveLink } = useActiveLink();
+    const { updateActiveLink } = useActiveLink();
     useEffect( () => {
             axios.get(`/api/links/${user.id}`)
             .then( res => {
                 setLinksFromDB(res.data); 
-                setActiveLink(res.data[0]); 
+                updateActiveLink(res.data[0]); 
                 setLoading(false)
             })
             .catch( err => setLoading(false))

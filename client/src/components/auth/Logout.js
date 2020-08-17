@@ -19,7 +19,7 @@ const Logout = () => {
         removeBrowserLinks();
     };
     return (
-        <AuthForm>
+        <AuthForm data-testid="logout">
             <h3>Are you sure you want to logout?</h3>
             <PrimaryFormBtn onClick={logout}>Yes</PrimaryFormBtn>
             <PrimaryFormBtn><Link to="/dashboard">No</Link></PrimaryFormBtn>

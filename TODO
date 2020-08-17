@@ -5,11 +5,9 @@ Forget password
 
 Bro check that user owns link they deleting
 
-Write tests 
-* conditional rendering for the nav
-* test fails with app 
-* finish with login
-* need to look up testing router
+Testing
+* all app snapshots are user 
+* integration testing (see TODOs)
 
 loading state for buttons?
 

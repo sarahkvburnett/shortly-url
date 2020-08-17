@@ -35,7 +35,7 @@ export const App = () => {
                         {isAuth ? <Redirect to="/dashboard"/> : <Auth auth="signup" />}
                     </Route>
                     <Route path="/logout">
-                        {isAuth ? <Auth auth="logout"/> : <Redirect to="/Dashboard"/>}
+                        {isAuth ? <Auth auth="logout"/> : <Redirect to="/"/>}
                     </Route>
                     <Route path="/dashboard">
                         {isAuth ? <Dashboard/> : <Redirect to="/login"/> }
