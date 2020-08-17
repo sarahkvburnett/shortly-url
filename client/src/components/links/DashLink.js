@@ -77,10 +77,15 @@ const DashLink = ({ link }) => {
         color: color(_id, activeLink),
       }}
       onClick={() => setActiveLink(link)}
+      data-testid="link"
     >
       <Urls className="urls">
         <h3>{full}</h3>
-        <Input id={short} value={shortlyUrl + short} readOnly />
+        <Input 
+          id={short} 
+          value={shortlyUrl + short} 
+          readOnly 
+        />
       </Urls>
       <Details className="details">
         <p>

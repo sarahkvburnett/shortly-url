@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import CopyShortLink from './CopyShortLink'
-import LinkCopyButton from './LinkCopyButton'
+import LinkCopyButton from './LinkCopyBtn'
 import { breakpoint, alignWidth, smallerWidth } from '../Styles'
 import { useCopyLink } from '../../hooks/useCopyLink';
 import { useLinks } from '../../hooks/useLinks';
@@ -56,11 +56,17 @@ const IndexLinks = () => {
     <LinkContainer className="linkContainer">
         {
         links.map( ({_id, full}) => {
-            return <Link key={_id} className="link">
+            return (
+            <Link 
+                key={_id} 
+                className="link"
+                data-testid="link"
+            >
                 <FullLink>{full}</FullLink>
                 <CopyShortLink shortUrl={_id}/>
                 <LinkCopyButton id={_id} copiedLink={copiedLink} copyLink={copyLink}/>
             </Link> 
+            )
         })
         }
     </LinkContainer> 

@@ -12,14 +12,14 @@ import { ProcessLinkProvider } from './context/ProcessLinkContext';
 import { FlashProvider } from './context/FlashContext';
 import App from './App';
 
-export const ComponentWrapper = (Component, prop1, prop2, prop3) => {
+export const ComponentWrapper = (Component) => {
     return (
         <UserProvider>
             <LinksProvider>
                 <ActiveLinkProvider>
                     <ProcessLinkProvider>
                         <FlashProvider>
-                            <Component prop1={prop1} prop2={prop2} prop3={prop3}/>
+                            <Component/>
                         </FlashProvider>
                     </ProcessLinkProvider>
                 </ActiveLinkProvider>

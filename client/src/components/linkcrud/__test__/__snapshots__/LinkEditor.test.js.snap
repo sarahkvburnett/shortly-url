@@ -25,6 +25,7 @@ exports[`link editor matches snapshot 1`] = `
       pattern="^[a-z0-9_-]{3,16}$"
       required={true}
       title="Letters and numbers between 3-16 characters"
+      value=""
     />
   </div>
   <button

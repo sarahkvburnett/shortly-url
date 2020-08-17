@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dash link matches snapshot 1`] = `
+<div
+  className="sc-fznyAO hWLNiR"
+  data-testid="link"
+  onClick={[Function]}
+  style={
+    Object {
+      "background": "#FFF",
+      "color": "hsl(257, 27%, 26%)",
+    }
+  }
+>
+  <div
+    className="sc-fznKkj chzDLP urls"
+  >
+    <h3>
+      http://reactcommunity.org/react-transition-group/css-transition
+    </h3>
+    <input
+      className="sc-fzokOt kfeyim"
+      id="octopus"
+      readOnly={true}
+      value="https://short.ly/octopus"
+    />
+  </div>
+  <div
+    className="sc-fznZeY dLjCSH details"
+  >
+    <p>
+      CREATED
+       
+      <span>
+        2020-08-14
+      </span>
+    </p>
+    <p>
+      CLICKS 
+      <span>
+        8
+      </span>
+    </p>
+  </div>
+</div>
+`;

@@ -25,7 +25,7 @@ const LinkCopyButton = ({id, copiedLink, copyLink}) => {
     return (
         <>
         { copiedLink === id 
-            ? <DisabledButton type="button" disabled="true">Copied</DisabledButton> 
+            ? <DisabledButton type="button" disabled>Copied</DisabledButton> 
             : <Button className="linkcopybtn" onClick={(event) => copyLink(event, id)}>Copy</Button> 
         }
         </>

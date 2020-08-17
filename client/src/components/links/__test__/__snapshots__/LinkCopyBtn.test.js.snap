@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link copy btn matches snapshot 1`] = `
+<button
+  className="sc-AxirZ sc-fzplWN sc-fznyAO bNgdGr"
+  disabled={true}
+  type="button"
+>
+  Copied
+</button>
+`;

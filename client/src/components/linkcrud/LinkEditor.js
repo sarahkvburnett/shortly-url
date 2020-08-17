@@ -38,7 +38,7 @@ const LinkEditor = () => {
                         <p>{shortlyUrl}</p>
                         <input 
                             onChange={handleChange} 
-                            value={newShortLink} 
+                            value={newShortLink || ''} 
                             required 
                             pattern="^[a-z0-9_-]{3,16}$" 
                             title="Letters and numbers between 3-16 characters"

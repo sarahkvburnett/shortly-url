@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`copy short link matches snapshot 1`] = `
+<input
+  className="sc-fzplWN dgYTEC shortLink"
+  readOnly="readonly"
+  value="https://short.ly/undefined"
+/>
+`;
