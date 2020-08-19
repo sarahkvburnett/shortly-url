@@ -2,7 +2,7 @@
 
 exports[`dash link matches snapshot 1`] = `
 <div
-  className="sc-fznyAO hWLNiR"
+  className="sc-fznyAO hycAEd"
   data-testid="link"
   onClick={[Function]}
   style={
@@ -13,20 +13,20 @@ exports[`dash link matches snapshot 1`] = `
   }
 >
   <div
-    className="sc-fznKkj chzDLP urls"
+    className="sc-fznKkj ebYqPP urls"
   >
     <h3>
       http://reactcommunity.org/react-transition-group/css-transition
     </h3>
     <input
-      className="sc-fzokOt kfeyim"
+      className="sc-fzokOt jgLhP"
       id="octopus"
       readOnly={true}
       value="https://short.ly/octopus"
     />
   </div>
   <div
-    className="sc-fznZeY dLjCSH details"
+    className="sc-fznZeY jIxaEU details"
   >
     <p>
       CREATED

@@ -2,7 +2,7 @@
 
 exports[`close button matches snapshot 1`] = `
 <button
-  className="sc-AxjAm iwCWZU"
+  className="sc-AxjAm kxpUMR"
   onClick={[Function]}
   type="button"
 >

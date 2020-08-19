@@ -1,6 +1,6 @@
-import { rendersWithoutCrashing, matchesSnapshot } from '../../../setupTests';
-import DashNone from '../DashNone';
+import { rendersWithoutCrashing, matchesSnapshot } from "../../../setupTests";
+import DashNone from "../DashNone";
 
-it('renders dash load without crashing', () => rendersWithoutCrashing(DashNone));
+it("renders dash load without crashing", () => rendersWithoutCrashing(DashNone));
 
-it('dash load matches snapshot', () => matchesSnapshot(DashNone));
+it("dash load matches snapshot", () => matchesSnapshot(DashNone));

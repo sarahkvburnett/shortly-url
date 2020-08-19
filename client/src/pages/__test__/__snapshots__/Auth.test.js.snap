@@ -2,10 +2,10 @@
 
 exports[`login matches snapshot 1`] = `
 <div
-  className="sc-fznyAO jJNjbR"
+  className="sc-fznyAO iEXDFt"
 >
   <form
-    className="sc-AxhUy jtTpBF"
+    className="sc-AxhUy dLXkxw"
     data-testid="login"
     noValidate={true}
     onSubmit={[Function]}
@@ -14,11 +14,12 @@ exports[`login matches snapshot 1`] = `
       Login
     </h3>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      Email 
+      Email
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="email"
         name="email"
         onChange={[Function]}
@@ -28,11 +29,12 @@ exports[`login matches snapshot 1`] = `
       />
     </label>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      Password 
+      Password
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="password"
         name="password"
         onChange={[Function]}
@@ -42,20 +44,20 @@ exports[`login matches snapshot 1`] = `
       />
     </label>
     <button
-      className="sc-AxirZ sc-AxheI emVeqi"
+      className="sc-AxirZ sc-AxheI cOblFm"
       type="submit"
     >
       Submit
     </button>
     <button
-      className="sc-AxjAm sc-AxgMl bEkBRD"
+      className="sc-AxjAm sc-AxgMl bwgmuq"
       type="button"
     >
       Forgot password
     </button>
   </form>
   <div
-    className="sc-fznKkj RakxV"
+    className="sc-fznKkj hMwGys"
   >
     <img
       alt="woman working at desk"
@@ -67,23 +69,23 @@ exports[`login matches snapshot 1`] = `
 
 exports[`logout matches snapshot 1`] = `
 <div
-  className="sc-fznyAO jJNjbR"
+  className="sc-fznyAO iEXDFt"
 >
   <form
-    className="sc-AxhUy jtTpBF"
+    className="sc-AxhUy dLXkxw"
     data-testid="logout"
   >
     <h3>
       Are you sure you want to logout?
     </h3>
     <button
-      className="sc-AxirZ sc-AxheI emVeqi"
+      className="sc-AxirZ sc-AxheI cOblFm"
       onClick={[Function]}
     >
       Yes
     </button>
     <button
-      className="sc-AxirZ sc-AxheI emVeqi"
+      className="sc-AxirZ sc-AxheI cOblFm"
     >
       <a
         href="/dashboard"
@@ -94,7 +96,7 @@ exports[`logout matches snapshot 1`] = `
     </button>
   </form>
   <div
-    className="sc-fznKkj RakxV"
+    className="sc-fznKkj hMwGys"
   >
     <img
       alt="woman working at desk"
@@ -106,10 +108,10 @@ exports[`logout matches snapshot 1`] = `
 
 exports[`signup matches snapshot 1`] = `
 <div
-  className="sc-fznyAO jJNjbR"
+  className="sc-fznyAO iEXDFt"
 >
   <form
-    className="sc-AxhUy jtTpBF"
+    className="sc-AxhUy dLXkxw"
     data-testid="signup"
     noValidate={true}
     onSubmit={[Function]}
@@ -118,11 +120,12 @@ exports[`signup matches snapshot 1`] = `
       Sign Up
     </h3>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      First Name 
+      First Name
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="firstName"
         name="firstName"
         onChange={[Function]}
@@ -131,11 +134,12 @@ exports[`signup matches snapshot 1`] = `
       />
     </label>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      Last Name 
+      Last Name
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="lastName"
         name="lastName"
         onChange={[Function]}
@@ -144,11 +148,12 @@ exports[`signup matches snapshot 1`] = `
       />
     </label>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      Email 
+      Email
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="email"
         name="email"
         onChange={[Function]}
@@ -158,11 +163,12 @@ exports[`signup matches snapshot 1`] = `
       />
     </label>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      Password 
+      Password
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="password"
         name="password"
         onChange={[Function]}
@@ -172,11 +178,12 @@ exports[`signup matches snapshot 1`] = `
       />
     </label>
     <label
-      className="sc-Axmtr KwGTg"
+      className="sc-Axmtr fYuxyA"
     >
-      Confirm your password 
+      Confirm your password
+       
       <input
-        className="sc-AxmLO kxGjkT"
+        className="sc-AxmLO erTjTr"
         id="password2"
         name="password2"
         onChange={[Function]}
@@ -186,14 +193,14 @@ exports[`signup matches snapshot 1`] = `
       />
     </label>
     <button
-      className="sc-AxirZ sc-AxheI emVeqi"
+      className="sc-AxirZ sc-AxheI cOblFm"
       type="submit"
     >
       Sign up
     </button>
   </form>
   <div
-    className="sc-fznKkj RakxV"
+    className="sc-fznKkj hMwGys"
   >
     <img
       alt="woman working at desk"

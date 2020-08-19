@@ -2,21 +2,21 @@
 
 exports[`dashboard matches snapshot 1`] = `
 <div
-  className="sc-fzoLag fXtiGu"
+  className="sc-fzoLag kzQfRr"
   data-testid="dashboard"
 >
   <div
-    className="sc-AxiKw cKbaXL"
+    className="sc-AxiKw kqusVU"
   >
     <p>
       Fetching Links...
     </p>
     <div
-      className="sc-AxhCb cgHmUX"
+      className="sc-AxhCb fniwr"
     />
   </div>
   <div
-    className="sc-fznWqX jhRSgX"
+    className="sc-fznWqX eQnlkr"
     style={
       Object {
         "top": "0",
@@ -24,7 +24,7 @@ exports[`dashboard matches snapshot 1`] = `
     }
   >
     <form
-      className="sc-fzoXzr djigUv"
+      className="sc-fzoXzr enaniD"
       onSubmit={[Function]}
     >
       <label
@@ -38,10 +38,10 @@ exports[`dashboard matches snapshot 1`] = `
         Website Url
       </label>
       <p
-        className="sc-fznJRM jLcXwS"
+        className="sc-fznJRM eblYjG"
       />
       <input
-        className="sc-fzpjYC kliCFF"
+        className="sc-fzpjYC bmqies"
         data-testid="input"
         id="link"
         name="link"
@@ -51,7 +51,7 @@ exports[`dashboard matches snapshot 1`] = `
         value="Shorten a link here... "
       />
       <input
-        className="sc-fzpjYC sc-fznxsB dSfCL"
+        className="sc-fzpjYC sc-fznxsB igVsfi"
         data-testid="button"
         disabled={false}
         type="submit"

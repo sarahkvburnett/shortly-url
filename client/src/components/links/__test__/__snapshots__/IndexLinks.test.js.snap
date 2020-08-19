@@ -2,45 +2,45 @@
 
 exports[`index links matches snapshot 1`] = `
 <div
-  className="sc-fznZeY gvBrXp linkContainer"
+  className="sc-fznZeY jFENKA linkContainer"
 >
   <div
-    className="sc-fzokOt jIsGrC link"
+    className="sc-fzokOt ebeuUt link"
     data-testid="link"
   >
     <div
-      className="sc-fzqBZW hSQcPn"
+      className="sc-fzqBZW kjqBei"
     >
       http://reactcommunity.org/react-transition-group/css-transition
     </div>
     <input
-      className="sc-fzplWN dgYTEC shortLink"
+      className="sc-fzplWN bbpMZr shortLink"
       readOnly="readonly"
       value="https://short.ly/K1pjMCK-F"
     />
     <button
-      className="sc-AxirZ sc-fznyAO dUXjER linkcopybtn"
+      className="sc-AxirZ sc-fznyAO cUiMDV linkcopybtn"
       onClick={[Function]}
     >
       Copy
     </button>
   </div>
   <div
-    className="sc-fzokOt jIsGrC link"
+    className="sc-fzokOt ebeuUt link"
     data-testid="link"
   >
     <div
-      className="sc-fzqBZW hSQcPn"
+      className="sc-fzqBZW kjqBei"
     >
       https://ba-grant.netlify.app/
     </div>
     <input
-      className="sc-fzplWN dgYTEC shortLink"
+      className="sc-fzplWN bbpMZr shortLink"
       readOnly="readonly"
       value="https://short.ly/lsncCe5RV"
     />
     <button
-      className="sc-AxirZ sc-fznyAO dUXjER linkcopybtn"
+      className="sc-AxirZ sc-fznyAO cUiMDV linkcopybtn"
       onClick={[Function]}
     >
       Copy

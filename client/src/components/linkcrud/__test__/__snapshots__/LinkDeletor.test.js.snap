@@ -2,7 +2,7 @@
 
 exports[`link deletor matches snapshot 1`] = `
 <form
-  className="sc-fzozJi eAysAZ"
+  className="sc-fzozJi blHhKY"
   onSubmit={[Function]}
 >
   <h3>
@@ -13,13 +13,13 @@ exports[`link deletor matches snapshot 1`] = `
     https://short.ly/undefined
   </p>
   <button
-    className="sc-AxirZ fTDgvF"
+    className="sc-AxirZ dVJbcR"
     id="delete"
   >
     Delete
   </button>
   <button
-    className="sc-AxjAm iwCWZU"
+    className="sc-AxjAm kxpUMR"
     onClick={[Function]}
     type="button"
   >

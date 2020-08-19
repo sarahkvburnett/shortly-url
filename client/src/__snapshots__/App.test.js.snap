@@ -3,7 +3,7 @@
 exports[`dash matches screenshot 1`] = `
 Array [
   <div
-    className="sc-fzoLsD lcTlnO"
+    className="sc-fzoLsD bJNbyp"
   >
     <a
       className="logo"
@@ -20,11 +20,11 @@ Array [
     className="home"
   >
     <section
-      className="sc-fzplWN cgogOI"
+      className="sc-fzplWN bqyiPU"
       data-testid="home"
     >
       <div
-        className="sc-fznyAO livSja"
+        className="sc-fznyAO vcaiD"
       >
         <img
           alt="woman working at desk"
@@ -32,7 +32,7 @@ Array [
         />
       </div>
       <div
-        className="sc-fznKkj dKlcTy"
+        className="sc-fznKkj jsUFqS"
       >
         <h1>
           More than just shorter links
@@ -41,14 +41,14 @@ Array [
           Build your brand’s recognition and get detailed insights on how your links are performing.
         </p>
         <button
-          className="sc-AxirZ fTDgvF"
+          className="sc-AxirZ dVJbcR"
         >
           Get Started
         </button>
       </div>
     </section>
     <div
-      className="sc-fzoLag jJdYNq"
+      className="sc-fzoLag gJCsEe"
       style={
         Object {
           "top": "-17vh",
@@ -56,7 +56,7 @@ Array [
       }
     >
       <form
-        className="sc-fzokOt clWjen"
+        className="sc-fzokOt ifNhZH"
         onSubmit={[Function]}
       >
         <label
@@ -70,10 +70,10 @@ Array [
           Website Url
         </label>
         <p
-          className="sc-fzoyAV dubxEg"
+          className="sc-fzoyAV fIMSJs"
         />
         <input
-          className="sc-fzqBZW dnSLoT"
+          className="sc-fzqBZW bGMBBW"
           data-testid="input"
           id="link"
           name="link"
@@ -83,7 +83,7 @@ Array [
           value="Shorten a link here... "
         />
         <input
-          className="sc-fzqBZW sc-fzqNJr koNsTb"
+          className="sc-fzqBZW sc-fzqNJr hIfBem"
           data-testid="button"
           disabled={false}
           type="submit"
@@ -92,13 +92,13 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ daFKUB linkContainer"
+      className="sc-fzqARJ jEUIbM linkContainer"
     />
     <div
-      className="sc-fzoNJl kEroSy"
+      className="sc-fzoNJl khGFLu"
     >
       <div
-        className="sc-fzoXWK itPnQj"
+        className="sc-fzoXWK gaSuIa"
       >
         <h2>
           Advanced Statistics
@@ -108,13 +108,13 @@ Array [
         </p>
       </div>
       <div
-        className="sc-fzpmMD cwOehU"
+        className="sc-fzpmMD fvYngY"
       >
         <div
-          className="sc-fznxKY izZNaC brand"
+          className="sc-fznxKY cEJBpq brand"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -128,7 +128,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Brand Recognition
@@ -139,10 +139,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC records"
+          className="sc-fznxKY cEJBpq records"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -156,7 +156,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Detailed Records
@@ -167,10 +167,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC custom"
+          className="sc-fznxKY cEJBpq custom"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="48"
@@ -184,7 +184,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Fully Customizable
@@ -197,13 +197,13 @@ Array [
       </div>
     </div>
     <div
-      className="sc-fzolEj dFOTKk"
+      className="sc-fzolEj dCwQuO"
     >
       <h2>
         Boost your links today
       </h2>
       <button
-        className="sc-AxirZ fTDgvF"
+        className="sc-AxirZ dVJbcR"
       >
         <b>
           Get Started
@@ -212,7 +212,7 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-fzoXzr fA-dsdY"
+    className="sc-fzoXzr dtplnt"
   >
     <svg
       title="Shortly"
@@ -220,7 +220,7 @@ Array [
       logo.svg
     </svg>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Features
@@ -250,7 +250,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Resources
@@ -280,7 +280,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Company
@@ -317,7 +317,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fznxsB djdHpV"
+      className="sc-fznxsB EvUgZ"
     >
       <a
         href="https://facebook.com"
@@ -411,7 +411,7 @@ Array [
 exports[`home matches screenshot 1`] = `
 Array [
   <div
-    className="sc-fzoLsD lcTlnO"
+    className="sc-fzoLsD bJNbyp"
   >
     <a
       className="logo"
@@ -428,11 +428,11 @@ Array [
     className="home"
   >
     <section
-      className="sc-fzplWN cgogOI"
+      className="sc-fzplWN bqyiPU"
       data-testid="home"
     >
       <div
-        className="sc-fznyAO livSja"
+        className="sc-fznyAO vcaiD"
       >
         <img
           alt="woman working at desk"
@@ -440,7 +440,7 @@ Array [
         />
       </div>
       <div
-        className="sc-fznKkj dKlcTy"
+        className="sc-fznKkj jsUFqS"
       >
         <h1>
           More than just shorter links
@@ -449,14 +449,14 @@ Array [
           Build your brand’s recognition and get detailed insights on how your links are performing.
         </p>
         <button
-          className="sc-AxirZ fTDgvF"
+          className="sc-AxirZ dVJbcR"
         >
           Get Started
         </button>
       </div>
     </section>
     <div
-      className="sc-fzoLag jJdYNq"
+      className="sc-fzoLag gJCsEe"
       style={
         Object {
           "top": "-17vh",
@@ -464,7 +464,7 @@ Array [
       }
     >
       <form
-        className="sc-fzokOt clWjen"
+        className="sc-fzokOt ifNhZH"
         onSubmit={[Function]}
       >
         <label
@@ -478,10 +478,10 @@ Array [
           Website Url
         </label>
         <p
-          className="sc-fzoyAV dubxEg"
+          className="sc-fzoyAV fIMSJs"
         />
         <input
-          className="sc-fzqBZW dnSLoT"
+          className="sc-fzqBZW bGMBBW"
           data-testid="input"
           id="link"
           name="link"
@@ -491,7 +491,7 @@ Array [
           value="Shorten a link here... "
         />
         <input
-          className="sc-fzqBZW sc-fzqNJr koNsTb"
+          className="sc-fzqBZW sc-fzqNJr hIfBem"
           data-testid="button"
           disabled={false}
           type="submit"
@@ -500,13 +500,13 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ daFKUB linkContainer"
+      className="sc-fzqARJ jEUIbM linkContainer"
     />
     <div
-      className="sc-fzoNJl kEroSy"
+      className="sc-fzoNJl khGFLu"
     >
       <div
-        className="sc-fzoXWK itPnQj"
+        className="sc-fzoXWK gaSuIa"
       >
         <h2>
           Advanced Statistics
@@ -516,13 +516,13 @@ Array [
         </p>
       </div>
       <div
-        className="sc-fzpmMD cwOehU"
+        className="sc-fzpmMD fvYngY"
       >
         <div
-          className="sc-fznxKY izZNaC brand"
+          className="sc-fznxKY cEJBpq brand"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -536,7 +536,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Brand Recognition
@@ -547,10 +547,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC records"
+          className="sc-fznxKY cEJBpq records"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -564,7 +564,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Detailed Records
@@ -575,10 +575,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC custom"
+          className="sc-fznxKY cEJBpq custom"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="48"
@@ -592,7 +592,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Fully Customizable
@@ -605,13 +605,13 @@ Array [
       </div>
     </div>
     <div
-      className="sc-fzolEj dFOTKk"
+      className="sc-fzolEj dCwQuO"
     >
       <h2>
         Boost your links today
       </h2>
       <button
-        className="sc-AxirZ fTDgvF"
+        className="sc-AxirZ dVJbcR"
       >
         <b>
           Get Started
@@ -620,7 +620,7 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-fzoXzr fA-dsdY"
+    className="sc-fzoXzr dtplnt"
   >
     <svg
       title="Shortly"
@@ -628,7 +628,7 @@ Array [
       logo.svg
     </svg>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Features
@@ -658,7 +658,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Resources
@@ -688,7 +688,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Company
@@ -725,7 +725,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fznxsB djdHpV"
+      className="sc-fznxsB EvUgZ"
     >
       <a
         href="https://facebook.com"
@@ -819,7 +819,7 @@ Array [
 exports[`login matches screenshot 1`] = `
 Array [
   <div
-    className="sc-fzoLsD lcTlnO"
+    className="sc-fzoLsD bJNbyp"
   >
     <a
       className="logo"
@@ -836,11 +836,11 @@ Array [
     className="home"
   >
     <section
-      className="sc-fzplWN cgogOI"
+      className="sc-fzplWN bqyiPU"
       data-testid="home"
     >
       <div
-        className="sc-fznyAO livSja"
+        className="sc-fznyAO vcaiD"
       >
         <img
           alt="woman working at desk"
@@ -848,7 +848,7 @@ Array [
         />
       </div>
       <div
-        className="sc-fznKkj dKlcTy"
+        className="sc-fznKkj jsUFqS"
       >
         <h1>
           More than just shorter links
@@ -857,14 +857,14 @@ Array [
           Build your brand’s recognition and get detailed insights on how your links are performing.
         </p>
         <button
-          className="sc-AxirZ fTDgvF"
+          className="sc-AxirZ dVJbcR"
         >
           Get Started
         </button>
       </div>
     </section>
     <div
-      className="sc-fzoLag jJdYNq"
+      className="sc-fzoLag gJCsEe"
       style={
         Object {
           "top": "-17vh",
@@ -872,7 +872,7 @@ Array [
       }
     >
       <form
-        className="sc-fzokOt clWjen"
+        className="sc-fzokOt ifNhZH"
         onSubmit={[Function]}
       >
         <label
@@ -886,10 +886,10 @@ Array [
           Website Url
         </label>
         <p
-          className="sc-fzoyAV dubxEg"
+          className="sc-fzoyAV fIMSJs"
         />
         <input
-          className="sc-fzqBZW dnSLoT"
+          className="sc-fzqBZW bGMBBW"
           data-testid="input"
           id="link"
           name="link"
@@ -899,7 +899,7 @@ Array [
           value="Shorten a link here... "
         />
         <input
-          className="sc-fzqBZW sc-fzqNJr koNsTb"
+          className="sc-fzqBZW sc-fzqNJr hIfBem"
           data-testid="button"
           disabled={false}
           type="submit"
@@ -908,13 +908,13 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ daFKUB linkContainer"
+      className="sc-fzqARJ jEUIbM linkContainer"
     />
     <div
-      className="sc-fzoNJl kEroSy"
+      className="sc-fzoNJl khGFLu"
     >
       <div
-        className="sc-fzoXWK itPnQj"
+        className="sc-fzoXWK gaSuIa"
       >
         <h2>
           Advanced Statistics
@@ -924,13 +924,13 @@ Array [
         </p>
       </div>
       <div
-        className="sc-fzpmMD cwOehU"
+        className="sc-fzpmMD fvYngY"
       >
         <div
-          className="sc-fznxKY izZNaC brand"
+          className="sc-fznxKY cEJBpq brand"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -944,7 +944,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Brand Recognition
@@ -955,10 +955,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC records"
+          className="sc-fznxKY cEJBpq records"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -972,7 +972,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Detailed Records
@@ -983,10 +983,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC custom"
+          className="sc-fznxKY cEJBpq custom"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="48"
@@ -1000,7 +1000,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Fully Customizable
@@ -1013,13 +1013,13 @@ Array [
       </div>
     </div>
     <div
-      className="sc-fzolEj dFOTKk"
+      className="sc-fzolEj dCwQuO"
     >
       <h2>
         Boost your links today
       </h2>
       <button
-        className="sc-AxirZ fTDgvF"
+        className="sc-AxirZ dVJbcR"
       >
         <b>
           Get Started
@@ -1028,7 +1028,7 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-fzoXzr fA-dsdY"
+    className="sc-fzoXzr dtplnt"
   >
     <svg
       title="Shortly"
@@ -1036,7 +1036,7 @@ Array [
       logo.svg
     </svg>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Features
@@ -1066,7 +1066,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Resources
@@ -1096,7 +1096,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Company
@@ -1133,7 +1133,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fznxsB djdHpV"
+      className="sc-fznxsB EvUgZ"
     >
       <a
         href="https://facebook.com"
@@ -1227,7 +1227,7 @@ Array [
 exports[`logout matches screenshot 1`] = `
 Array [
   <div
-    className="sc-fzoLsD lcTlnO"
+    className="sc-fzoLsD bJNbyp"
   >
     <a
       className="logo"
@@ -1244,11 +1244,11 @@ Array [
     className="home"
   >
     <section
-      className="sc-fzplWN cgogOI"
+      className="sc-fzplWN bqyiPU"
       data-testid="home"
     >
       <div
-        className="sc-fznyAO livSja"
+        className="sc-fznyAO vcaiD"
       >
         <img
           alt="woman working at desk"
@@ -1256,7 +1256,7 @@ Array [
         />
       </div>
       <div
-        className="sc-fznKkj dKlcTy"
+        className="sc-fznKkj jsUFqS"
       >
         <h1>
           More than just shorter links
@@ -1265,14 +1265,14 @@ Array [
           Build your brand’s recognition and get detailed insights on how your links are performing.
         </p>
         <button
-          className="sc-AxirZ fTDgvF"
+          className="sc-AxirZ dVJbcR"
         >
           Get Started
         </button>
       </div>
     </section>
     <div
-      className="sc-fzoLag jJdYNq"
+      className="sc-fzoLag gJCsEe"
       style={
         Object {
           "top": "-17vh",
@@ -1280,7 +1280,7 @@ Array [
       }
     >
       <form
-        className="sc-fzokOt clWjen"
+        className="sc-fzokOt ifNhZH"
         onSubmit={[Function]}
       >
         <label
@@ -1294,10 +1294,10 @@ Array [
           Website Url
         </label>
         <p
-          className="sc-fzoyAV dubxEg"
+          className="sc-fzoyAV fIMSJs"
         />
         <input
-          className="sc-fzqBZW dnSLoT"
+          className="sc-fzqBZW bGMBBW"
           data-testid="input"
           id="link"
           name="link"
@@ -1307,7 +1307,7 @@ Array [
           value="Shorten a link here... "
         />
         <input
-          className="sc-fzqBZW sc-fzqNJr koNsTb"
+          className="sc-fzqBZW sc-fzqNJr hIfBem"
           data-testid="button"
           disabled={false}
           type="submit"
@@ -1316,13 +1316,13 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ daFKUB linkContainer"
+      className="sc-fzqARJ jEUIbM linkContainer"
     />
     <div
-      className="sc-fzoNJl kEroSy"
+      className="sc-fzoNJl khGFLu"
     >
       <div
-        className="sc-fzoXWK itPnQj"
+        className="sc-fzoXWK gaSuIa"
       >
         <h2>
           Advanced Statistics
@@ -1332,13 +1332,13 @@ Array [
         </p>
       </div>
       <div
-        className="sc-fzpmMD cwOehU"
+        className="sc-fzpmMD fvYngY"
       >
         <div
-          className="sc-fznxKY izZNaC brand"
+          className="sc-fznxKY cEJBpq brand"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -1352,7 +1352,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Brand Recognition
@@ -1363,10 +1363,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC records"
+          className="sc-fznxKY cEJBpq records"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -1380,7 +1380,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Detailed Records
@@ -1391,10 +1391,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC custom"
+          className="sc-fznxKY cEJBpq custom"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="48"
@@ -1408,7 +1408,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Fully Customizable
@@ -1421,13 +1421,13 @@ Array [
       </div>
     </div>
     <div
-      className="sc-fzolEj dFOTKk"
+      className="sc-fzolEj dCwQuO"
     >
       <h2>
         Boost your links today
       </h2>
       <button
-        className="sc-AxirZ fTDgvF"
+        className="sc-AxirZ dVJbcR"
       >
         <b>
           Get Started
@@ -1436,7 +1436,7 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-fzoXzr fA-dsdY"
+    className="sc-fzoXzr dtplnt"
   >
     <svg
       title="Shortly"
@@ -1444,7 +1444,7 @@ Array [
       logo.svg
     </svg>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Features
@@ -1474,7 +1474,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Resources
@@ -1504,7 +1504,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Company
@@ -1541,7 +1541,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fznxsB djdHpV"
+      className="sc-fznxsB EvUgZ"
     >
       <a
         href="https://facebook.com"
@@ -1635,7 +1635,7 @@ Array [
 exports[`signup matches screenshot 1`] = `
 Array [
   <div
-    className="sc-fzoLsD lcTlnO"
+    className="sc-fzoLsD bJNbyp"
   >
     <a
       className="logo"
@@ -1652,11 +1652,11 @@ Array [
     className="home"
   >
     <section
-      className="sc-fzplWN cgogOI"
+      className="sc-fzplWN bqyiPU"
       data-testid="home"
     >
       <div
-        className="sc-fznyAO livSja"
+        className="sc-fznyAO vcaiD"
       >
         <img
           alt="woman working at desk"
@@ -1664,7 +1664,7 @@ Array [
         />
       </div>
       <div
-        className="sc-fznKkj dKlcTy"
+        className="sc-fznKkj jsUFqS"
       >
         <h1>
           More than just shorter links
@@ -1673,14 +1673,14 @@ Array [
           Build your brand’s recognition and get detailed insights on how your links are performing.
         </p>
         <button
-          className="sc-AxirZ fTDgvF"
+          className="sc-AxirZ dVJbcR"
         >
           Get Started
         </button>
       </div>
     </section>
     <div
-      className="sc-fzoLag jJdYNq"
+      className="sc-fzoLag gJCsEe"
       style={
         Object {
           "top": "-17vh",
@@ -1688,7 +1688,7 @@ Array [
       }
     >
       <form
-        className="sc-fzokOt clWjen"
+        className="sc-fzokOt ifNhZH"
         onSubmit={[Function]}
       >
         <label
@@ -1702,10 +1702,10 @@ Array [
           Website Url
         </label>
         <p
-          className="sc-fzoyAV dubxEg"
+          className="sc-fzoyAV fIMSJs"
         />
         <input
-          className="sc-fzqBZW dnSLoT"
+          className="sc-fzqBZW bGMBBW"
           data-testid="input"
           id="link"
           name="link"
@@ -1715,7 +1715,7 @@ Array [
           value="Shorten a link here... "
         />
         <input
-          className="sc-fzqBZW sc-fzqNJr koNsTb"
+          className="sc-fzqBZW sc-fzqNJr hIfBem"
           data-testid="button"
           disabled={false}
           type="submit"
@@ -1724,13 +1724,13 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ daFKUB linkContainer"
+      className="sc-fzqARJ jEUIbM linkContainer"
     />
     <div
-      className="sc-fzoNJl kEroSy"
+      className="sc-fzoNJl khGFLu"
     >
       <div
-        className="sc-fzoXWK itPnQj"
+        className="sc-fzoXWK gaSuIa"
       >
         <h2>
           Advanced Statistics
@@ -1740,13 +1740,13 @@ Array [
         </p>
       </div>
       <div
-        className="sc-fzpmMD cwOehU"
+        className="sc-fzpmMD fvYngY"
       >
         <div
-          className="sc-fznxKY izZNaC brand"
+          className="sc-fznxKY cEJBpq brand"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -1760,7 +1760,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Brand Recognition
@@ -1771,10 +1771,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC records"
+          className="sc-fznxKY cEJBpq records"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="40"
@@ -1788,7 +1788,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Detailed Records
@@ -1799,10 +1799,10 @@ Array [
           </div>
         </div>
         <div
-          className="sc-fznxKY izZNaC custom"
+          className="sc-fznxKY cEJBpq custom"
         >
           <i
-            className="sc-fznWOq HltbZ"
+            className="sc-fznWOq llHHZR"
           >
             <svg
               height="48"
@@ -1816,7 +1816,7 @@ Array [
             </svg>
           </i>
           <div
-            className="sc-fznMAR kjmECz"
+            className="sc-fznMAR ihWOYQ"
           >
             <h3>
               Fully Customizable
@@ -1829,13 +1829,13 @@ Array [
       </div>
     </div>
     <div
-      className="sc-fzolEj dFOTKk"
+      className="sc-fzolEj dCwQuO"
     >
       <h2>
         Boost your links today
       </h2>
       <button
-        className="sc-AxirZ fTDgvF"
+        className="sc-AxirZ dVJbcR"
       >
         <b>
           Get Started
@@ -1844,7 +1844,7 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-fzoXzr fA-dsdY"
+    className="sc-fzoXzr dtplnt"
   >
     <svg
       title="Shortly"
@@ -1852,7 +1852,7 @@ Array [
       logo.svg
     </svg>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Features
@@ -1882,7 +1882,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Resources
@@ -1912,7 +1912,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fzpjYC hjemau"
+      className="sc-fzpjYC buPxvG"
     >
       <h4>
         Company
@@ -1949,7 +1949,7 @@ Array [
       </ul>
     </div>
     <div
-      className="sc-fznxsB djdHpV"
+      className="sc-fznxsB EvUgZ"
     >
       <a
         href="https://facebook.com"

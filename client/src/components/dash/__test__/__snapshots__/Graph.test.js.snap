@@ -8,15 +8,16 @@ exports[`graph matches snapshot 1`] = `
     className="date"
   >
     <input
-      className="sc-fznKkj dozVdw"
+      className="sc-fznKkj lnSHCc"
       id="date"
       onChange={[Function]}
       type="date"
     />
     <p>
-      WEEK COMMENCING: 
+      WEEK COMMENCING:
+       
       <span>
-        Tue Aug 11
+        Thu Aug 13
       </span>
     </p>
     <p>

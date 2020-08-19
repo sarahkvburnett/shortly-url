@@ -2,7 +2,7 @@
 
 exports[`signup matches snapshot 1`] = `
 <form
-  className="sc-AxhUy jtTpBF"
+  className="sc-AxhUy dLXkxw"
   data-testid="signup"
   noValidate={true}
   onSubmit={[Function]}
@@ -11,11 +11,12 @@ exports[`signup matches snapshot 1`] = `
     Sign Up
   </h3>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    First Name 
+    First Name
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="firstName"
       name="firstName"
       onChange={[Function]}
@@ -24,11 +25,12 @@ exports[`signup matches snapshot 1`] = `
     />
   </label>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    Last Name 
+    Last Name
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="lastName"
       name="lastName"
       onChange={[Function]}
@@ -37,11 +39,12 @@ exports[`signup matches snapshot 1`] = `
     />
   </label>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    Email 
+    Email
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="email"
       name="email"
       onChange={[Function]}
@@ -51,11 +54,12 @@ exports[`signup matches snapshot 1`] = `
     />
   </label>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    Password 
+    Password
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="password"
       name="password"
       onChange={[Function]}
@@ -66,11 +70,12 @@ exports[`signup matches snapshot 1`] = `
     />
   </label>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    Confirm your password 
+    Confirm your password
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="password2"
       name="password2"
       onChange={[Function]}
@@ -81,7 +86,7 @@ exports[`signup matches snapshot 1`] = `
     />
   </label>
   <button
-    className="sc-AxirZ sc-AxheI emVeqi"
+    className="sc-AxirZ sc-AxheI cOblFm"
     type="submit"
   >
     Sign up

@@ -2,7 +2,7 @@
 
 exports[`link copier matches snapshot 1`] = `
 <form
-  className="sc-fzozJi eAysAZ"
+  className="sc-fzozJi blHhKY"
 >
   <h3>
     Copy Shortly Link
@@ -12,7 +12,7 @@ exports[`link copier matches snapshot 1`] = `
     value="https://short.ly/undefined"
   />
   <button
-    className="sc-AxirZ fTDgvF"
+    className="sc-AxirZ dVJbcR"
     id="copy"
     onClick={[Function]}
     type="button"
@@ -20,7 +20,7 @@ exports[`link copier matches snapshot 1`] = `
     Copy
   </button>
   <button
-    className="sc-AxjAm iwCWZU"
+    className="sc-AxjAm kxpUMR"
     onClick={[Function]}
     type="button"
   >

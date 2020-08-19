@@ -2,11 +2,11 @@
 
 exports[`intro matches snapshot 1`] = `
 <section
-  className="sc-fzplWN cgogOI"
+  className="sc-fzplWN bqyiPU"
   data-testid="home"
 >
   <div
-    className="sc-fznyAO livSja"
+    className="sc-fznyAO vcaiD"
   >
     <img
       alt="woman working at desk"
@@ -14,7 +14,7 @@ exports[`intro matches snapshot 1`] = `
     />
   </div>
   <div
-    className="sc-fznKkj dKlcTy"
+    className="sc-fznKkj jsUFqS"
   >
     <h1>
       More than just shorter links
@@ -23,7 +23,7 @@ exports[`intro matches snapshot 1`] = `
       Build your brand’s recognition and get detailed insights on how your links are performing.
     </p>
     <button
-      className="sc-AxirZ fTDgvF"
+      className="sc-AxirZ dVJbcR"
     >
       Get Started
     </button>

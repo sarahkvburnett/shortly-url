@@ -2,7 +2,7 @@
 
 exports[`link editor matches snapshot 1`] = `
 <form
-  className="sc-fzozJi eAysAZ"
+  className="sc-fzozJi blHhKY"
   onSubmit={[Function]}
 >
   <h3>
@@ -29,14 +29,14 @@ exports[`link editor matches snapshot 1`] = `
     />
   </div>
   <button
-    className="sc-AxirZ fTDgvF"
+    className="sc-AxirZ dVJbcR"
     data-testid="button"
     id="update"
   >
     Update
   </button>
   <button
-    className="sc-AxjAm iwCWZU"
+    className="sc-AxjAm kxpUMR"
     onClick={[Function]}
     type="button"
   >

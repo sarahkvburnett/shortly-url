@@ -2,7 +2,7 @@
 
 exports[`login matches snapshot 1`] = `
 <form
-  className="sc-AxhUy jtTpBF"
+  className="sc-AxhUy dLXkxw"
   data-testid="login"
   noValidate={true}
   onSubmit={[Function]}
@@ -11,11 +11,12 @@ exports[`login matches snapshot 1`] = `
     Login
   </h3>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    Email 
+    Email
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="email"
       name="email"
       onChange={[Function]}
@@ -25,11 +26,12 @@ exports[`login matches snapshot 1`] = `
     />
   </label>
   <label
-    className="sc-Axmtr KwGTg"
+    className="sc-Axmtr fYuxyA"
   >
-    Password 
+    Password
+     
     <input
-      className="sc-AxmLO kxGjkT"
+      className="sc-AxmLO erTjTr"
       id="password"
       name="password"
       onChange={[Function]}
@@ -39,13 +41,13 @@ exports[`login matches snapshot 1`] = `
     />
   </label>
   <button
-    className="sc-AxirZ sc-AxheI emVeqi"
+    className="sc-AxirZ sc-AxheI cOblFm"
     type="submit"
   >
     Submit
   </button>
   <button
-    className="sc-AxjAm sc-AxgMl bEkBRD"
+    className="sc-AxjAm sc-AxgMl bwgmuq"
     type="button"
   >
     Forgot password

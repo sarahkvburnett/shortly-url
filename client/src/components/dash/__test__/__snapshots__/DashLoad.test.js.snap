@@ -2,13 +2,13 @@
 
 exports[`dash load matches snapshot 1`] = `
 <div
-  className="sc-AxiKw cKbaXL"
+  className="sc-AxiKw kqusVU"
 >
   <p>
     Fetching Links...
   </p>
   <div
-    className="sc-AxhCb cgHmUX"
+    className="sc-AxhCb fniwr"
   />
 </div>
 `;

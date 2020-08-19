@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import { rendersWithoutCrashing, matchesSnapshot, ComponentWrapper } from '../../../setupTests';
-import LinkDeletor from '../LinkDeletor';
-import { UserContext } from '../../../context/UserContext';
-import { LinksProvider } from '../../../context/LinksContext';
-import { FlashProvider } from '../../../context/FlashContext';
-import { ProcessLinkProvider } from '../../../context/ProcessLinkContext';
+import React, { useState } from "react";
+import {
+	rendersWithoutCrashing,
+	matchesSnapshot,
+	ComponentWrapper,
+} from "../../../setupTests";
+import LinkDeletor from "../LinkDeletor";
+import { UserContext } from "../../../context/UserContext";
+import { LinksProvider } from "../../../context/LinksContext";
+import { FlashProvider } from "../../../context/FlashContext";
+import { ProcessLinkProvider } from "../../../context/ProcessLinkContext";
 
 // const LinkDeletorWrapper = () => {
 //     const [ user, setUser ] = useState({
@@ -27,8 +31,9 @@ import { ProcessLinkProvider } from '../../../context/ProcessLinkContext';
 
 const LinkDeletorWrapper = () => ComponentWrapper(LinkDeletor);
 
-it('renders link deletor without crashing', () => rendersWithoutCrashing(LinkDeletorWrapper));
+it("renders link deletor without crashing", () =>
+	rendersWithoutCrashing(LinkDeletorWrapper));
 
-it('link deletor matches snapshot', () => matchesSnapshot(LinkDeletorWrapper));
+it("link deletor matches snapshot", () => matchesSnapshot(LinkDeletorWrapper));
 
 //TODO: check deleting link deletes link - integration

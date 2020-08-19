@@ -2,7 +2,7 @@
 
 exports[`link shortener matches snapshot 1`] = `
 <div
-  className="sc-fzqBZW deRmIF"
+  className="sc-fzqBZW llRiop"
   style={
     Object {
       "top": undefined,
@@ -10,7 +10,7 @@ exports[`link shortener matches snapshot 1`] = `
   }
 >
   <form
-    className="sc-fznyAO dlGfaB"
+    className="sc-fznyAO iCWzIZ"
     onSubmit={[Function]}
   >
     <label
@@ -24,10 +24,10 @@ exports[`link shortener matches snapshot 1`] = `
       Website Url
     </label>
     <p
-      className="sc-fzokOt kPqHuq"
+      className="sc-fzokOt vtVLC"
     />
     <input
-      className="sc-fznKkj jhFdRJ"
+      className="sc-fznKkj hKNoZk"
       data-testid="input"
       id="link"
       name="link"
@@ -37,7 +37,7 @@ exports[`link shortener matches snapshot 1`] = `
       value="Shorten a link here... "
     />
     <input
-      className="sc-fznKkj sc-fznZeY iOAXEI"
+      className="sc-fznKkj sc-fznZeY kKkZPF"
       data-testid="button"
       disabled={false}
       type="submit"

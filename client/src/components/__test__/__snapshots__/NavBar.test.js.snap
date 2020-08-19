@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
- 
+
 exports[`nav bar matches snapshot 1`] = `
 <div
-  className="sc-fzoLsD lcTlnO"
+  className="sc-fzoLsD bJNbyp"
 >
   <a
     className="logo"

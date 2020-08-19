@@ -5,11 +5,11 @@ exports[`index matches snapshot 1`] = `
   className="home"
 >
   <section
-    className="sc-fzplWN cgogOI"
+    className="sc-fzplWN bqyiPU"
     data-testid="home"
   >
     <div
-      className="sc-fznyAO livSja"
+      className="sc-fznyAO vcaiD"
     >
       <img
         alt="woman working at desk"
@@ -17,7 +17,7 @@ exports[`index matches snapshot 1`] = `
       />
     </div>
     <div
-      className="sc-fznKkj dKlcTy"
+      className="sc-fznKkj jsUFqS"
     >
       <h1>
         More than just shorter links
@@ -26,14 +26,14 @@ exports[`index matches snapshot 1`] = `
         Build your brand’s recognition and get detailed insights on how your links are performing.
       </p>
       <button
-        className="sc-AxirZ fTDgvF"
+        className="sc-AxirZ dVJbcR"
       >
         Get Started
       </button>
     </div>
   </section>
   <div
-    className="sc-fzoLag jJdYNq"
+    className="sc-fzoLag gJCsEe"
     style={
       Object {
         "top": "-17vh",
@@ -41,7 +41,7 @@ exports[`index matches snapshot 1`] = `
     }
   >
     <form
-      className="sc-fzokOt clWjen"
+      className="sc-fzokOt ifNhZH"
       onSubmit={[Function]}
     >
       <label
@@ -55,10 +55,10 @@ exports[`index matches snapshot 1`] = `
         Website Url
       </label>
       <p
-        className="sc-fzoyAV dubxEg"
+        className="sc-fzoyAV fIMSJs"
       />
       <input
-        className="sc-fzqBZW dnSLoT"
+        className="sc-fzqBZW bGMBBW"
         data-testid="input"
         id="link"
         name="link"
@@ -68,7 +68,7 @@ exports[`index matches snapshot 1`] = `
         value="Shorten a link here... "
       />
       <input
-        className="sc-fzqBZW sc-fzqNJr koNsTb"
+        className="sc-fzqBZW sc-fzqNJr hIfBem"
         data-testid="button"
         disabled={false}
         type="submit"
@@ -77,13 +77,13 @@ exports[`index matches snapshot 1`] = `
     </form>
   </div>
   <div
-    className="sc-fznJRM fVmCjm linkContainer"
+    className="sc-fznJRM jtGbAX linkContainer"
   />
   <div
-    className="sc-fzqARJ cqBnmN"
+    className="sc-fzqARJ jDUHJB"
   >
     <div
-      className="sc-fzqNqU ctxECb"
+      className="sc-fzqNqU epSBwW"
     >
       <h2>
         Advanced Statistics
@@ -93,13 +93,13 @@ exports[`index matches snapshot 1`] = `
       </p>
     </div>
     <div
-      className="sc-fzoyTs kocVDl"
+      className="sc-fzoyTs eieAkx"
     >
       <div
-        className="sc-fzoNJl ecwXgN brand"
+        className="sc-fzoNJl iAVOkN brand"
       >
         <i
-          className="sc-fzpmMD eFFFxO"
+          className="sc-fzpmMD KVOsC"
         >
           <svg
             height="40"
@@ -113,7 +113,7 @@ exports[`index matches snapshot 1`] = `
           </svg>
         </i>
         <div
-          className="sc-fzoXWK eEVnPU"
+          className="sc-fzoXWK jvXOcH"
         >
           <h3>
             Brand Recognition
@@ -124,10 +124,10 @@ exports[`index matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-fzoNJl ecwXgN records"
+        className="sc-fzoNJl iAVOkN records"
       >
         <i
-          className="sc-fzpmMD eFFFxO"
+          className="sc-fzpmMD KVOsC"
         >
           <svg
             height="40"
@@ -141,7 +141,7 @@ exports[`index matches snapshot 1`] = `
           </svg>
         </i>
         <div
-          className="sc-fzoXWK eEVnPU"
+          className="sc-fzoXWK jvXOcH"
         >
           <h3>
             Detailed Records
@@ -152,10 +152,10 @@ exports[`index matches snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-fzoNJl ecwXgN custom"
+        className="sc-fzoNJl iAVOkN custom"
       >
         <i
-          className="sc-fzpmMD eFFFxO"
+          className="sc-fzpmMD KVOsC"
         >
           <svg
             height="48"
@@ -169,7 +169,7 @@ exports[`index matches snapshot 1`] = `
           </svg>
         </i>
         <div
-          className="sc-fzoXWK eEVnPU"
+          className="sc-fzoXWK jvXOcH"
         >
           <h3>
             Fully Customizable
@@ -182,13 +182,13 @@ exports[`index matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-fznxKY jlvbBw"
+    className="sc-fznxKY kxVYEy"
   >
     <h2>
       Boost your links today
     </h2>
     <button
-      className="sc-AxirZ fTDgvF"
+      className="sc-AxirZ dVJbcR"
     >
       <b>
         Get Started

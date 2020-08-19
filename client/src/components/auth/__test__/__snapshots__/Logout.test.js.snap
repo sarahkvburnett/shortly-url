@@ -2,20 +2,20 @@
 
 exports[`logout matches snapshot 1`] = `
 <form
-  className="sc-AxhUy jtTpBF"
+  className="sc-AxhUy dLXkxw"
   data-testid="logout"
 >
   <h3>
     Are you sure you want to logout?
   </h3>
   <button
-    className="sc-AxirZ sc-AxheI emVeqi"
+    className="sc-AxirZ sc-AxheI cOblFm"
     onClick={[Function]}
   >
     Yes
   </button>
   <button
-    className="sc-AxirZ sc-AxheI emVeqi"
+    className="sc-AxirZ sc-AxheI cOblFm"
   >
     <a
       href="/dashboard"
