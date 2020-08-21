@@ -4,6 +4,6 @@ exports[`copy short link matches snapshot 1`] = `
 <input
   className="sc-fzplWN bbpMZr shortLink"
   readOnly="readonly"
-  value="https://short.ly/undefined"
+  value="https://short.ly/shortUrl"
 />
 `;

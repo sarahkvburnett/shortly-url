@@ -5,7 +5,7 @@ import { useProcessLink } from "../hooks/useProcessLink";
 import { violet, grey } from "../components/Styles";
 import DashNone from "../components/dash/DashNone";
 import DashLoad from "../components/dash/DashLoad";
-import DashLinks from "../components/links/DashLinks";
+import DashLinks from "../components/dash/DashLinks";
 import Graph from "../components/dash/Graph";
 const LinkCopier = lazy(() => import("../components/linkcrud/LinkCopier"));
 const LinkEditor = lazy(() => import("../components/linkcrud/LinkEditor"));

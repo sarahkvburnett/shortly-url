@@ -1,38 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-import { greyViolet, grey, alignPadding, Button } from "./Styles";
+import { greyViolet, violet, grey, breakpoint } from "./Styles";
 import { useFlash } from "../hooks/useFlash";
 
 const FlashMsg = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 10vh;
-	width: 100vw;
+	height: auto;
+	min-width: 50vw;
 	z-index: 150;
 	background: ${greyViolet};
-	padding: 1vh ${alignPadding};
-	color: ${grey};
+	padding: 0.5vh 1vw;
+	color: ${violet};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	button {
-		font-size: larger;
+	font-size: 14px;
+	@media (min-width: ${breakpoint}) {
+		min-width: auto;
 	}
+	border: .5px solid ${grey};
 `;
 
 const Flash = () => {
-	const {
-		flashMsg,
-		isAutoHideFlash,
-		autoHideFlash,
-		manualHideFlash,
-	} = useFlash();
-	if (isAutoHideFlash) autoHideFlash();
+	const { flashMsg, autoHideFlash } = useFlash();
+	autoHideFlash();
 	return (
 		<FlashMsg>
 			<p>{flashMsg}</p>
-			<Button onClick={manualHideFlash}>&times;</Button>
 		</FlashMsg>
 	);
 };

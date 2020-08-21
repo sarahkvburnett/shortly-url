@@ -6,7 +6,6 @@ export const FlashProvider = (props) => {
 	const [flash, setFlash] = useState({
 		flashMsg: "",
 		isFlashVisible: false,
-		isAutoHideFlash: true,
 	});
 	return (
 		<FlashContext.Provider value={[flash, setFlash]}>
