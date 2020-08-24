@@ -3,6 +3,13 @@
 exports[`dash matches screenshot 1`] = `
 Array [
   <div
+    className="sc-fzpans iRklpG"
+  >
+    <p>
+      asdfasdf
+    </p>
+  </div>,
+  <div
     className="sc-fzoLsD bJNbyp"
   >
     <a
@@ -410,6 +417,13 @@ Array [
 
 exports[`home matches screenshot 1`] = `
 Array [
+  <div
+    className="sc-fzpans iRklpG"
+  >
+    <p>
+      asdfasdf
+    </p>
+  </div>,
   <div
     className="sc-fzoLsD bJNbyp"
   >
@@ -819,6 +833,13 @@ Array [
 exports[`login matches screenshot 1`] = `
 Array [
   <div
+    className="sc-fzpans iRklpG"
+  >
+    <p>
+      asdfasdf
+    </p>
+  </div>,
+  <div
     className="sc-fzoLsD bJNbyp"
   >
     <a
@@ -1227,6 +1248,13 @@ Array [
 exports[`logout matches screenshot 1`] = `
 Array [
   <div
+    className="sc-fzpans iRklpG"
+  >
+    <p>
+      asdfasdf
+    </p>
+  </div>,
+  <div
     className="sc-fzoLsD bJNbyp"
   >
     <a
@@ -1634,6 +1662,13 @@ Array [
 
 exports[`signup matches screenshot 1`] = `
 Array [
+  <div
+    className="sc-fzpans iRklpG"
+  >
+    <p>
+      asdfasdf
+    </p>
+  </div>,
   <div
     className="sc-fzoLsD bJNbyp"
   >

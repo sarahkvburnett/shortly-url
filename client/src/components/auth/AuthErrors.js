@@ -13,12 +13,9 @@ const ErrorBar = styled.div`
 	align-items: center;
 	margin: 3vh 0;
 	font-size: inherit;
-	div {
-		margin-left: 2vw;
+	div p {
 		font-size: smaller;
-		p {
-			margin: 0.5vh 1vw;
-		}
+		margin: 0.5vh 1.5vw;
 	}
 	border: 1px solid ${red};
 	border-radius: 5px;

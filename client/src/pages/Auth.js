@@ -33,11 +33,11 @@ const Img = styled.div`
 
 const Auth = ({ auth }) => {
 	const [formValues, setFormValues] = useState({
-		// firstName: '',
-		// lastName: '',
-		// email: '',
-		// password: '',
-		// password2: '',
+		firstName: '',
+		lastName: '',
+		email: '',
+		password: '',
+		password2: '',
 	});
 	return (
 		<AuthPg>

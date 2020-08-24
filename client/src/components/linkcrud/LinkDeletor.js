@@ -7,9 +7,12 @@ import CloseButton from "./CloseButton";
 import { useLinks } from "../../hooks/useLinks";
 import { useProcessLink } from "../../hooks/useProcessLink";
 import { useFlash } from "../../hooks/useFlash";
+import { useUser } from "../../hooks/useUser";
+
 
 const LinkDeletor = () => {
 	const { deleteLinkFromLinks } = useLinks();
+	const { user: { id } } = useUser();
 	const {
 		processLink: {
 			link,
@@ -22,7 +25,7 @@ const LinkDeletor = () => {
 	const deleteLink = (event) => {
 		event.preventDefault();
 		axios
-			.delete(`/api/links/${_id}`)
+			.delete(`/api/links/${_id}`, { data: { userId: id } })
 			.then((res) => {
 				deleteLinkFromLinks({ link });
 				showFlash("Link deleted");

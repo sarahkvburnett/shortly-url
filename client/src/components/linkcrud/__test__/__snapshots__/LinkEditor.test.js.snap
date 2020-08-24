@@ -3,6 +3,7 @@
 exports[`link editor matches snapshot 1`] = `
 <form
   className="sc-fzozJi blHhKY"
+  noValidate={true}
   onSubmit={[Function]}
 >
   <h3>
@@ -24,7 +25,6 @@ exports[`link editor matches snapshot 1`] = `
       onChange={[Function]}
       pattern="^[a-z0-9_-]{3,16}$"
       required={true}
-      title="Letters and numbers between 3-16 characters"
       value=""
     />
   </div>

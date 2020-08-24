@@ -27,5 +27,5 @@ it('invalid new short url shows error', async () => {
         }
     })
     await fireEvent.click(screen.getByTestId('button'))
-    expect(screen.getByTestId('error')).toHaveTextContent('Url same as existing');
+    expect(screen.getByTestId('error')).toHaveTextContent('Please enter a new short link');
 })

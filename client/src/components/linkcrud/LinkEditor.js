@@ -26,7 +26,13 @@ const LinkEditor = () => {
 	};
 	const updateLink = (event) => {
 		event.preventDefault();
-		if (newShortLink === short) return setError("Url same as existing");
+		if (!newShortLink) return setError("Please enter a new short link");
+		if (newShortLink === short)
+			return setError("New short link same as existing");
+		if (newShortLink.length > 16 || newShortLink.length < 3)
+			return setError("Short link must contain 3 - 16 characters");
+		if (newShortLink.match(/\W/))
+			return setError("Short link must only contain letters and numbers");
 		const newLink = { ...link, short: newShortLink };
 		axios
 			.put(`/api/links/${_id}`, newLink)
@@ -38,7 +44,7 @@ const LinkEditor = () => {
 			.catch(() => setError("Update failed, please try again"));
 	};
 	return (
-		<LinkModal onSubmit={(event) => updateLink(event)}>
+		<LinkModal onSubmit={(event) => updateLink(event)} noValidate>
 			<h3>Edit Shortly Link</h3>
 			<p>{full}</p>
 			<div style={{ display: "flex" }}>
@@ -48,7 +54,6 @@ const LinkEditor = () => {
 					value={newShortLink || ""}
 					required
 					pattern="^[a-z0-9_-]{3,16}$"
-					title="Letters and numbers between 3-16 characters"
 					data-testid="input"
 				/>
 			</div>

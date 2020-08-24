@@ -4,8 +4,8 @@ export const FlashContext = createContext();
 
 export const FlashProvider = (props) => {
 	const [flash, setFlash] = useState({
-		flashMsg: "",
-		isFlashVisible: false,
+		flashMsg: "asdfasdf",
+		isFlashVisible: true,
 	});
 	return (
 		<FlashContext.Provider value={[flash, setFlash]}>
