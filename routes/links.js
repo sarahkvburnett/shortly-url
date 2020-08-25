@@ -30,7 +30,6 @@ const compareLink = (req, res, next) => {
 	Link.findById(req.params.id)
 		.then((link) => {
 			let { full, userId, short, _id } = link;
-			console.log(link, req.body);
 			if (short === req.body.short)
 				return res.status(400).json({ msg: "Short link is the same" });
 			else if (
@@ -114,7 +113,8 @@ router.put(
 //@desc remove link
 //@access authenticated
 router.delete("/:id", isAuthenticated, (req, res) => {
-	Link.findOneAndDelete({ _id: req.params.id })
+	//checking userId to ensure user owns link they deleting
+	Link.findOneAndDelete({ _id: req.params.id, userId: req.body.userId })
 		.then((query) => res.json(query))
 		.catch((err) => res.send(404).json({ msg: "Link not found", err }));
 });

@@ -52,22 +52,28 @@ a {
 	outline-color: hsl(257, 27%, 26%);
 }
 
-.slide-enter,
-.slide-appear {
-	width: 0;
+/* transition for links */
+.list-fade-enter,
+.list-fade-appear {
+	max-height: 0;
+	opacity: 0;
 }
 
-.slide-enter-active,
-.slide-appear-active {
-	width: auto;
-	transition: width 5s;
+.list-fade-enter-active,
+.list-fear-appear-active {
+	max-height: 30px;
+	opacity: 1;
+	transition: all 500ms;
 }
 
-.slide-exit {
-	width: auto;
+.list-fade-exit {
+	max-height: 30px;
+	opacity: 1;
 }
 
-.slide-exit-active {
-	width: auto;
-	transition: width 5s;
+.list-fade-exit-active {
+	max-height: 0;
+	opacity: 0;
+	transition: all 500ms;
 }
+

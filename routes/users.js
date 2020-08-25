@@ -13,20 +13,30 @@ const router = express.Router();
 router.post(
 	"/signup",
 	[
-		check("firstName").isLength({ min: 1 }),
-		check("lastName").isLength({ min: 1 }),
-		check("email").isEmail(),
-		check("password").isLength({ min: 6 }),
-		check("password2").isLength({ min: 6 }),
+		check("firstName")
+			.isLength({ min: 1 })
+			.withMessage("Please enter your first name"),
+		check("lastName")
+			.isLength({ min: 1 })
+			.withMessage("Please enter your last name"),
+		check("email").isEmail().withMessage("Please enter your email"),
+		check("password")
+			.isLength({ min: 6 })
+			.withMessage("Please enter your password"),
+		check("password2")
+			.isLength({ min: 6 })
+			.withMessage("Please confirm your password"),
 	],
 	(req, res) => {
-		const errors = validationResult(req);
-		if (req.body.password !== req.body.password2)
-			return res.status(400).json({ error: "Passwords do not match" });
-		if (!errors.isEmpty())
+		let errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			errors = errors.errors.map( error => error.msg )
 			return res
 				.status(400)
-				.json({ error: "One or more fields not long enough" });
+				.json(errors);
+		}
+		if (req.body.password !== req.body.password2)
+			return res.status(400).json({ error: "Passwords do not match" });
 		User.findOne({ email: req.body.email }).then((user) => {
 			if (user) return res.status(400).json({ error: "Email already exists" });
 			const newUser = new User({
@@ -54,7 +64,12 @@ router.post(
 //@access public
 router.post(
 	"/login",
-	[check("email").isEmail(), check("password").isLength({ min: 6 })],
+	[
+		check("email").isEmail().withMessage("Please enter your email"),
+		check("password")
+			.isLength({ min: 6 })
+			.withMessage("Please enter your password"),
+	],
 	(req, res) => {
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) return res.status(400).json(errors);
