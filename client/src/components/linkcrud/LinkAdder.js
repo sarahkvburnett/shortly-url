@@ -77,7 +77,7 @@ const P = styled.p`
 
 const LinkAdder = () => {
 	const { user } = useUser();
-	const { links, setLinks } = useLinks();
+	const { links, addLink } = useLinks();
 	const [input, setInput] = useState({ value: "Shorten a link here... " });
 	const [error, setError] = useState(false);
 	const [isSending, setIsSending] = useState(false);
@@ -93,7 +93,7 @@ const LinkAdder = () => {
 		else if (validator.isURL(value)) changeState(value, true, false);
 		else changeState(value, false, false);
 	};
-	const addLink = (event) => {
+	const postLink = (event) => {
 		event.preventDefault();
 		if (!input.valid) return setError("Please add a link");
 		const params = { full: input.value };
@@ -110,10 +110,10 @@ const LinkAdder = () => {
 						short: data[0]._id,
 						date: data[0].date,
 						click: data[0].click,
-					},
+					}
 				];
 				if (!user.id) addLocalStorage("links", JSON.stringify(newLinks));
-				setLinks(newLinks);
+				addLink(newLinks);
 				setInput({ value: "" });
 				setIsSending(false);
 			})
@@ -123,7 +123,7 @@ const LinkAdder = () => {
 			});
 	};
 	return (
-		<Form onSubmit={(event) => addLink(event)}>
+		<Form onSubmit={(event) => postLink(event)}>
 			<label htmlFor="link" style={{ display: "none" }}>
 				Website Url
 			</label>

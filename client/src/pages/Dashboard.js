@@ -1,5 +1,6 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import styled from "styled-components";
+import { CSSTransition } from "react-transition-group";
 import { useLinks } from "../hooks/useLinks";
 import { useProcessLink } from "../hooks/useProcessLink";
 import { violet, grey } from "../components/Styles";
@@ -26,18 +27,19 @@ const Dash = styled.div`
 const Dashboard = () => {
 	const { links } = useLinks();
 	const {
-		processLink: { process },
+		processLink: { process, link: { short } },
 	} = useProcessLink();
-	const [loading, setLoading] = useState(true);
+	console.log(short);
+	const [loading, setLoading] = useState(true)
 	return (
 		<Dash data-testid="dashboard">
 			{loading && <DashLoad setLoading={setLoading} />}
 			{!loading && <>{links.length > 0 ? <Graph /> : <DashNone />}</>}
 			<Suspense fallback={<div />}>
-				{!loading && links.length > 0 && <DashLinks />}
-				{process === "copy" && <LinkCopier />}
-				{process === "edit" && <LinkEditor />}
-				{process === "delete" && <LinkDeletor />}
+				{!loading && links.length > 0 && <DashLinks short={short} />}
+				{process === "copy" && <LinkCopier short={short} />}
+				{process === "edit" && <LinkEditor short={short} />}
+				{process === "delete" && <LinkDeletor short={short} />}
 				<LinkShortener position="0" />
 			</Suspense>
 		</Dash>

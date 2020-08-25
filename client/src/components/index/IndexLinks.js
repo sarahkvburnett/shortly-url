@@ -5,6 +5,7 @@ import LinkCopyButton from "./LinkCopyBtn";
 import { breakpoint, alignWidth, smallerWidth } from "../Styles";
 import { useCopyLink } from "../../hooks/useCopyLink";
 import { useLinks } from "../../hooks/useLinks";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const LinkContainer = styled.div`
 	position: relative;
@@ -52,9 +53,9 @@ const IndexLinks = () => {
 	const { copiedLink, copyLink } = useCopyLink();
 	useEffect(setLinksFromBrowser, []);
 	return (
-		<LinkContainer className="linkContainer">
-			{links.map(({ _id, full }) => {
-				return (
+		<TransitionGroup component={LinkContainer}>
+			{links.map(({ _id, full }) => (
+				<CSSTransition timeout={500} classNames="list-fade" key={_id} appear>
 					<Link key={_id} className="link" data-testid="link">
 						<FullLink>{full}</FullLink>
 						<CopyShortLink shortUrl={_id} />
@@ -64,9 +65,9 @@ const IndexLinks = () => {
 							copyLink={copyLink}
 						/>
 					</Link>
-				);
-			})}
-		</LinkContainer>
+				</CSSTransition>
+			))}
+		</TransitionGroup>
 	);
 };
 

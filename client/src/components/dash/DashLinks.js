@@ -1,15 +1,23 @@
 import React from "react";
 import { useLinks } from "../../hooks/useLinks";
 import Link from "./DashLink";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const DashLinks = () => {
 	const { links } = useLinks();
 	return (
-		<div>
+		<TransitionGroup component="div">
 			{links.map((link) => (
-				<Link key={link._id} link={link} />
+				<CSSTransition
+					classNames="list-fade"
+					timeout={500}
+					key={link._id}
+					appear
+				>
+					<Link key={link._id} link={link} />
+				</CSSTransition>
 			))}
-		</div>
+		</TransitionGroup>
 	);
 };
 

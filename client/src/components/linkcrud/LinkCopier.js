@@ -6,13 +6,8 @@ import CloseButton from "./CloseButton";
 import { useProcessLink } from "../../hooks/useProcessLink";
 import { useFlash } from "../../hooks/useFlash";
 
-const LinkCopier = () => {
-	const {
-		processLink: {
-			link: { short },
-		},
-		setProcessNull,
-	} = useProcessLink();
+const LinkCopier = ({ short }) => {
+	const { setProcessNull } = useProcessLink();
 	const { showFlash } = useFlash();
 	const { copiedLink, copyLink } = useCopyLink();
 	const copyShortLink = (event) => {
@@ -36,4 +31,4 @@ const LinkCopier = () => {
 	);
 };
 
-export default LinkCopier;
+export default React.memo(LinkCopier);

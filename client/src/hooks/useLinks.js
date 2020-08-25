@@ -24,6 +24,10 @@ export const useLinks = () => {
 
 	const removeBrowserLinks = () => setLinks([]);
 
+	const addLink = (newLinks) => {
+		setLinks(newLinks);
+	}
+
 	return {
 		links,
 		setLinksFromBrowser,
@@ -31,6 +35,6 @@ export const useLinks = () => {
 		deleteLinkFromLinks,
 		updateLinkInLinks,
 		removeBrowserLinks,
-		setLinks,
+		addLink,
 	};
 };

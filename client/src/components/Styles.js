@@ -31,13 +31,10 @@ export const Button = styled.button`
 	color: ${grey};
 	cursor: pointer;
 	&:hover {
-		color: ${violet};
+		color: ${darkViolet};
 	}
 	a {
-		color: ${grey};
-		&:hover {
-			color: ${violet};
-		}
+		color: inherit;
 	}
 `;
 
