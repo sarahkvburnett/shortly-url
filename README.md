@@ -12,15 +12,13 @@ Dashboard
 - Select each link for graphical representation of 'click' data
 - Change week viewable on graph
 
-Short.ly domain not owned so need to use https://shortlyurl.herokoapp.com for link shortener
-
-See 'TODO' for coming soon
 
 ## Dev
 - Create-react-app
 - Routing with react-router
 - Stage management with hooks (context)
 - Graph with reactD3
+- Need to change to https://shortlyurl.herokoapp.com for link shortener
 
 ``` bash
 # Install dependencies for server
