@@ -4,7 +4,7 @@ import { breakpoint, PrimaryButton, white, alignPadding } from "../Styles";
 import image from "../../images/illustration-working.svg";
 
 const IntroWrapper = styled.section`
-	height: auto;
+	height: 100%;
 	width: 100vw;
 	background: ${white};
 	padding-bottom: 15vh;

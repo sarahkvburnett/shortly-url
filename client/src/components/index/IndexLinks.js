@@ -2,35 +2,28 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import CopyShortLink from "./CopyShortLink";
 import LinkCopyButton from "./LinkCopyBtn";
-import { breakpoint, alignWidth, smallerWidth } from "../Styles";
+import { breakpoint, grey, alignPadding } from "../Styles";
 import { useCopyLink } from "../../hooks/useCopyLink";
 import { useLinks } from "../../hooks/useLinks";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const LinkContainer = styled.div`
-	position: relative;
-	top: -15vh;
-	width: ${alignWidth};
+	padding: 2vh ${alignPadding};
 	height: min-content;
 	margin: auto;
-	@media (min-width: ${breakpoint}) {
-		width: ${smallerWidth};
-		top: -10vh;
-	}
+	background: ${grey};
 `;
 
 const Link = styled.div`
 	min-height: 15vh;
 	background: #fff;
-	width: ${alignWidth};
 	padding: 2vh 2vw;
-	margin: 2vh 0 2vh 0;
+	margin: 2vh 0;
 	border-radius: 15px;
 	@media (min-width: ${breakpoint}) {
 		display: flex;
 		align-items: center;
 		height: 10vh;
-		width: ${smallerWidth};
 	}
 `;
 

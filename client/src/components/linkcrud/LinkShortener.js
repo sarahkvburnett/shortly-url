@@ -1,18 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { breakpoint, violet, alignWidth, smallerWidth } from "../Styles";
+import {
+	grey,
+	violet,
+	alignPadding,
+} from "../Styles";
 import LinkAdder from "./LinkAdder";
 import imgDesktop from "../../images/bg-shorten-desktop.svg";
 import imgMobile from "../../images/bg-shorten-mobile.svg";
 
+const ShortenerWrapper = styled.section`
+	padding: 0 ${alignPadding};
+`;
+
 const Shortener = styled.div`
-	position: relative;
-	width: ${alignWidth};
 	background-image: url(${imgMobile});
 	background-color: ${violet};
 	background-size: cover;
 	min-height: 128px;
-	margin: 2vh auto;
+	margin: auto;
+	padding: 2vh 0;
 	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
@@ -21,17 +28,19 @@ const Shortener = styled.div`
 	@media (min-width: 375px) {
 		background-image: url(${imgDesktop});
 	}
-	@media (min-width: ${breakpoint}) {
-		top: -10vh;
-		width: ${smallerWidth};
-	}
 `;
 
-const LinkShortener = ({ position }) => {
+const LinkShortener = ({ bg }) => {
 	return (
-		<Shortener style={{ top: position }}>
-			<LinkAdder />
-		</Shortener>
+		<ShortenerWrapper
+			style={{
+				background: `linear-gradient(to bottom, ${bg} 50%, ${grey} 50%)`,
+			}}
+		>
+			<Shortener>
+				<LinkAdder />
+			</Shortener>
+		</ShortenerWrapper>
 	);
 };
 

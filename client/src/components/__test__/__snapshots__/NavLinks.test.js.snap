@@ -2,22 +2,22 @@
 
 exports[`nav links authenticated matches snapshot 1`] = `
 <div
-  className="sc-fzplWN ccPsUu"
+  className="sc-fzplWN gspxOl"
   onClick={[Function]}
 >
   <div>
     <button
-      className="sc-AxjAm kxpUMR"
+      className="sc-AxjAm cktYxw"
     >
       Features
     </button>
     <button
-      className="sc-AxjAm kxpUMR"
+      className="sc-AxjAm cktYxw"
     >
       Pricing
     </button>
     <button
-      className="sc-AxjAm kxpUMR resourcesBtn"
+      className="sc-AxjAm cktYxw resourcesBtn"
     >
       Resources
     </button>
@@ -41,22 +41,22 @@ exports[`nav links authenticated matches snapshot 1`] = `
 
 exports[`nav links not-authenticated matches snapshot 1`] = `
 <div
-  className="sc-fzplWN ccPsUu"
+  className="sc-fzplWN gspxOl"
   onClick={[Function]}
 >
   <div>
     <button
-      className="sc-AxjAm kxpUMR"
+      className="sc-AxjAm cktYxw"
     >
       Features
     </button>
     <button
-      className="sc-AxjAm kxpUMR"
+      className="sc-AxjAm cktYxw"
     >
       Pricing
     </button>
     <button
-      className="sc-AxjAm kxpUMR resourcesBtn"
+      className="sc-AxjAm cktYxw resourcesBtn"
     >
       Resources
     </button>
@@ -69,7 +69,7 @@ exports[`nav links not-authenticated matches snapshot 1`] = `
       onClick={[Function]}
     >
       <button
-        className="sc-AxjAm kxpUMR"
+        className="sc-AxjAm cktYxw"
       >
         Login
       </button>

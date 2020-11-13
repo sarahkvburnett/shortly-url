@@ -6,14 +6,15 @@ import {
 	grey,
 	cyan,
 	violet,
-	alignWidth,
 	smallerWidth,
 	desktop,
+	alignPadding,
 } from "../Styles";
 
 const Stats = styled.div`
 	height: auto;
-	width: ${alignWidth};
+	padding: 2vh ${alignPadding} 0;
+	background: ${grey};
 	margin: auto;
 	text-align: center;
 	h2,

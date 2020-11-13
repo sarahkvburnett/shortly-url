@@ -22,6 +22,7 @@ export const alignWidth = "88vw";
 export const alignPadding = "6vw";
 
 export const smallerWidth = "80vw";
+export const smallerPadding = "5vw";
 
 export const heightPadding = "6vh";
 

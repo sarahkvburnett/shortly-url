@@ -20,4 +20,4 @@ it("nav bar matches snapshot", () => {
 	expect(tree).toMatchSnapshot();
 });
 
-//TODO: add check for media query ??
+//TODO: [BB-6] add check for media query ??

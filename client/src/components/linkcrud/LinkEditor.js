@@ -7,16 +7,15 @@ import CloseButton from "./CloseButton";
 import { useProcessLink } from "../../hooks/useProcessLink";
 import { useLinks } from "../../hooks/useLinks";
 import { useFlash } from "../../hooks/useFlash";
+import { useActiveLink } from "../../hooks/useActiveLink";
 
 const LinkEditor = () => {
 	const { updateLinkInLinks } = useLinks();
+	const { setProcessNull } = useProcessLink();
 	const {
-		processLink: {
-			link,
-			link: { _id, full, short },
-		},
-		setProcessNull,
-	} = useProcessLink();
+		activeLink: link,
+		activeLink: { _id, short, full },
+	} = useActiveLink();
 	const [newShortLink, setNewShortLink] = useState(short);
 	const { showFlash } = useFlash();
 	const [error, setError] = useState();
@@ -66,4 +65,4 @@ const LinkEditor = () => {
 	);
 };
 
-export default LinkEditor;
+export default React.memo(LinkEditor);

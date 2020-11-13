@@ -47,7 +47,7 @@ exports[`login matches snapshot 1`] = `
     Submit
   </button>
   <button
-    className="sc-AxjAm sc-AxgMl bwgmuq"
+    className="sc-AxjAm sc-AxgMl ifNyYf"
     type="button"
   >
     Forgot password

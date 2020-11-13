@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { darkViolet, cyan, white, grey, red, breakpoint } from "../Styles";
 import Error from "../Error";
 import { useActiveLink } from "../../hooks/useActiveLink";
+import { CSSTransition } from "react-transition-group";
 
 const GraphBox = styled.div`
     background: ${darkViolet};
@@ -104,31 +105,31 @@ const Graph = () => {
 
 	return (
 		<GraphBox>
-			<div className="date">
-				<DateInput type="date" id="date" onChange={selectDate} readonly />
-				{error !== "" && <Error error={error} />}
-				<p>
-					WEEK COMMENCING:{" "}
-					<span>{new Date(firstDate).toString().substring(0, 10)}</span>
-				</p>
-				<p>
-					WEEK COUNT: <span>{totalClicks}</span>
-				</p>
-			</div>
-			<MediaQuery maxWidth={breakpoint}>
-				<BarChart width={300} height={300} data={clickData} style={styles}>
-					<XAxis dataKey="date" />
-					<YAxis />
-					<Bar dataKey="clicks" barSize={20} fill={cyan} />
-				</BarChart>
-			</MediaQuery>
-			<MediaQuery minWidth={breakpoint}>
-				<BarChart width={600} height={300} data={clickData} style={styles}>
-					<XAxis dataKey="date" />
-					<YAxis />
-					<Bar dataKey="clicks" barSize={30} fill={cyan} />
-				</BarChart>
-			</MediaQuery>
+				<div className="date">
+					<DateInput type="date" id="date" onChange={selectDate} readonly />
+					{error !== "" && <Error error={error} />}
+					<p>
+						WEEK COMMENCING:{" "}
+						<span>{new Date(firstDate).toString().substring(0, 10)}</span>
+					</p>
+					<p>
+						WEEK COUNT: <span>{totalClicks}</span>
+					</p>
+				</div>
+				<MediaQuery maxWidth={breakpoint}>
+					<BarChart width={300} height={300} data={clickData} style={styles}>
+						<XAxis dataKey="date" />
+						<YAxis />
+						<Bar dataKey="clicks" barSize={20} fill={cyan} />
+					</BarChart>
+				</MediaQuery>
+				<MediaQuery minWidth={breakpoint}>
+					<BarChart width={600} height={300} data={clickData} style={styles}>
+						<XAxis dataKey="date" />
+						<YAxis />
+						<Bar dataKey="clicks" barSize={30} fill={cyan} />
+					</BarChart>
+					</MediaQuery>
 		</GraphBox>
 	);
 };

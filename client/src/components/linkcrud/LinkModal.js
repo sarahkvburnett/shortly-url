@@ -1,20 +1,21 @@
 import React from "react";
-import { LinkModal } from "../Styles";
+import { LinkModal as Modal} from "../Styles";
 import { useProcessLink } from "../../hooks/useProcessLink";
-const LinkCopier = lazy(() => import("../components/linkcrud/LinkCopier"));
-const LinkEditor = lazy(() => import("../components/linkcrud/LinkEditor"));
-const LinkDeletor = lazy(() => import("../components/linkcrud/LinkDeletor"));
+import LinkCopier from "./LinkCopier";
+import LinkEditor from "./LinkEditor";
+import LinkDeletor from "./LinkDeletor";
 
 const LinkModal = () => {
 const {
 		processLink: { process },
 	} = useProcessLink();
     return (
-        <LinkModal>
+        <Modal>
                 {process === "copy" && <LinkCopier />}
             	{process === "edit" && <LinkEditor />}
 				{process === "delete" && <LinkDeletor />}
-        </LinkModal>
+        </Modal>
+    )
 }
 
-export default LinkModal;
+export default React.memo(LinkModal);

@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/logo.svg";
 import styled from "styled-components";
@@ -23,10 +23,7 @@ const Nav = styled.div`
 		}
 	}
 `;
-const NavBar = () => {
-	const [isMobNav, setIsMobNav] = useState(false);
-	const toggleMobNav = () =>
-		isMobNav ? setIsMobNav(false) : setIsMobNav(true);
+const NavBar = ({mobNav: {isMobNav, toggleMobNav}}) => {
 	return (
 		<Nav>
 			<Link className="logo" to="/">

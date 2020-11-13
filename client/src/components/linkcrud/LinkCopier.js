@@ -5,9 +5,12 @@ import { PrimaryButton, LinkModal } from "../Styles";
 import CloseButton from "./CloseButton";
 import { useProcessLink } from "../../hooks/useProcessLink";
 import { useFlash } from "../../hooks/useFlash";
+import { useActiveLink } from "../../hooks/useActiveLink";
 
-const LinkCopier = ({ short }) => {
+const LinkCopier = () => {
 	const { setProcessNull } = useProcessLink();
+	const { activeLink: { short } } = useActiveLink();
+	console.log(short);
 	const { showFlash } = useFlash();
 	const { copiedLink, copyLink } = useCopyLink();
 	const copyShortLink = (event) => {

@@ -2,37 +2,33 @@ import React, { useState } from "react";
 import axios from "axios";
 import validator from "validator";
 import styled from "styled-components";
-import { red, grey, cyan, white, breakpoint } from "../Styles";
+import { red, cyan, white, breakpoint } from "../Styles";
 import Error from "../Error";
 import { useUser } from "../../hooks/useUser";
 import { useLinks } from "../../hooks/useLinks";
 import { addLocalStorage } from "../../utilities/setLocalStorage";
 
 const Form = styled.form`
-    margin: auto;
-    padding: 1.5vh 1vw;
-    height: 30vh;
-    @media (max-width: ${breakpoint}) {
-        input {
-            width: 80vw;
-            margin: 2vh 0;
-        }
-    }
-    @media (min-width: ${breakpoint}) {
-       width: 80vw;
-       display: grid;
-       padding: 9vh 2vw 0;
-       grid-template-columns: 8fr 2fr;
-       grid-template-rows: auto auto;
-       grid-column-gap: 1.5vw;
-       grid-template-areas: "link button" "error error";
-       p {
-           margin: 0;
-       }
-       input {
-        height: 12vh;
-       }
-    }
+	margin: auto;
+	padding: 1.5vh 1vw;
+	@media (max-width: ${breakpoint}) {
+		input {
+			width: 80vw;
+			margin: 2vh 0;
+		}
+	}
+	@media (min-width: ${breakpoint}) {
+		width: 80vw;
+		display: grid;
+		padding: 2vh 2vw 0;
+		grid-template-columns: 8fr 2fr;
+		grid-template-rows: auto auto;
+		grid-column-gap: 1.5vw;
+		grid-template-areas: "link button" "error error";
+		p {
+			margin: 0;
+		}
+	}
 `;
 
 const Input = styled.input`
@@ -57,22 +53,6 @@ const Button = styled(Input)`
 		opacity: 0.5;
 	}
 	grid-area: button;
-`;
-
-const P = styled.p`
-	text-align: center;
-	width: 100%;
-	padding: 0 1vw;
-	color: ${grey};
-	font-size: small;
-	a {
-		color: ${grey};
-		&:hover {
-			color: ${cyan};
-		}
-	}
-	grid-area: error;
-	height: 3vh;
 `;
 
 const LinkAdder = () => {
@@ -110,7 +90,7 @@ const LinkAdder = () => {
 						short: data[0]._id,
 						date: data[0].date,
 						click: data[0].click,
-					}
+					},
 				];
 				if (!user.id) addLocalStorage("links", JSON.stringify(newLinks));
 				addLink(newLinks);
@@ -127,7 +107,7 @@ const LinkAdder = () => {
 			<label htmlFor="link" style={{ display: "none" }}>
 				Website Url
 			</label>
-			{error ? <Error error={error} /> : <P />}
+			{error && <Error error={error} />}
 			<Input
 				id="link"
 				name="link"

@@ -1,14 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`dash matches screenshot 1`] = `
-Array [
-  <div
-    className="sc-fzpans iRklpG"
-  >
-    <p>
-      asdfasdf
-    </p>
-  </div>,
+<main>
   <div
     className="sc-fzoLsD bJNbyp"
   >
@@ -22,7 +15,7 @@ Array [
         src="logo.svg"
       />
     </a>
-  </div>,
+  </div>
   <div
     className="home"
   >
@@ -99,7 +92,7 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ jEUIbM linkContainer"
+      className="sc-fzqARJ jEUIbM"
     />
     <div
       className="sc-fzoNJl khGFLu"
@@ -217,7 +210,7 @@ Array [
         </b>
       </button>
     </div>
-  </div>,
+  </div>
   <div
     className="sc-fzoXzr dtplnt"
   >
@@ -411,19 +404,12 @@ Array [
         </svg>
       </a>
     </div>
-  </div>,
-]
+  </div>
+</main>
 `;
 
 exports[`home matches screenshot 1`] = `
-Array [
-  <div
-    className="sc-fzpans iRklpG"
-  >
-    <p>
-      asdfasdf
-    </p>
-  </div>,
+<main>
   <div
     className="sc-fzoLsD bJNbyp"
   >
@@ -437,7 +423,7 @@ Array [
         src="logo.svg"
       />
     </a>
-  </div>,
+  </div>
   <div
     className="home"
   >
@@ -514,7 +500,7 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ jEUIbM linkContainer"
+      className="sc-fzqARJ jEUIbM"
     />
     <div
       className="sc-fzoNJl khGFLu"
@@ -632,7 +618,7 @@ Array [
         </b>
       </button>
     </div>
-  </div>,
+  </div>
   <div
     className="sc-fzoXzr dtplnt"
   >
@@ -826,19 +812,12 @@ Array [
         </svg>
       </a>
     </div>
-  </div>,
-]
+  </div>
+</main>
 `;
 
 exports[`login matches screenshot 1`] = `
-Array [
-  <div
-    className="sc-fzpans iRklpG"
-  >
-    <p>
-      asdfasdf
-    </p>
-  </div>,
+<main>
   <div
     className="sc-fzoLsD bJNbyp"
   >
@@ -852,7 +831,7 @@ Array [
         src="logo.svg"
       />
     </a>
-  </div>,
+  </div>
   <div
     className="home"
   >
@@ -929,7 +908,7 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ jEUIbM linkContainer"
+      className="sc-fzqARJ jEUIbM"
     />
     <div
       className="sc-fzoNJl khGFLu"
@@ -1047,7 +1026,7 @@ Array [
         </b>
       </button>
     </div>
-  </div>,
+  </div>
   <div
     className="sc-fzoXzr dtplnt"
   >
@@ -1241,19 +1220,12 @@ Array [
         </svg>
       </a>
     </div>
-  </div>,
-]
+  </div>
+</main>
 `;
 
 exports[`logout matches screenshot 1`] = `
-Array [
-  <div
-    className="sc-fzpans iRklpG"
-  >
-    <p>
-      asdfasdf
-    </p>
-  </div>,
+<main>
   <div
     className="sc-fzoLsD bJNbyp"
   >
@@ -1267,7 +1239,7 @@ Array [
         src="logo.svg"
       />
     </a>
-  </div>,
+  </div>
   <div
     className="home"
   >
@@ -1344,7 +1316,7 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ jEUIbM linkContainer"
+      className="sc-fzqARJ jEUIbM"
     />
     <div
       className="sc-fzoNJl khGFLu"
@@ -1462,7 +1434,7 @@ Array [
         </b>
       </button>
     </div>
-  </div>,
+  </div>
   <div
     className="sc-fzoXzr dtplnt"
   >
@@ -1656,19 +1628,12 @@ Array [
         </svg>
       </a>
     </div>
-  </div>,
-]
+  </div>
+</main>
 `;
 
 exports[`signup matches screenshot 1`] = `
-Array [
-  <div
-    className="sc-fzpans iRklpG"
-  >
-    <p>
-      asdfasdf
-    </p>
-  </div>,
+<main>
   <div
     className="sc-fzoLsD bJNbyp"
   >
@@ -1682,7 +1647,7 @@ Array [
         src="logo.svg"
       />
     </a>
-  </div>,
+  </div>
   <div
     className="home"
   >
@@ -1759,7 +1724,7 @@ Array [
       </form>
     </div>
     <div
-      className="sc-fzqARJ jEUIbM linkContainer"
+      className="sc-fzqARJ jEUIbM"
     />
     <div
       className="sc-fzoNJl khGFLu"
@@ -1877,7 +1842,7 @@ Array [
         </b>
       </button>
     </div>
-  </div>,
+  </div>
   <div
     className="sc-fzoXzr dtplnt"
   >
@@ -2071,6 +2036,6 @@ Array [
         </svg>
       </a>
     </div>
-  </div>,
-]
+  </div>
+</main>
 `;

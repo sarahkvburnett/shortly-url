@@ -8,18 +8,18 @@ import { useLinks } from "../../hooks/useLinks";
 import { useProcessLink } from "../../hooks/useProcessLink";
 import { useFlash } from "../../hooks/useFlash";
 import { useUser } from "../../hooks/useUser";
-
+import { useActiveLink } from "../../hooks/useActiveLink";
 
 const LinkDeletor = () => {
 	const { deleteLinkFromLinks } = useLinks();
-	const { user: { id } } = useUser();
 	const {
-		processLink: {
-			link,
-			link: { _id, full, short },
-		},
-		setProcessNull,
-	} = useProcessLink();
+		user: { id },
+	} = useUser();
+	const {
+		activeLink: link,
+		activeLink: { _id, short, full },
+	} = useActiveLink();
+	const { setProcessNull } = useProcessLink();
 	const { showFlash } = useFlash();
 	const [error, setError] = useState();
 	const deleteLink = (event) => {
@@ -46,4 +46,4 @@ const LinkDeletor = () => {
 	);
 };
 
-export default LinkDeletor;
+export default React.memo(LinkDeletor);

@@ -7,12 +7,12 @@ import { useUser } from "../hooks/useUser";
 const Links = styled.div`
 	display: flex;
 	@media (max-width: ${desktop}) {
-		position: absolute;
+		position: fixed;
 		z-index: 101;
-		top: 10vh;
-		left: 1vw;
-		height: 89vh;
-		width: 98vw;
+		top: 15vh;
+		left: 10vw;
+		height: 70vh;
+		width: 80vw;
 		flex-direction: column;
 		background: ${violet};
 		padding: 2vh 2vw;
