@@ -8,11 +8,11 @@ const Links = styled.div`
 	display: flex;
 	@media (max-width: ${desktop}) {
 		position: fixed;
-		z-index: 101;
 		top: 15vh;
 		left: 10vw;
 		height: 70vh;
 		width: 80vw;
+		z-index: 101;
 		flex-direction: column;
 		background: ${violet};
 		padding: 2vh 2vw;
