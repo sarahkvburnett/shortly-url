@@ -11,6 +11,7 @@ Dashboard
 - Login to view, customise and delete links
 - Select each link for graphical representation of 'click' data
 - Change week viewable on graph
+- Flash message reporting CRUD/auth
 
 
 ## Dev
@@ -42,6 +43,6 @@ npm run client
 
 ## Credits
 
-Design by FrontendMentor
+Landing page design by FrontendMentor
 
 Built by Sarah Burnett
